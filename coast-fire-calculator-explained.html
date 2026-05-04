@@ -185,7 +185,7 @@
         <span class="slider-value" id="savingsDisplay">$50,000</span>
       </div>
       <div class="slider-extra">
-        <input type="range" id="savingsSlider" min="0" max="2000000" step="5000" value="50000"/>
+        <input type="range" id="savingsSlider" min="0" max="2000000" step="100" value="50000"/>
         <input type="number" class="slider-val-input" id="savingsInput" min="0" value="50000"/>
       </div>
     </div>
@@ -347,8 +347,6 @@
       if (isNaN(raw)) return;
       var v = Math.min(raw, parseFloat(sliderEl.max));
       v = Math.max(v, parseFloat(sliderEl.min));
-      var step = parseFloat(sliderEl.step) || 1;
-      v = Math.round(v / step) * step;
       refreshDisplay(v);
       calcFn();
     });
