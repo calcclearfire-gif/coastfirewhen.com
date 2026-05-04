@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Coast FIRE Calculator', 'description': 'Calculate your Coast FIRE number: how much you need invested to coast to retirement with zero additional savings.', 'url': 'https://coastfirewhen.com/coast-fire-calculator-explained.html', 'applicationCategory': 'FinanceApplication', 'operatingSystem': 'All', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'browserRequirements': 'No special requirements'}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Coast FIRE Calculator","description":"Calculate your Coast FIRE number: how much you need invested to coast to retirement with zero additional savings.","url":"https://coastfirewhen.com/coast-fire-calculator-explained.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"browserRequirements":"No special requirements"}</script>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Coast FIRE Calculator — CoastFIREWhen</title><meta content="Calculate your Coast FIRE number: how much you need invested to coast to retirement with zero additional savings." name="description"/> <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;510;590&family=JetBrains+Mono:wght@400;500&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{
-      --bg:#08090a;--bg-panel:#0f1011;--bg-surface:#191a1b;--bg-hover:#28282c;
+      --bg:#0d0f14;--bg-panel:#0f1011;--bg-surface:#191a1b;--bg-hover:#28282c;
       --text-primary:#f7f8f8;--text-secondary:#d0d6e0;--text-tertiary:#8a8f98;--text-muted:#62666d;
       --accent:#5e6ad2;--accent-hover:#7170ff;--accent-light:#828fff;--success:#10b981;
       --border:rgba(255,255,255,0.08);--border-subtle:rgba(255,255,255,0.05);--border-solid:#23252a;
       --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
     }
-    html{font-family:var(--font);background:var(--bg);color:var(--text-primary);font-size:16px;-webkit-font-smoothing:antialiased;}
-    body{min-height:100vh;}a{color:inherit;text-decoration:none;}::selection{background:var(--accent);color:#fff;}
-    nav{position:sticky;top:0;z-index:100;background:rgba(8,9,10,0.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-subtle);}
+    html{font-family:var(--font);background:var(--bg);color:var(--text-primary);font-size:16px;-webkit-font-smoothing:antialiased}
+    body{min-height:100vh;padding-bottom:70px}
+    nav{position:sticky;top:0;z-index:100;background:rgba(13,15,20,0.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-subtle);}
     .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;}
-    .nav-logo{font-size:15px;font-weight:510;letter-spacing:-0.01em;color:var(--text-secondary);}
+    .nav-logo{font-size:15px;font-weight:510;letter-spacing:-.01em;color:var(--text-secondary);}
     .nav-logo span{color:var(--text-primary);}
     .nav-links{display:flex;align-items:center;gap:2px;}
     .nav-links a{font-size:14px;font-weight:510;color:var(--text-tertiary);padding:6px 10px;border-radius:6px;transition:background .15s,color .15s;}
@@ -23,19 +23,68 @@
     .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:6px;font-size:14px;font-weight:510;cursor:pointer;transition:all .15s;border:none;}
     .btn-primary{background:var(--accent);color:#fff;}.btn-primary:hover{background:var(--accent-hover);color:#fff;}
     .btn-ghost{background:rgba(255,255,255,0.03);color:var(--text-secondary);border:1px solid var(--border);}.btn-ghost:hover{background:rgba(255,255,255,0.07);color:var(--text-primary);}
+
+    /* --- Page layout --- */
     .page-header{padding:52px 24px 0;max-width:1100px;margin:0 auto;}
-    
     .eyebrow{font-size:12px;font-weight:510;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
     .eyebrow-orange{color:#f97316;}.eyebrow-blue{color:#60a5fa;}.eyebrow-green{color:var(--success);}.eyebrow-purple{color:var(--accent-light);}
     .page-h1{font-size:34px;font-weight:510;letter-spacing:-.025em;color:var(--text-primary);margin-bottom:16px;line-height:1.1;}
     .page-h2{font-size:22px;font-weight:510;letter-spacing:-.015em;color:var(--text-primary);margin:32px 0 12px;}
     .page-h3{font-size:17px;font-weight:590;color:var(--text-primary);margin:24px 0 10px;letter-spacing:-.01em;}
     .page-p{font-size:16px;font-weight:300;line-height:1.75;color:var(--text-tertiary);margin-bottom:14px;}
-    .page-ul{list-style:none;padding:0;margin:10px 0 16px;}
-    .page-ul li{font-size:15px;font-weight:300;line-height:1.7;color:var(--text-tertiary);padding:3px 0 3px 16px;position:relative;}
-    .page-ul li::before{content:'–';position:absolute;left:0;color:var(--text-muted);}
     .intro-box{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:22px;margin:24px 0 32px;}
     .intro-box p{font-size:17px;font-weight:300;line-height:1.65;color:var(--text-secondary);margin:0;}
+
+    /* --- Two-column calculator layout --- */
+    .calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:48px}
+    @media(max-width:767px){.calc-layout{grid-template-columns:1fr}}
+
+    .calc-inputs,.calc-results{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:24px}
+    .calc-inputs h2,.calc-results h2{font-size:16px;font-weight:590;margin-bottom:20px;letter-spacing:-.01em;color:var(--text-primary);}
+
+    /* --- Slider inputs --- */
+    .slider-row{margin-bottom:18px}
+    .slider-row:last-child{margin-bottom:0}
+    .slider-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .slider-label{font-size:13px;font-weight:510;color:var(--text-tertiary);letter-spacing:.01em}
+    .slider-value{font-size:15px;font-weight:590;color:var(--text-primary);font-variant-numeric:tabular-nums}
+    .slider-value.green{color:var(--success)}
+    .slider-wrap{position:relative}
+    input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:999px;background:var(--bg-surface);outline:none;cursor:pointer;display:block}
+    input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid var(--bg);transition:transform .1s,background .1s}
+    input[type="range"]::-webkit-slider-thumb:hover{background:var(--accent-hover);transform:scale(1.15)}
+    input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--accent);cursor:pointer;border:2px solid var(--bg)}
+    input[type="range"]:focus::-webkit-slider-thumb{box-shadow:0 0 0 3px rgba(94,106,210,0.3)}
+    .slider-val-input{width:90px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:6px 10px;color:var(--text-primary);font-size:15px;font-family:var(--font);outline:none;text-align:right;transition:border-color .15s}
+    .slider-val-input:focus{border-color:var(--accent)}
+    input[type="number"].slider-val-input{-moz-appearance:textfield}
+    input[type="number"].slider-val-input::-webkit-outer-spin-button,input[type="number"].slider-val-input::-webkit-inner-spin-button{-webkit-appearance:none}
+    .slider-extra{display:grid;grid-template-columns:1fr 90px;gap:8px;align-items:center}
+
+    /* --- Results panel --- */
+    .result-box{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:14px}
+    .result-box h4{font-size:11px;font-weight:510;color:var(--text-tertiary);margin-bottom:5px;text-transform:uppercase;letter-spacing:.06em}
+    .result-big{font-size:28px;font-weight:590;color:var(--text-primary);letter-spacing:-.02em;line-height:1.1}
+    .result-big.green{color:var(--success)}
+    .result-big .unit{font-size:14px;font-weight:400;color:var(--text-tertiary);margin-left:4px}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+    .stat{text-align:center;padding:10px 6px;background:rgba(255,255,255,0.02);border-radius:6px;}
+    .stat-val{font-size:15px;font-weight:590;color:var(--text-primary);}.stat-lbl{font-size:10px;color:var(--text-muted);margin-top:2px;letter-spacing:.03em}
+
+    /* --- Gap progress bar --- */
+    .gap-section{margin-top:4px}
+    .gap-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);margin-bottom:6px;letter-spacing:.03em}
+    .gap-bar{height:6px;background:var(--bg-surface);border-radius:999px;overflow:hidden;margin-bottom:4px}
+    .gap-fill{height:100%;border-radius:999px;background:var(--accent);transition:width .3s ease}
+    .gap-fill.success{background:var(--success)}
+    .gap-caption{font-size:11px;color:var(--text-muted);text-align:center}
+
+    /* --- Chart --- */
+    .chart-wrap{position:relative;height:160px;margin:4px 0 4px}
+    .chart-wrap canvas{width:100% !important;height:160px !important}
+
+    /* --- How it works (full width below) --- */
+    .how-it-works{max-width:680px;margin:0 auto}
     .callout{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:24px 0;}
     .callout-blue{border-color:rgba(96,165,250,.18);background:rgba(96,165,250,.04);}
     .callout-amber{border-color:rgba(251,191,36,.18);background:rgba(251,191,36,.04);}
@@ -43,129 +92,429 @@
     .callout h4{font-size:13px;font-weight:590;margin-bottom:5px;}
     .callout-blue h4{color:#60a5fa;}.callout-amber h4{color:#fbbf24;}.callout-green h4{color:var(--success);}
     .callout p{font-size:14px;font-weight:300;color:var(--text-tertiary);margin:0;}
-    .formula{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:6px;padding:14px 18px;font-family:var(--mono);font-size:13px;color:var(--text-secondary);margin:16px 0;line-height:1.7;}
+    .formula{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:6px;padding:14px 18px;font-family:var(--mono);font-size:13px;color:var(--text-secondary);margin:16px 0;line-height:1.7}
     .t{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0;}
     .t th{text-align:left;padding:9px 14px;background:var(--bg-surface);color:var(--text-tertiary);font-weight:510;font-size:11px;letter-spacing:.04em;border-bottom:1px solid var(--border-solid);}
     .t td{padding:9px 14px;color:var(--text-secondary);border-bottom:1px solid var(--border-subtle);font-weight:300;}
     .t tr:last-child td{border-bottom:none;}.t .hl{color:var(--accent-light);}
-    label{display:block;font-size:13px;font-weight:510;color:var(--text-tertiary);margin-bottom:6px;letter-spacing:.01em;}
-    input[type="number"]{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text-primary);font-size:15px;font-family:var(--font);outline:none;transition:border-color .15s;}
+    label{display:block;font-size:13px;font-weight:510;color:var(--text-tertiary);margin-bottom:6px;letter-spacing:.01em}
+    input[type="number"]{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text-primary);font-size:15px;font-family:var(--font);outline:none;transition:border-color .15s}
     input[type="number"]:focus{border-color:var(--accent);}input[type="number"]::placeholder{color:var(--text-muted);}
-    .calc-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:26px;margin:24px 0;}
-    .calc-card h2{font-size:18px;font-weight:590;margin-bottom:20px;letter-spacing:-.01em;}
-    .form-grid{display:grid;gap:16px;}
-    .form-row{display:grid;gap:12px;}
-    .form-row-2{grid-template-columns:1fr 1fr;}.form-row-3{grid-template-columns:1fr 1fr 1fr;}
-    @media(max-width:600px){.form-row-2,.form-row-3{grid-template-columns:1fr;}}
-    .result-box{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:16px 0;}
-    .result-box h4{font-size:12px;font-weight:510;color:var(--text-tertiary);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em;}
-    .result-big{font-size:26px;font-weight:590;color:var(--text-primary);letter-spacing:-.02em;}
-    .result-big.green{color:var(--success);}.result-big.orange{color:#f97316;}
-    .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px;}
-    .stat{text-align:center;padding:11px 8px;background:rgba(255,255,255,0.02);border-radius:6px;}
-    .stat-val{font-size:17px;font-weight:590;color:var(--text-primary);}.stat-lbl{font-size:11px;color:var(--text-muted);margin-top:2px;}
-    footer{border-top:1px solid var(--border-subtle);padding:36px 24px;text-align:center;}
-    footer p{font-size:13px;color:var(--text-muted);}
-    .footer-links{display:flex;justify-content:center;gap:20px;margin-top:12px;}
-    .footer-links a{font-size:13px;color:var(--text-muted);}.footer-links a:hover{color:var(--text-tertiary);}
     .disclaimer{font-size:13px;font-weight:300;color:var(--text-muted);font-style:italic;margin-top:40px;padding-top:20px;border-top:1px solid var(--border-subtle);}
-    .hidden{display:none;}
-    .progress-wrap{margin:16px 0;}
-    .progress-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--text-tertiary);margin-bottom:7px;}
-    .progress-bar{height:5px;background:var(--bg-surface);border-radius:999px;overflow:hidden;}
-    .progress-fill{height:100%;border-radius:999px;background:var(--accent);transition:width .4s ease;}
-    .progress-fill.green{background:var(--success);}.progress-fill.orange{background:#f97316;}
-  .ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+
+    /* --- Help tip --- */
+    .help-tip{display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid var(--border);color:var(--text-muted);font-size:10px;font-weight:590;cursor:default;vertical-align:middle;margin-left:4px;position:relative;cursor:help}
+    .help-tip:hover::after{content:attr(title);position:absolute;bottom:calc(100%+6px);left:50%;transform:translateX(-50%);background:var(--bg-surface);border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:12px;font-weight:300;color:var(--text-secondary);white-space:normal;width:220px;z-index:50;pointer-events:none;line-height:1.5}
+
+    /* --- Sticky mobile bar --- */
+    .sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(13,15,20,0.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:12px 20px}
+    .sticky-bar-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+    .sticky-label{font-size:12px;font-weight:510;color:var(--text-tertiary);letter-spacing:.04em}
+    .sticky-val{font-size:17px;font-weight:590;color:var(--text-primary)}
+    @media(max-width:767px){.sticky-bar{display:block}}
+
+    /* --- Ad sidebar (retained from existing) --- */
+    .page-wrapper{display:flex;gap:32px;align-items:flex-start;max-width:1100px;margin:0 auto;padding:0 24px 80px}
+    .page-main{flex:1;min-width:0}
+    .ad-sidebar{width:160px;flex-shrink:0;position:sticky;top:72px}
+    @media(max-width:900px){.page-wrapper{flex-direction:column}.ad-sidebar{width:100%;position:static;margin-top:32px}}
     .ad-slot{min-height:600px}
-    .page-wrapper{display:flex;gap:32px;align-items:flex-start;max-width:960px;margin:0 auto;padding:40px 24px 80px}.ad-sidebar{width:160px;flex-shrink:0;position:sticky;top:72px}@media(max-width:900px){.page-wrapper{display:block;padding:40px 24px 80px}.ad-sidebar{width:100%;position:static;margin-top:32px}}
-    .page-content{flex:1;min-width:0}</style> <link href="https://coastfirewhen.com/coast-fire-calculator-explained.html" rel="canonical"/>
+  .ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+</style> <link href="https://coastfirewhen.com/coast-fire-calculator-explained.html" rel="canonical"/>
 <meta content="Coast FIRE Calculator Explained — CoastFIREWhen" property="og:title"/>
 <meta content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="Coast FIRE Calculator Explained — CoastFIREWhen" name="twitter:title"/>
 <meta content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for." name="twitter:description"/>
-</head><body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebollow-orange">Calculator</p></div>
-<div class="page-wrapper"><div class="page-content">
+</head>
+<body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav>
+
+<div class="page-header">
+<p class="eyebrow eyebollow-orange">Calculator</p>
 <h1 class="page-h1">Coast FIRE Calculator</h1>
 <div class="intro-box"><p>Find the exact amount you need invested to coast to your full FIRE number — with no further savings required.</p></div>
-<div class="calc-card">
-<h2>Your numbers</h2>
-<div class="form-grid">
-<div class="form-row form-row-2">
-<div><label>Current Age</label><input id="age" max="80" min="18" type="number" value="30"/></div>
+</div>
 
-<div><label>Target Retirement Age</label><input id="retireAge" max="90" min="30" type="number" value="65"/></div>
-</div>
-<div class="form-row form-row-2">
-<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" min="1000" value="50000" type="number"/></div>
-<div><label>Safe Withdrawal Rate (%)</label><input id="swr" max="10" min="1" step="0.1" type="number" value="4"/></div>
-</div>
-<div class="form-row form-row-2">
-<div><label>Expected Annual Return (%)</label><input id="returnRate" max="15" min="1" step="0.1" type="number" value="7"/></div>
-<div><label>Current Savings ($)</label><input autocomplete="off" id="savings" min="0" value="50000" type="number"/></div>
-</div>
-<button class="btn btn-primary" onclick="calculate()" style="align-self:flex-start;">Calculate</button>
-</div>
-</div>
-<div class="hidden" id="result">
-<div class="result-box">
-<h4>Your Coast FIRE Number</h4>
-<div class="result-big" id="coastNum">—</div>
-</div>
-<div class="stats-row">
-<div class="stat"><div class="stat-val" id="fireTarget">—</div><div class="stat-lbl">Full FIRE Target</div></div>
-<div class="stat"><div class="stat-val" id="gapNum">—</div><div class="stat-lbl">Gap</div></div>
-<div class="stat"><div class="stat-val" id="coastAge">—</div><div class="stat-lbl">Coast FIRE Age</div></div>
-<div class="stat"><div class="stat-val" id="yearCount">—</div><div class="stat-lbl">Years to Go</div></div>
-</div>
-</div>
+<div class="page-wrapper">
+<div class="page-main">
+
+<!-- ===== TWO-COLUMN CALCULATOR ===== -->
+<div class="calc-layout">
+
+  <!-- LEFT: Inputs -->
+  <div class="calc-inputs">
+    <h2>Your numbers</h2>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Current Age</span>
+        <span class="slider-value" id="ageDisplay">30</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="ageSlider" min="18" max="80" value="30"/>
+        <input type="number" class="slider-val-input" id="ageInput" min="18" max="80" value="30"/>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Target Retirement Age</span>
+        <span class="slider-value" id="retireAgeDisplay">65</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="retireAgeSlider" min="30" max="90" value="65"/>
+        <input type="number" class="slider-val-input" id="retireAgeInput" min="30" max="90" value="65"/>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Annual Expenses <span class="help-tip" title="How much you expect to spend per year in retirement.">?</span></span>
+        <span class="slider-value" id="expensesDisplay">$50,000</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="expensesSlider" min="10000" max="300000" step="1000" value="50000"/>
+        <input type="number" class="slider-val-input" id="expensesInput" min="1000" value="50000"/>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Current Savings <span class="help-tip" title="Total invested assets (401k, IRA, brokerage). Exclude home equity and cash reserves.">?</span></span>
+        <span class="slider-value" id="savingsDisplay">$50,000</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="savingsSlider" min="0" max="2000000" step="5000" value="50000"/>
+        <input type="number" class="slider-val-input" id="savingsInput" min="0" value="50000"/>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Expected Annual Return <span class="help-tip" title="Average annual return after inflation. 7% approximates a diversified US stock portfolio historically.">?</span></span>
+        <span class="slider-value" id="returnRateDisplay">7%</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="returnRateSlider" min="1" max="15" step="0.1" value="7"/>
+        <input type="number" class="slider-val-input" id="returnRateInput" min="1" max="15" step="0.1" value="7"/>
+      </div>
+    </div>
+
+    <div class="slider-row">
+      <div class="slider-header">
+        <span class="slider-label">Safe Withdrawal Rate <span class="help-tip" title="The Trinity Study 4% rule: you can withdraw 4% of your portfolio annually with high probability of not outliving it over 30 years.">?</span></span>
+        <span class="slider-value" id="swrDisplay">4%</span>
+      </div>
+      <div class="slider-extra">
+        <input type="range" id="swrSlider" min="1" max="10" step="0.1" value="4"/>
+        <input type="number" class="slider-val-input" id="swrInput" min="1" max="10" step="0.1" value="4"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Results + Chart -->
+  <div class="calc-results">
+    <h2>Your Coast FIRE number</h2>
+
+    <div class="result-box">
+      <h4>Coast FIRE Number</h4>
+      <div class="result-big" id="coastNum">—</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="stat-val" id="fireTarget">—</div><div class="stat-lbl">Full FIRE Target</div></div>
+      <div class="stat"><div class="stat-val" id="gapNum">—</div><div class="stat-lbl">Gap</div></div>
+      <div class="stat"><div class="stat-val" id="coastAge">—</div><div class="stat-lbl">Coast Age</div></div>
+      <div class="stat"><div class="stat-val" id="yearCount">—</div><div class="stat-lbl">Years Left</div></div>
+    </div>
+
+    <!-- Compound growth chart -->
+    <div class="chart-wrap">
+      <canvas id="growthChart"></canvas>
+    </div>
+
+    <!-- Gap progress bar -->
+    <div class="gap-section">
+      <div class="gap-labels"><span>Savings progress to Coast</span><span id="gapPct">—</span></div>
+      <div class="gap-bar"><div class="gap-fill" id="gapFill" style="width:0%"></div></div>
+      <div class="gap-caption" id="gapCaption">Enter your numbers to see progress</div>
+    </div>
+  </div>
+
+</div><!-- end .calc-layout -->
+
+<!-- ===== HOW IT WORKS (full width) ===== -->
+<div class="how-it-works">
 <h2 class="page-h2">How it works</h2>
 <p class="page-p">The calculation has three steps:</p>
+
 <h3 class="page-h3">1. Full FIRE Target</h3>
 <div class="formula">Full FIRE Number = Annual Expenses ÷ SWR<br/><span style="color:var(--text-muted);font-size:12px;">Example: $50,000 ÷ 0.04 = $1,250,000</span></div>
+
 <h3 class="page-h3">2. Years to Retirement</h3>
 <div class="formula">Years = Target Retirement Age − Current Age<br/><span style="color:var(--text-muted);font-size:12px;">Example: 65 − 30 = 35 years</span></div>
+
 <h3 class="page-h3">3. Coast FIRE Number</h3>
 <div class="formula">Coast FIRE Number = Full FIRE ÷ (1 + r)<sup>years</sup><br/><span style="color:var(--text-muted);font-size:12px;">Example: $1,250,000 ÷ 1.07<sup>35</sup> = $117,000</span></div>
+
 <p class="page-p">Once your portfolio hits your Coast FIRE number, you can stop saving entirely. The market does the rest.</p>
+
 <div class="callout callout-amber">
 <h4>Why 7% and 4%?</h4>
 <p>7% is the approximate historical average return of a diversified US stock portfolio after inflation. 4% is the Trinity Study safe withdrawal rate — the amount you can withdraw annually with a high probability of not outliving your money over 30 years. Starting points, not guarantees.</p>
 </div>
+
 <div class="callout callout-blue">
 <h4>Social Security is not included</h4>
 <p>This calculator uses your full annual expenses to derive your FIRE target. If you expect Social Security income in retirement, your actual portfolio target may be lower — because SS typically covers 30–50% of expenses for average earners. Including it would produce a smaller Coast FIRE number and an earlier coast date. The tradeoff: SS estimates depend on your claimed earnings history, your claiming age (62 vs. 70 produces roughly a 70% difference in monthly benefit), and whether the Social Security trust fund remains fully funded. The trust fund is projected to be depleted by the mid-2030s, which would trigger an automatic ~23% benefit reduction without Congressional action. Enter your full expenses here for the conservative (portfolio-only) calculation. Check your actual SS estimate at <strong style="color:var(--accent-light);">ssa.gov/my-account</strong>.</p>
 </div>
-<p class="disclaimer">This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.</p>
-</div><div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div></div>
-<script>
-    
-  
-  
 
-function calculate(){
-      const age=parseFloat(document.getElementById("age").value);
-      const retireAge=parseFloat(document.getElementById("retireAge").value);
-      const expenses=parseFloat(document.getElementById("expenses").value);
-      const swr=parseFloat(document.getElementById("swr").value)/100;
-      const r=parseFloat(document.getElementById("returnRate").value)/100;
-      const savings=parseFloat(document.getElementById("savings").value);
-      const years=retireAge-age;
-      const fireNumber=expenses/swr;
-      const coastNumber=fireNumber/Math.pow(1+r,years);
-      const gap=Math.max(0,coastNumber-savings);
-      const yrsToCoast=savings>=coastNumber?0:Math.log(fireNumber/savings)/Math.log(1+r);
-      const ageAtCoast=Math.ceil(age+yrsToCoast);
-      document.getElementById("coastNum").textContent="$"+Math.round(coastNumber).toLocaleString();
-      document.getElementById("fireTarget").textContent="$"+Math.round(fireNumber).toLocaleString();
-      document.getElementById("gapNum").textContent="$"+Math.round(gap).toLocaleString();
-      document.getElementById("coastAge").textContent=ageAtCoast;
-      document.getElementById("yearCount").textContent=years;
-      document.getElementById("result").classList.remove("hidden");
-      if(savings>=coastNumber){document.getElementById("coastNum").classList.add("green");}
-      else{document.getElementById("coastNum").classList.remove("green");}
+<p class="disclaimer">This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.</p>
+</div><!-- end .how-it-works -->
+
+</div><!-- end .page-main -->
+
+<div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div>
+</div><!-- end .page-wrapper -->
+
+<!-- Mobile sticky bar -->
+<div class="sticky-bar">
+<div class="sticky-bar-inner">
+<span class="sticky-label">Coast FIRE Number</span>
+<span class="sticky-val" id="stickyCoastNum">—</span>
+</div>
+</div>
+
+<footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<script>
+(function(){
+  // ── Element refs ──────────────────────────────────────────────
+  var els = {
+    ageSlider:    document.getElementById('ageSlider'),
+    ageInput:     document.getElementById('ageInput'),
+    ageDisplay:   document.getElementById('ageDisplay'),
+    retireAgeSlider: document.getElementById('retireAgeSlider'),
+    retireAgeInput:  document.getElementById('retireAgeInput'),
+    retireAgeDisplay:document.getElementById('retireAgeDisplay'),
+    expensesSlider:  document.getElementById('expensesSlider'),
+    expensesInput:   document.getElementById('expensesInput'),
+    expensesDisplay: document.getElementById('expensesDisplay'),
+    savingsSlider:   document.getElementById('savingsSlider'),
+    savingsInput:    document.getElementById('savingsInput'),
+    savingsDisplay:  document.getElementById('savingsDisplay'),
+    returnRateSlider:document.getElementById('returnRateSlider'),
+    returnRateInput: document.getElementById('returnRateInput'),
+    returnRateDisplay:document.getElementById('returnRateDisplay'),
+    swrSlider:       document.getElementById('swrSlider'),
+    swrInput:        document.getElementById('swrInput'),
+    swrDisplay:      document.getElementById('swrDisplay'),
+    coastNum:        document.getElementById('coastNum'),
+    fireTarget:      document.getElementById('fireTarget'),
+    gapNum:          document.getElementById('gapNum'),
+    coastAge:        document.getElementById('coastAge'),
+    yearCount:       document.getElementById('yearCount'),
+    gapFill:         document.getElementById('gapFill'),
+    gapPct:          document.getElementById('gapPct'),
+    gapCaption:      document.getElementById('gapCaption'),
+    stickyCoastNum:  document.getElementById('stickyCoastNum'),
+  };
+
+  // ── Currency formatter ────────────────────────────────────────
+  var fmt = new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:0});
+
+  // ── Sync slider ↔ text input ──────────────────────────────────
+  function syncSlider(sliderEl, inputEl, displayEl, formatter, calcFn) {
+    function update(fromSlider) {
+      var v = parseFloat(sliderEl.value);
+      if (!fromSlider) inputEl.value = v;
+      if (displayEl) displayEl.textContent = formatter ? formatter(v) : v;
+      calcFn();
     }
-    calculate();
-    ["age","retireAge","expenses","swr","returnRate","savings"].forEach(id=>document.getElementById(id).addEventListener("input",calculate));
-  </script><footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>
+    sliderEl.addEventListener('input', function(){ update(true); });
+    inputEl.addEventListener('input', function(){
+      var v = Math.min(parseFloat(inputEl.value)||0, parseFloat(inputEl.max));
+      v = Math.max(v, parseFloat(inputEl.min));
+      sliderEl.value = v;
+      if (displayEl) displayEl.textContent = formatter ? formatter(v) : v;
+      calcFn();
+    });
+    inputEl.addEventListener('blur', function(){
+      // Clamp on blur
+      var v = Math.min(parseFloat(inputEl.value)||0, parseFloat(inputEl.max));
+      v = Math.max(v, parseFloat(inputEl.min));
+      inputEl.value = v;
+      sliderEl.value = v;
+      update(false);
+    });
+  }
+
+  // ── Chart.js setup ────────────────────────────────────────────
+  var ctx = document.getElementById('growthChart').getContext('2d');
+  var chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: 'Portfolio (no more savings)',
+          data: [],
+          borderColor: 'rgba(94,106,210,0.8)',
+          backgroundColor: 'rgba(94,106,210,0.08)',
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          fill: true,
+          tension: 0.4
+        },
+        {
+          label: 'Full FIRE Target',
+          data: [],
+          borderColor: 'rgba(16,185,129,0.5)',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          borderDash: [5,4],
+          pointRadius: 0,
+          fill: false
+        },
+        {
+          label: 'Coast FIRE Number',
+          data: [],
+          borderColor: 'rgba(249,115,22,0.7)',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          borderDash: [5,4],
+          pointRadius: 0,
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(13,15,20,0.95)',
+          borderColor: 'rgba(255,255,255,0.08)',
+          borderWidth: 1,
+          titleColor: '#8a8f98',
+          bodyColor: '#f7f8f8',
+          bodyFont: { family: 'Inter', size: 13, weight: '590' },
+          titleFont: { family: 'Inter', size: 11 },
+          padding: 10,
+          callbacks: {
+            label: function(ctx) {
+              return ' ' + ctx.dataset.label + ': ' + fmt.format(ctx.parsed.y);
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.04)', drawTicks: false },
+          border: { display: false },
+          ticks: { color: '#62666d', font: { family: 'Inter', size: 11 }, maxTicksLimit: 8, maxRotation: 0 }
+        },
+        y: {
+          grid: { color: 'rgba(255,255,255,0.04)', drawTicks: false },
+          border: { display: false },
+          ticks: {
+            color: '#62666d',
+            font: { family: 'Inter', size: 11 },
+            callback: function(v){ return '$' + (v>=1e6 ? (v/1e6).toFixed(1)+'M' : v>=1000 ? (v/1000).toFixed(0)+'K' : v); },
+            maxTicksLimit: 5
+          }
+        }
+      }
+    }
+  });
+
+  // ── Main calculate function ───────────────────────────────────
+  function calculate() {
+    var age       = parseFloat(els.ageSlider.value);
+    var retireAge = parseFloat(els.retireAgeSlider.value);
+    var expenses  = parseFloat(els.expensesSlider.value);
+    var r         = parseFloat(els.returnRateSlider.value) / 100;
+    var swr       = parseFloat(els.swrSlider.value) / 100;
+    var savings   = parseFloat(els.savingsSlider.value);
+
+    var years      = retireAge - age;
+    var fireNumber = expenses / swr;
+    var coastNumber = fireNumber / Math.pow(1 + r, years);
+    var gap        = Math.max(0, coastNumber - savings);
+    var pct        = Math.min(100, Math.max(0, (savings / coastNumber) * 100));
+    var yrsToCoast = savings >= coastNumber ? 0 : Math.log(fireNumber / savings) / Math.log(1 + r);
+    var ageAtCoast = Math.ceil(age + yrsToCoast);
+
+    // Update result boxes
+    var coastStr = savings >= coastNumber ? fmt.format(coastNumber) : fmt.format(coastNumber);
+    els.coastNum.innerHTML = coastStr + (savings >= coastNumber ? '<span class="unit — already there"></span>' : '');
+    if (savings >= coastNumber) {
+      els.coastNum.classList.add('green');
+    } else {
+      els.coastNum.classList.remove('green');
+    }
+    els.fireTarget.textContent = fmt.format(fireNumber);
+    els.gapNum.textContent = gap === 0 ? '$0' : fmt.format(gap);
+    els.coastAge.textContent  = ageAtCoast <= retireAge ? ageAtCoast : '—';
+    els.yearCount.textContent = years;
+    els.stickyCoastNum.textContent = fmt.format(coastNumber);
+
+    // Gap bar
+    if (savings >= coastNumber) {
+      els.gapFill.style.width = '100%';
+      els.gapFill.classList.add('success');
+      els.gapPct.textContent = '100%';
+      els.gapCaption.textContent = "You've reached Coast FIRE!";
+    } else {
+      els.gapFill.style.width = pct.toFixed(1) + '%';
+      els.gapFill.classList.remove('success');
+      els.gapPct.textContent = pct.toFixed(0) + '%';
+      els.gapCaption.textContent = fmt.format(gap) + ' to go';
+    }
+
+    // ── Update chart ──
+    var numYears = Math.max(years, 1);
+    var labels = [];
+    var portfolioData = [];
+    var fireLine = [];
+    var coastLine = [];
+
+    for (var y = 0; y <= numYears; y++) {
+      labels.push(age + y);
+      var pv = savings * Math.pow(1 + r, y);
+      portfolioData.push(Math.round(pv));
+      fireLine.push(Math.round(fireNumber));
+      coastLine.push(Math.round(coastNumber));
+    }
+
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = portfolioData;
+    chart.data.datasets[1].data = fireLine;
+    chart.data.datasets[2].data = coastLine;
+    chart.update('none');
+  }
+
+  // ── Wire up sliders ──────────────────────────────────────────
+  syncSlider(els.ageSlider,      els.ageInput,      els.ageDisplay,      null,       calculate);
+  syncSlider(els.retireAgeSlider,els.retireAgeInput, els.retireAgeDisplay,null,        calculate);
+  syncSlider(els.expensesSlider, els.expensesInput,  els.expensesDisplay,
+    function(v){ return '$' + v.toLocaleString(); }, calculate);
+  syncSlider(els.savingsSlider,  els.savingsInput,   els.savingsDisplay,
+    function(v){ return '$' + v.toLocaleString(); }, calculate);
+  syncSlider(els.returnRateSlider,els.returnRateInput,els.returnRateDisplay,
+    function(v){ return v + '%'; }, calculate);
+  syncSlider(els.swrSlider,      els.swrInput,      els.swrDisplay,
+    function(v){ return v + '%'; }, calculate);
+
+  // Initial calc
+  calculate();
+})();
+</script>
+</body></html>
