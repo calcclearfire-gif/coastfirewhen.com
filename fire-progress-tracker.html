@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
 <script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'FIRE Progress Tracker', 'description': 'Track your FIRE progress: assets, liabilities, net worth, and percentage of financial independence reached.', 'url': 'https://coastfirewhen.com/fire-progress-tracker.html', 'applicationCategory': 'FinanceApplication', 'operatingSystem': 'All', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'browserRequirements': 'No special requirements'}</script>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>FIRE Progress Tracker — CoastFIREWhen</title><meta content="Track your FIRE progress: assets, liabilities, net worth, and percentage of financial independence reached." name="description"/> <style>
@@ -85,7 +86,7 @@
 <meta content="summary" name="twitter:card"/>
 <meta content="FIRE Progress Tracker — CoastFIREWhen" name="twitter:title"/>
 <meta content="Track your net worth, savings rate, and progress toward your FIRE number with this interactive tracker." name="twitter:description"/>
-</head><body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebrow-purple">Tracker</p></div>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script></head><body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebrow-purple">Tracker</p></div>
 <div class="page-wrapper"><div class="page-content">
 <h1 class="page-h1">FIRE Progress Tracker</h1>
 <div class="intro-box"><p>See where you stand. Net worth, FIRE target, and how close you are to financial independence.</p></div>
@@ -93,8 +94,7 @@
 <h2>Your numbers</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" min="1000" value="50000" type="number" oninput="calculate()"/></div>
-
+<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" min="1000" oninput="calculate()" type="number" value="50000"/></div>
 <div><label>Safe Withdrawal Rate (%)</label><input id="swr" max="10" min="1" oninput="calculate()" step="0.1" type="number" value="4"/></div>
 </div>
 </div>
@@ -103,12 +103,12 @@
 <h2>Assets</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Investment Accounts (401k, IRA, brokerage)</label><input autocomplete="off" id="investments" min="0" value="150000" type="number" oninput="calculate()"/></div>
-<div><label>Real Estate Equity</label><input autocomplete="off" id="realEstate" min="0" value="100000" type="number" oninput="calculate()"/></div>
+<div><label>Investment Accounts (401k, IRA, brokerage)</label><input autocomplete="off" id="investments" min="0" oninput="calculate()" type="number" value="150000"/></div>
+<div><label>Real Estate Equity</label><input autocomplete="off" id="realEstate" min="0" oninput="calculate()" type="number" value="100000"/></div>
 </div>
 <div class="form-row form-row-2">
-<div><label>Savings / Cash</label><input autocomplete="off" id="cash" min="0" value="20000" type="number" oninput="calculate()"/></div>
-<div><label>Other Assets</label><input autocomplete="off" id="otherAssets" min="0" value="0" type="number" oninput="calculate()"/></div>
+<div><label>Savings / Cash</label><input autocomplete="off" id="cash" min="0" oninput="calculate()" type="number" value="20000"/></div>
+<div><label>Other Assets</label><input autocomplete="off" id="otherAssets" min="0" oninput="calculate()" type="number" value="0"/></div>
 </div>
 </div>
 </div>
@@ -116,8 +116,8 @@
 <h2>Liabilities</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Mortgage Balance</label><input autocomplete="off" id="mortgage" min="0" value="200000" type="number" oninput="calculate()"/></div>
-<div><label>Other Debt (student loans, car, etc.)</label><input autocomplete="off" id="otherDebt" min="0" value="10000" type="number" oninput="calculate()"/></div>
+<div><label>Mortgage Balance</label><input autocomplete="off" id="mortgage" min="0" oninput="calculate()" type="number" value="200000"/></div>
+<div><label>Other Debt (student loans, car, etc.)</label><input autocomplete="off" id="otherDebt" min="0" oninput="calculate()" type="number" value="10000"/></div>
 </div>
 </div>
 </div>
@@ -144,7 +144,7 @@
 <p>FIRE Number = Annual Expenses ÷ SWR. At 4% SWR, that's 25x your annual expenses. At 3.5% SWR (more conservative), that's about 28.5x.</p>
 </div>
 <p class="disclaimer">This tracker is for educational purposes only. FIRE depends on taxes, Social Security, pensions, healthcare, and spending flexibility. Not financial advice.</p>
-</div><div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div></div>
+</div><div class="ad-sidebar"><div class="ad-slot"></div></div></div>
 <script>
     
   
@@ -174,4 +174,4 @@ function calculate(){
       document.getElementById("result").classList.remove("hidden");
     }
     calculate();
-  </script><footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>
+  </script><div class="ad-inline"><ins class="adsbygoogle" data-ad-client="ca-pub-1342579174060580" data-ad-format="auto" data-ad-slot="banner" data-full-width-responsive="true" style="display:block;margin:24px 0"></ins></div><footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>

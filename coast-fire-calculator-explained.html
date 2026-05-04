@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Coast FIRE Calculator","description":"Calculate your Coast FIRE number: how much you need invested to coast to retirement with zero additional savings.","url":"https://coastfirewhen.com/coast-fire-calculator-explained.html","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"browserRequirements":"No special requirements"}</script>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Coast FIRE Calculator — CoastFIREWhen</title><meta content="Calculate your Coast FIRE number: how much you need invested to coast to retirement with zero additional savings." name="description"/> <style>
@@ -127,157 +128,130 @@
 <meta content="summary" name="twitter:card"/>
 <meta content="Coast FIRE Calculator Explained — CoastFIREWhen" name="twitter:title"/>
 <meta content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for." name="twitter:description"/>
-</head>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script></head>
 <body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav>
-
 <div class="page-header">
 <p class="eyebrow eyebollow-orange">Calculator</p>
 <h1 class="page-h1">Coast FIRE Calculator</h1>
 <div class="intro-box"><p>Find the exact amount you need invested to coast to your full FIRE number — with no further savings required.</p></div>
 </div>
-
 <div class="page-wrapper">
 <div class="page-main">
-
 <!-- ===== TWO-COLUMN CALCULATOR ===== -->
 <div class="calc-layout">
-
-  <!-- LEFT: Inputs -->
-  <div class="calc-inputs">
-    <h2>Your numbers</h2>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Current Age</span>
-        <span class="slider-value" id="ageDisplay">30</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="ageSlider" min="18" max="80" value="30"/>
-        <input type="number" class="slider-val-input" id="ageInput" min="18" max="80" value="30"/>
-      </div>
-    </div>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Target Retirement Age</span>
-        <span class="slider-value" id="retireAgeDisplay">65</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="retireAgeSlider" min="30" max="90" value="65"/>
-        <input type="number" class="slider-val-input" id="retireAgeInput" min="30" max="90" value="65"/>
-      </div>
-    </div>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Annual Expenses <span class="help-tip" title="How much you expect to spend per year in retirement.">?</span></span>
-        <span class="slider-value" id="expensesDisplay">$50,000</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="expensesSlider" min="10000" max="300000" step="1000" value="50000"/>
-        <input type="number" class="slider-val-input" id="expensesInput" min="1000" value="50000"/>
-      </div>
-    </div>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Current Savings <span class="help-tip" title="Total invested assets (401k, IRA, brokerage). Exclude home equity and cash reserves.">?</span></span>
-        <span class="slider-value" id="savingsDisplay">$50,000</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="savingsSlider" min="0" max="2000000" step="100" value="50000"/>
-        <input type="number" class="slider-val-input" id="savingsInput" min="0" value="50000"/>
-      </div>
-    </div>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Expected Annual Return <span class="help-tip" title="Average annual return after inflation. 7% approximates a diversified US stock portfolio historically.">?</span></span>
-        <span class="slider-value" id="returnRateDisplay">7%</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="returnRateSlider" min="1" max="15" step="0.1" value="7"/>
-        <input type="number" class="slider-val-input" id="returnRateInput" min="1" max="15" step="0.1" value="7"/>
-      </div>
-    </div>
-
-    <div class="slider-row">
-      <div class="slider-header">
-        <span class="slider-label">Safe Withdrawal Rate <span class="help-tip" title="The Trinity Study 4% rule: you can withdraw 4% of your portfolio annually with high probability of not outliving it over 30 years.">?</span></span>
-        <span class="slider-value" id="swrDisplay">4%</span>
-      </div>
-      <div class="slider-extra">
-        <input type="range" id="swrSlider" min="1" max="10" step="0.1" value="4"/>
-        <input type="number" class="slider-val-input" id="swrInput" min="1" max="10" step="0.1" value="4"/>
-      </div>
-    </div>
-  </div>
-
-  <!-- RIGHT: Results + Chart -->
-  <div class="calc-results">
-    <h2>Your Coast FIRE number</h2>
-
-    <div class="result-box">
-      <h4>Coast FIRE Number</h4>
-      <div class="result-big" id="coastNum">—</div>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat"><div class="stat-val" id="fireTarget">—</div><div class="stat-lbl">Full FIRE Target</div></div>
-      <div class="stat"><div class="stat-val" id="gapNum">—</div><div class="stat-lbl">Gap</div></div>
-      <div class="stat"><div class="stat-val" id="coastAge">—</div><div class="stat-lbl">Coast Age</div></div>
-      <div class="stat"><div class="stat-val" id="yearCount">—</div><div class="stat-lbl">Years Left</div></div>
-    </div>
-
-    <!-- Compound growth chart -->
-    <div class="chart-wrap">
-      <canvas id="growthChart"></canvas>
-    </div>
-
-    <!-- Gap progress bar -->
-    <div class="gap-section">
-      <div class="gap-labels"><span>Savings progress to Coast</span><span id="gapPct">—</span></div>
-      <div class="gap-bar"><div class="gap-fill" id="gapFill" style="width:0%"></div></div>
-      <div class="gap-caption" id="gapCaption">Enter your numbers to see progress</div>
-    </div>
-  </div>
-
+<!-- LEFT: Inputs -->
+<div class="calc-inputs">
+<h2>Your numbers</h2>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Current Age</span>
+<span class="slider-value" id="ageDisplay">30</span>
+</div>
+<div class="slider-extra">
+<input id="ageSlider" max="80" min="18" type="range" value="30"/>
+<input class="slider-val-input" id="ageInput" max="80" min="18" type="number" value="30"/>
+</div>
+</div>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Target Retirement Age</span>
+<span class="slider-value" id="retireAgeDisplay">65</span>
+</div>
+<div class="slider-extra">
+<input id="retireAgeSlider" max="90" min="30" type="range" value="65"/>
+<input class="slider-val-input" id="retireAgeInput" max="90" min="30" type="number" value="65"/>
+</div>
+</div>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Annual Expenses <span class="help-tip" title="How much you expect to spend per year in retirement.">?</span></span>
+<span class="slider-value" id="expensesDisplay">$50,000</span>
+</div>
+<div class="slider-extra">
+<input id="expensesSlider" max="300000" min="10000" step="1000" type="range" value="50000"/>
+<input class="slider-val-input" id="expensesInput" min="1000" type="number" value="50000"/>
+</div>
+</div>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Current Savings <span class="help-tip" title="Total invested assets (401k, IRA, brokerage). Exclude home equity and cash reserves.">?</span></span>
+<span class="slider-value" id="savingsDisplay">$50,000</span>
+</div>
+<div class="slider-extra">
+<input id="savingsSlider" max="2000000" min="0" step="100" type="range" value="50000"/>
+<input class="slider-val-input" id="savingsInput" min="0" type="number" value="50000"/>
+</div>
+</div>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Expected Annual Return <span class="help-tip" title="Average annual return after inflation. 7% approximates a diversified US stock portfolio historically.">?</span></span>
+<span class="slider-value" id="returnRateDisplay">7%</span>
+</div>
+<div class="slider-extra">
+<input id="returnRateSlider" max="15" min="1" step="0.1" type="range" value="7"/>
+<input class="slider-val-input" id="returnRateInput" max="15" min="1" step="0.1" type="number" value="7"/>
+</div>
+</div>
+<div class="slider-row">
+<div class="slider-header">
+<span class="slider-label">Safe Withdrawal Rate <span class="help-tip" title="The Trinity Study 4% rule: you can withdraw 4% of your portfolio annually with high probability of not outliving it over 30 years.">?</span></span>
+<span class="slider-value" id="swrDisplay">4%</span>
+</div>
+<div class="slider-extra">
+<input id="swrSlider" max="10" min="1" step="0.1" type="range" value="4"/>
+<input class="slider-val-input" id="swrInput" max="10" min="1" step="0.1" type="number" value="4"/>
+</div>
+</div>
+</div>
+<!-- RIGHT: Results + Chart -->
+<div class="calc-results">
+<h2>Your Coast FIRE number</h2>
+<div class="result-box">
+<h4>Coast FIRE Number</h4>
+<div class="result-big" id="coastNum">—</div>
+</div>
+<div class="stats-row">
+<div class="stat"><div class="stat-val" id="fireTarget">—</div><div class="stat-lbl">Full FIRE Target</div></div>
+<div class="stat"><div class="stat-val" id="gapNum">—</div><div class="stat-lbl">Gap</div></div>
+<div class="stat"><div class="stat-val" id="coastAge">—</div><div class="stat-lbl">Coast Age</div></div>
+<div class="stat"><div class="stat-val" id="yearCount">—</div><div class="stat-lbl">Years Left</div></div>
+</div>
+<!-- Compound growth chart -->
+<div class="chart-wrap">
+<canvas id="growthChart"></canvas>
+</div>
+<!-- Gap progress bar -->
+<div class="gap-section">
+<div class="gap-labels"><span>Savings progress to Coast</span><span id="gapPct">—</span></div>
+<div class="gap-bar"><div class="gap-fill" id="gapFill" style="width:0%"></div></div>
+<div class="gap-caption" id="gapCaption">Enter your numbers to see progress</div>
+</div>
+</div>
 </div><!-- end .calc-layout -->
-
 <!-- ===== HOW IT WORKS (full width) ===== -->
 <div class="how-it-works">
 <h2 class="page-h2">How it works</h2>
 <p class="page-p">The calculation has three steps:</p>
-
 <h3 class="page-h3">1. Full FIRE Target</h3>
 <div class="formula">Full FIRE Number = Annual Expenses ÷ SWR<br/><span style="color:var(--text-muted);font-size:12px;">Example: $50,000 ÷ 0.04 = $1,250,000</span></div>
-
 <h3 class="page-h3">2. Years to Retirement</h3>
 <div class="formula">Years = Target Retirement Age − Current Age<br/><span style="color:var(--text-muted);font-size:12px;">Example: 65 − 30 = 35 years</span></div>
-
 <h3 class="page-h3">3. Coast FIRE Number</h3>
 <div class="formula">Coast FIRE Number = Full FIRE ÷ (1 + r)<sup>years</sup><br/><span style="color:var(--text-muted);font-size:12px;">Example: $1,250,000 ÷ 1.07<sup>35</sup> = $117,000</span></div>
-
 <p class="page-p">Once your portfolio hits your Coast FIRE number, you can stop saving entirely. The market does the rest.</p>
-
 <div class="callout callout-amber">
 <h4>Why 7% and 4%?</h4>
 <p>7% is the approximate historical average return of a diversified US stock portfolio after inflation. 4% is the Trinity Study safe withdrawal rate — the amount you can withdraw annually with a high probability of not outliving your money over 30 years. Starting points, not guarantees.</p>
 </div>
-
 <div class="callout callout-blue">
 <h4>Social Security is not included</h4>
 <p>This calculator uses your full annual expenses to derive your FIRE target. If you expect Social Security income in retirement, your actual portfolio target may be lower — because SS typically covers 30–50% of expenses for average earners. Including it would produce a smaller Coast FIRE number and an earlier coast date. The tradeoff: SS estimates depend on your claimed earnings history, your claiming age (62 vs. 70 produces roughly a 70% difference in monthly benefit), and whether the Social Security trust fund remains fully funded. The trust fund is projected to be depleted by the mid-2030s, which would trigger an automatic ~23% benefit reduction without Congressional action. Enter your full expenses here for the conservative (portfolio-only) calculation. Check your actual SS estimate at <strong style="color:var(--accent-light);">ssa.gov/my-account</strong>.</p>
 </div>
-
 <p class="disclaimer">This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.</p>
 </div><!-- end .how-it-works -->
-
 </div><!-- end .page-main -->
-
-<div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div>
+<div class="ad-sidebar"><ins class="adsbygoogle" data-ad-client="ca-pub-1342579174060580" data-ad-format="auto" data-ad-slot="sidebar" data-full-width-responsive="true" style="display:block"></ins></div>
 </div><!-- end .page-wrapper -->
-
 <!-- Mobile sticky bar -->
 <div class="sticky-bar">
 <div class="sticky-bar-inner">
@@ -285,12 +259,9 @@
 <span class="sticky-val" id="stickyCoastNum">—</span>
 </div>
 </div>
-
 <footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
-
 <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-
 <script>
 (function(){
   // ── Element refs ──────────────────────────────────────────────
