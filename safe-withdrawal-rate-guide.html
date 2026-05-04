@@ -86,9 +86,9 @@
 <h2>Test your withdrawal rate</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Portfolio Value ($)</label><input autocomplete="off" id="portfolio" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="1000000"/></div>
+<div><label>Portfolio Value ($)</label><input autocomplete="off" id="portfolio" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="1000000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 
-<div><label>Annual Withdrawal ($)</label><input autocomplete="off" id="withdrawal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="40000"/></div>
+<div><label>Annual Withdrawal ($)</label><input autocomplete="off" id="withdrawal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="40000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 </div>
 <div class="form-row form-row-3">
 <div><label>Years in Retirement</label><input id="years" max="50" min="10" type="number" value="30"/></div>

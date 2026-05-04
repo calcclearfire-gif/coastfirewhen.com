@@ -93,7 +93,7 @@
 <h2>Your numbers</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="50000"/></div>
+<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="50000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 
 <div><label>Safe Withdrawal Rate (%)</label><input id="swr" max="10" min="1" oninput="calculate()" step="0.1" type="number" value="4"/></div>
 </div>
@@ -103,12 +103,12 @@
 <h2>Assets</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Investment Accounts (401k, IRA, brokerage)</label><input autocomplete="off" id="investments" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="150000"/></div>
-<div><label>Real Estate Equity</label><input autocomplete="off" id="realEstate" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="100000"/></div>
+<div><label>Investment Accounts (401k, IRA, brokerage)</label><input autocomplete="off" id="investments" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="150000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Real Estate Equity</label><input autocomplete="off" id="realEstate" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="100000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 </div>
 <div class="form-row form-row-2">
-<div><label>Savings / Cash</label><input autocomplete="off" id="cash" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="20000"/></div>
-<div><label>Other Assets</label><input autocomplete="off" id="otherAssets" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="0"/></div>
+<div><label>Savings / Cash</label><input autocomplete="off" id="cash" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="20000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Other Assets</label><input autocomplete="off" id="otherAssets" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="0" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 </div>
 </div>
 </div>
@@ -116,8 +116,8 @@
 <h2>Liabilities</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Mortgage Balance</label><input autocomplete="off" id="mortgage" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="200000"/></div>
-<div><label>Other Debt (student loans, car, etc.)</label><input autocomplete="off" id="otherDebt" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="10000"/></div>
+<div><label>Mortgage Balance</label><input autocomplete="off" id="mortgage" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="200000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Other Debt (student loans, car, etc.)</label><input autocomplete="off" id="otherDebt" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="calculate()" pattern="[0-9,]*" type="text" value="10000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
 </div>
 </div>
 </div>
