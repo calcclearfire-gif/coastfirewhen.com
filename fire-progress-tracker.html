@@ -74,7 +74,7 @@
     .progress-bar{height:5px;background:var(--bg-surface);border-radius:999px;overflow:hidden;}
     .progress-fill{height:100%;border-radius:999px;background:var(--accent);transition:width .4s ease;}
     .progress-fill.green{background:var(--success);}.progress-fill.orange{background:#f97316;}
-  </style>  <link rel="canonical" href="https://coastfirewhen.com/fire-progress-tracker.html">
+  .ad-slot{background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;padding:20px;text-align:center;margin:24px 0;}.ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}</style>  <link rel="canonical" href="https://coastfirewhen.com/fire-progress-tracker.html">
   <meta property="og:title" content="FIRE Progress Tracker — CoastFIREWhen">
   <meta property="og:description" content="Track your net worth, savings rate, and progress toward your FIRE number with this interactive tracker.">
   <meta property="og:type" content="website">
@@ -90,8 +90,10 @@
       <h2>Your numbers</h2>
       <div class="form-grid">
         <div class="form-row form-row-2">
-          <div><label>Annual Expenses ($/year)</label><input type="number" id="expenses" value="50000" min="1000" oninput="calculate()"></div>
-          <div><label>Safe Withdrawal Rate (%)</label><input type="number" id="swr" value="4" min="1" max="10" step="0.1" oninput="calculate()"></div>
+          <div><label>Annual Expenses ($/year)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="expenses" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="50000" min="1000" oninput="calculate()"></div>
+          
+<div class="ad-slot"><p>Advertisement</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+<div><label>Safe Withdrawal Rate (%)</label><input type="number" id="swr" value="4" min="1" max="10" step="0.1" oninput="calculate()"></div>
         </div>
       </div>
     </div>
@@ -99,12 +101,12 @@
       <h2>Assets</h2>
       <div class="form-grid">
         <div class="form-row form-row-2">
-          <div><label>Investment Accounts (401k, IRA, brokerage)</label><input type="number" id="investments" value="150000" min="0" oninput="calculate()"></div>
-          <div><label>Real Estate Equity</label><input type="number" id="realEstate" value="100000" min="0" oninput="calculate()"></div>
+          <div><label>Investment Accounts (401k, IRA, brokerage)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="investments" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="150000" min="0" oninput="calculate()"></div>
+          <div><label>Real Estate Equity</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="realEstate" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="100000" min="0" oninput="calculate()"></div>
         </div>
         <div class="form-row form-row-2">
-          <div><label>Savings / Cash</label><input type="number" id="cash" value="20000" min="0" oninput="calculate()"></div>
-          <div><label>Other Assets</label><input type="number" id="otherAssets" value="0" min="0" oninput="calculate()"></div>
+          <div><label>Savings / Cash</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="cash" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="20000" min="0" oninput="calculate()"></div>
+          <div><label>Other Assets</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="otherAssets" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="0" min="0" oninput="calculate()"></div>
         </div>
       </div>
     </div>
@@ -112,8 +114,8 @@
       <h2>Liabilities</h2>
       <div class="form-grid">
         <div class="form-row form-row-2">
-          <div><label>Mortgage Balance</label><input type="number" id="mortgage" value="200000" min="0" oninput="calculate()"></div>
-          <div><label>Other Debt (student loans, car, etc.)</label><input type="number" id="otherDebt" value="10000" min="0" oninput="calculate()"></div>
+          <div><label>Mortgage Balance</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="mortgage" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="200000" min="0" oninput="calculate()"></div>
+          <div><label>Other Debt (student loans, car, etc.)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="otherDebt" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="10000" min="0" oninput="calculate()"></div>
         </div>
       </div>
     </div>
@@ -145,7 +147,11 @@
     <p class="disclaimer">This tracker is for educational purposes only. FIRE depends on taxes, Social Security, pensions, healthcare, and spending flexibility. Not financial advice.</p>
   </div>
   <script>
-    function calculate(){
+    
+  
+  function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+function calculate(){
       const expenses=parseFloat(document.getElementById("expenses").value)||0;
       const swr=parseFloat(document.getElementById("swr").value)/100||0.04;
       const investments=parseFloat(document.getElementById("investments").value)||0;

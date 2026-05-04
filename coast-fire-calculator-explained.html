@@ -74,7 +74,7 @@
     .progress-bar{height:5px;background:var(--bg-surface);border-radius:999px;overflow:hidden;}
     .progress-fill{height:100%;border-radius:999px;background:var(--accent);transition:width .4s ease;}
     .progress-fill.green{background:var(--success);}.progress-fill.orange{background:#f97316;}
-  </style>  <link rel="canonical" href="https://coastfirewhen.com/coast-fire-calculator-explained.html">
+  .ad-slot{background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;padding:20px;text-align:center;margin:24px 0;}.ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}</style>  <link rel="canonical" href="https://coastfirewhen.com/coast-fire-calculator-explained.html">
   <meta property="og:title" content="Coast FIRE Calculator Explained — CoastFIREWhen">
   <meta property="og:description" content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for.">
   <meta property="og:type" content="website">
@@ -91,15 +91,17 @@
       <div class="form-grid">
         <div class="form-row form-row-2">
           <div><label>Current Age</label><input type="number" id="age" value="30" min="18" max="80"></div>
-          <div><label>Target Retirement Age</label><input type="number" id="retireAge" value="65" min="30" max="90"></div>
+          
+<div class="ad-slot"><p>Advertisement</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+<div><label>Target Retirement Age</label><input type="number" id="retireAge" value="65" min="30" max="90"></div>
         </div>
         <div class="form-row form-row-2">
-          <div><label>Annual Expenses ($/year)</label><input type="number" id="expenses" value="50000" min="1000"></div>
+          <div><label>Annual Expenses ($/year)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="expenses" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="50000" min="1000"></div>
           <div><label>Safe Withdrawal Rate (%)</label><input type="number" id="swr" value="4" min="1" max="10" step="0.1"></div>
         </div>
         <div class="form-row form-row-2">
           <div><label>Expected Annual Return (%)</label><input type="number" id="returnRate" value="7" min="1" max="15" step="0.1"></div>
-          <div><label>Current Savings ($)</label><input type="number" id="savings" value="50000" min="0"></div>
+          <div><label>Current Savings ($)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="savings" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="50000" min="0"></div>
         </div>
         <button onclick="calculate()" class="btn btn-primary" style="align-self:flex-start;">Calculate</button>
       </div>
@@ -139,7 +141,11 @@
     <p class="disclaimer">This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.</p>
   </div>
   <script>
-    function calculate(){
+    
+  
+  function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+function calculate(){
       const age=parseFloat(document.getElementById("age").value);
       const retireAge=parseFloat(document.getElementById("retireAge").value);
       const expenses=parseFloat(document.getElementById("expenses").value);
