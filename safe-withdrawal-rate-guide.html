@@ -86,9 +86,9 @@
 <h2>Test your withdrawal rate</h2>
 <div class="form-grid">
 <div class="form-row form-row-2">
-<div><label>Portfolio Value ($)</label><input autocomplete="off" id="portfolio" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="1000000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Portfolio Value ($)</label><input autocomplete="off" id="portfolio" min="1000" value="1000000" type="number"/></div>
 
-<div><label>Annual Withdrawal ($)</label><input autocomplete="off" id="withdrawal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="40000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Annual Withdrawal ($)</label><input autocomplete="off" id="withdrawal" min="0" value="40000" type="number"/></div>
 </div>
 <div class="form-row form-row-3">
 <div><label>Years in Retirement</label><input id="years" max="50" min="10" type="number" value="30"/></div>
@@ -145,8 +145,8 @@
 <script>
     
   
-  function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
-function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+  
+
 function calculate(){
       const portfolio=parseFloat(document.getElementById("portfolio").value)||0;
       const withdrawal=parseFloat(document.getElementById("withdrawal").value)||0;

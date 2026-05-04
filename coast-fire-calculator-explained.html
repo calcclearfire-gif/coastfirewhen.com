@@ -98,12 +98,12 @@
 <div><label>Target Retirement Age</label><input id="retireAge" max="90" min="30" type="number" value="65"/></div>
 </div>
 <div class="form-row form-row-2">
-<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="50000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Annual Expenses ($/year)</label><input autocomplete="off" id="expenses" min="1000" value="50000" type="number"/></div>
 <div><label>Safe Withdrawal Rate (%)</label><input id="swr" max="10" min="1" step="0.1" type="number" value="4"/></div>
 </div>
 <div class="form-row form-row-2">
 <div><label>Expected Annual Return (%)</label><input id="returnRate" max="15" min="1" step="0.1" type="number" value="7"/></div>
-<div><label>Current Savings ($)</label><input autocomplete="off" id="savings" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="50000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Current Savings ($)</label><input autocomplete="off" id="savings" min="0" value="50000" type="number"/></div>
 </div>
 <button class="btn btn-primary" onclick="calculate()" style="align-self:flex-start;">Calculate</button>
 </div>
@@ -142,8 +142,8 @@
 <script>
     
   
-  function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
-function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+  
+
 function calculate(){
       const age=parseFloat(document.getElementById("age").value);
       const retireAge=parseFloat(document.getElementById("retireAge").value);

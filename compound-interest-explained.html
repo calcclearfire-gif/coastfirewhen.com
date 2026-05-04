@@ -86,9 +86,9 @@
 <h2>See it in action</h2>
 <div class="form-grid">
 <div class="form-row form-row-3">
-<div><label>Starting Amount ($)</label><input autocomplete="off" id="principal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="10000" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Starting Amount ($)</label><input autocomplete="off" id="principal" min="0" value="10000" type="number"/></div>
 
-<div><label>Monthly Contribution ($)</label><input autocomplete="off" id="monthly" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" pattern="[0-9,]*" type="text" value="500" onfocus="if(this.value)this.value=this.value.replace(/,/g,\'\')"/></div>
+<div><label>Monthly Contribution ($)</label><input autocomplete="off" id="monthly" min="0" value="500" type="number"/></div>
 <div><label>Annual Return (%)</label><input id="annualReturn" max="20" min="0" step="0.1" type="number" value="7"/></div>
 </div>
 <div class="form-row form-row-2">
@@ -129,8 +129,8 @@
 <script>
     
   
-  function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
-function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
+  
+
 function calculate(){
       const p=parseFloat(document.getElementById("principal").value)||0;
       const m=parseFloat(document.getElementById("monthly").value)||0;
