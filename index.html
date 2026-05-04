@@ -11,8 +11,8 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;510;590&family=JetBrains+Mono:wght@400;500&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #08090a; --bg-panel: #0f1011; --bg-surface: #191a1b; --bg-hover: #28282c;
-      --text-primary: #f7f8f8; --text-secondary: #d0d6e0; --text-tertiary: #8a8f98; --text-muted: #62666d;
+      --bg: #0d0f14; --bg-panel: #0f1011; --bg-surface: #191a1b; --bg-hover: #28282c;
+      --text-primary: #f7f8f8; --text-secondary: #d0d6e0; --text-tertiary: #A3A3A3; --text-muted: #62666d;
       --accent: #5e6ad2; --accent-hover: #7170ff; --accent-light: #828fff;
       --success: #10b981;
       --border: rgba(255,255,255,0.08); --border-subtle: rgba(255,255,255,0.05); --border-solid: #23252a;
@@ -23,7 +23,7 @@
     a { color: inherit; text-decoration: none; }
     ::selection { background: var(--accent); color: #fff; }
 
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,9,10,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-subtle); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,15,20,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-subtle); }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { font-size: 15px; font-weight: 510; letter-spacing: -0.01em; color: var(--text-secondary); }
     .nav-logo span { color: var(--text-primary); }
@@ -34,13 +34,13 @@
     .hero { padding: 96px 24px 80px; text-align: center; }
     .hero-eyebrow { font-size: 12px; font-weight: 510; color: var(--accent-light); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
     .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 510; line-height: 1.05; letter-spacing: -0.025em; color: var(--text-primary); margin-bottom: 20px; }
-    .hero p { font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--text-tertiary); max-width: 520px; margin: 0 auto 36px; }
+    .hero p { font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--text-tertiary); max-width: 520px; margin: 0 auto 20px; }
     .hero-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
     .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 6px; font-size: 14px; font-weight: 510; cursor: pointer; transition: all 0.15s; border: none; }
     .btn-primary { background: var(--accent); color: #fff; }
     .btn-primary:hover { background: var(--accent-hover); color: #fff; }
-    .btn-ghost { background: rgba(255,255,255,0.03); color: var(--text-secondary); border: 1px solid var(--border); }
+    .btn-ghost { background: rgba(255,255,255,0.05); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.12); }
     .btn-ghost:hover { background: rgba(255,255,255,0.07); color: var(--text-primary); }
 
     .cards-section { padding: 0 24px 96px; }
@@ -51,8 +51,7 @@
     .card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 22px; transition: border-color 0.15s, background 0.15s; display: block; }
     .card:hover { border-color: rgba(255,255,255,0.13); background: rgba(255,255,255,0.04); }
     .card-eyebrow { font-size: 11px; font-weight: 510; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-    .eyebrow-orange { color: #f97316; } .eyebrow-blue { color: #60a5fa; }
-    .eyebrow-green { color: var(--success); } .eyebrow-purple { color: var(--accent-light); }
+    .eyebrow-muted { color: var(--text-muted); }
     .card h3 { font-size: 16px; font-weight: 590; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.01em; }
     .card p { font-size: 14px; font-weight: 300; line-height: 1.6; color: var(--text-tertiary); }
 
@@ -111,10 +110,7 @@
     .page-header { padding: 52px 24px 0; max-width: 1100px; margin: 0 auto; }
     .page-content { max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; }
     .eyebrow { font-size: 12px; font-weight: 510; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-    .eyebrow-orange { color: #f97316; }
-    .eyebrow-blue { color: #60a5fa; }
-    .eyebrow-green { color: var(--success); }
-    .eyebrow-purple { color: var(--accent-light); }
+    .eyebrow-muted { color: var(--text-muted); }
 
     .intro-box { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin: 24px 0 32px; }
     .intro-box p { font-size: 17px; font-weight: 300; line-height: 1.65; color: var(--text-secondary); margin: 0; }
@@ -172,37 +168,37 @@
 <div class="cards-header"><h2>Tools &amp; Guides</h2></div>
 <div class="cards-grid">
 <a class="card" href="/coast-fire-calculator-explained.html">
-<div class="card-eyebrow eyebrow-orange">Calculator</div>
+<div class="card-eyebrow eyebrow-muted">Calculator</div>
 <h3>Coast FIRE Calculator</h3>
 <p>Get your exact Coast FIRE number. Know when you can stop saving and still hit your retirement target.</p>
 </a>
 <a class="card" href="/fire-progress-tracker.html">
-<div class="card-eyebrow eyebrow-purple">Tracker</div>
+<div class="card-eyebrow eyebrow-muted">Tracker</div>
 <h3>FIRE Progress Tracker</h3>
 <p>Assets, liabilities, net worth. See what percentage of financial independence you've already reached.</p>
 </a>
 <a class="card" href="/safe-withdrawal-rate-guide.html">
-<div class="card-eyebrow eyebrow-green">Calculator</div>
+<div class="card-eyebrow eyebrow-muted">Calculator</div>
 <h3>Safe Withdrawal Rate</h3>
 <p>The 4% rule, Trinity Study, sequence of returns risk — and your personalized withdrawal number.</p>
 </a>
 <a class="card" href="/compound-interest-explained.html">
-<div class="card-eyebrow eyebrow-blue">Guide</div>
+<div class="card-eyebrow eyebrow-muted">Guide</div>
 <h3>Compound Interest</h3>
 <p>Why starting early beats saving more. Rule of 72, the math, and why it matters for your timeline.</p>
 </a>
 <a class="card" href="/what-is-coast-fire.html">
-<div class="card-eyebrow eyebrow-blue">Guide</div>
+<div class="card-eyebrow eyebrow-muted">Guide</div>
 <h3>What is Coast FIRE?</h3>
 <p>Save aggressively now, then back off — compound growth does the rest. The 30-second explanation.</p>
 </a>
 <a class="card" href="/margin-vs-markup-guide.html">
-<div class="card-eyebrow eyebrow-green">Business</div>
+<div class="card-eyebrow eyebrow-muted">Business</div>
 <h3>Margin vs. Markup</h3>
 <p>Two numbers that look the same but aren't. How to use each one without confusing them.</p>
 </a>
 <a class="card" href="/probate-guide.html">
-<div class="card-eyebrow eyebrow-purple">Guide</div>
+<div class="card-eyebrow eyebrow-muted">Guide</div>
 <h3>Probate Guide</h3>
 <p>What actually happens when someone dies — plain English, real numbers on cost and time.</p>
 </a>
