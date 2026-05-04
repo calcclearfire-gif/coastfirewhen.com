@@ -1,6 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en"><head>
 <script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': 'What is compound interest?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Compound interest is when your returns generate their own returns. Interest earns interest. Over long time horizons, this accelerates growth dramatically.'}}, {'@type': 'Question', 'name': 'What is the Rule of 72?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'Divide 72 by your annual return rate to estimate years to double your money. At 7% returns, money doubles roughly every 10.3 years.'}}, {'@type': 'Question', 'name': 'How does starting age affect compound growth?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'A 22-year-old investing $200/month at 7% accumulates roughly $1,034,000 by age 65. A 32-year-old investing $400/month at the same rate accumulates about $986,000. Starting 10 years earlier beats saving twice as much.'}}, {'@type': 'Question', 'name': 'What return rate should I use?', 'acceptedAnswer': {'@type': 'Answer', 'text': '7% is the approximate historical average of a diversified US stock portfolio after inflation. This is a starting point, not a guarantee.'}}]}</script>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Compound Interest Explained — CoastFIREWhen</title><meta name="description" content="How compound growth works, the Rule of 72, and why starting early matters more than saving more.">  <style>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Compound Interest Explained — CoastFIREWhen</title><meta content="How compound growth works, the Rule of 72, and why starting early matters more than saving more." name="description"/> <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;510;590&family=JetBrains+Mono:wght@400;500&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{--bg:#08090a;--bg-panel:#0f1011;--bg-surface:#191a1b;--bg-hover:#28282c;--text-primary:#f7f8f8;--text-secondary:#d0d6e0;--text-tertiary:#8a8f98;--text-muted:#62666d;--accent:#5e6ad2;--accent-hover:#7170ff;--accent-light:#828fff;--success:#10b981;--border:rgba(255,255,255,0.08);--border-subtle:rgba(255,255,255,0.05);--border-solid:#23252a;--font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;}
@@ -13,7 +14,7 @@
     .nav-links a{font-size:14px;font-weight:510;color:var(--text-tertiary);padding:6px 10px;border-radius:6px;transition:background .15s,color .15s;}
     .nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--text-secondary);}
     .page-header{padding:52px 24px 0;max-width:1100px;margin:0 auto;}
-    .page-content{max-width:680px;margin:0 auto;padding:32px 24px 80px;}
+    
     .eyebrow{font-size:12px;font-weight:510;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
     .eyebrow-orange{color:#f97316;}.eyebrow-blue{color:#60a5fa;}.eyebrow-green{color:var(--success);}.eyebrow-purple{color:var(--accent-light);}
     .page-h1{font-size:34px;font-weight:510;letter-spacing:-.025em;color:var(--text-primary);margin-bottom:16px;line-height:1.1;}
@@ -67,68 +68,65 @@
     .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:6px;font-size:14px;font-weight:510;cursor:pointer;transition:all .15s;border:none;}
     .btn-primary{background:var(--accent);color:#fff;}.btn-primary:hover{background:var(--accent-hover);color:#fff;}
     .btn-ghost{background:rgba(255,255,255,0.03);color:var(--text-secondary);border:1px solid var(--border);}.btn-ghost:hover{background:rgba(255,255,255,0.07);color:var(--text-primary);}
-  .ad-slot{background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;padding:20px;text-align:center;margin:24px 0;}.ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}</style>  <link rel="canonical" href="https://coastfirewhen.com/compound-interest-explained.html">
-  <meta property="og:title" content="Compound Interest Explained — CoastFIREWhen">
-  <meta property="og:description" content="How compound interest works, the Rule of 72, and why starting early matters more than you think.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Compound Interest Explained — CoastFIREWhen">
-  <meta name="twitter:description" content="How compound interest works, the Rule of 72, and why starting early matters more than you think.">
-</head><body><nav><div class="nav-inner"><a href="/" class="nav-logo">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebollow-blue">Guide</p></div>
-  <div class="page-content">
-    <h1 class="page-h1">Compound Interest</h1>
-    <div class="intro-box"><p>Einstein probably didn't say it. But it's still true: compound growth is the most powerful force in personal finance — and it rewards the patient.</p></div>
+  .ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+    .ad-slot{min-height:600px}
+    .page-wrapper{display:flex;gap:32px;align-items:flex-start;max-width:960px;margin:0 auto;padding:40px 24px 80px}.ad-sidebar{width:160px;flex-shrink:0;position:sticky;top:72px}@media(max-width:900px){.page-wrapper{display:block;padding:40px 24px 80px}.ad-sidebar{width:100%;position:static;margin-top:32px}}
+    .page-content{flex:1;min-width:0}</style> <link href="https://coastfirewhen.com/compound-interest-explained.html" rel="canonical"/>
+<meta content="Compound Interest Explained — CoastFIREWhen" property="og:title"/>
+<meta content="How compound interest works, the Rule of 72, and why starting early matters more than you think." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Compound Interest Explained — CoastFIREWhen" name="twitter:title"/>
+<meta content="How compound interest works, the Rule of 72, and why starting early matters more than you think." name="twitter:description"/>
+</head><body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebollow-blue">Guide</p></div>
+<div class="page-wrapper"><div class="page-content">
+<h1 class="page-h1">Compound Interest</h1>
+<div class="intro-box"><p>Einstein probably didn't say it. But it's still true: compound growth is the most powerful force in personal finance — and it rewards the patient.</p></div>
+<div class="calc-card">
+<h2>See it in action</h2>
+<div class="form-grid">
+<div class="form-row form-row-3">
+<div><label>Starting Amount ($)</label><input autocomplete="off" id="principal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="10000"/></div>
 
-    <div class="calc-card">
-      <h2>See it in action</h2>
-      <div class="form-grid">
-        <div class="form-row form-row-3">
-          <div><label>Starting Amount ($)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="principal" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="10000" min="0"></div>
-          
-<div class="ad-slot"><p>Advertisement</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
-<div><label>Monthly Contribution ($)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="monthly" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="500" min="0"></div>
-          <div><label>Annual Return (%)</label><input type="number" id="annualReturn" value="7" min="0" max="20" step="0.1"></div>
-        </div>
-        <div class="form-row form-row-2">
-          <div><label>Years</label><input type="number" id="years" value="30" min="1" max="60"></div>
-          <div style="display:flex;align-items:flex-end;"><button onclick="calculate()" class="btn btn-primary" style="width:100%;">Calculate</button></div>
-        </div>
-      </div>
-    </div>
-    <div id="result" class="hidden">
-      <div class="stats-row">
-        <div class="stat"><div class="stat-val" id="fv" style="font-size:15px;">—</div><div class="stat-lbl">Portfolio Value</div></div>
-        <div class="stat"><div class="stat-val" id="growth" style="font-size:15px;color:var(--success);">—</div><div class="stat-lbl">Growth</div></div>
-        <div class="stat"><div class="stat-val" id="contributed" style="font-size:15px;">—</div><div class="stat-lbl">Contributed</div></div>
-      </div>
-    </div>
-
-    <h2 class="page-h2">The formula</h2>
-    <div class="formula">Future Value = Principal × (1 + r)<sup>n</sup> + Monthly × [((1 + r)<sup>n</sup> − 1) / r]<br><span style="color:var(--text-muted);font-size:12px;">r = annual rate ÷ 12 (monthly periods) &nbsp;|&nbsp; n = years × 12 (total months)</span></div>
-
-    <h2 class="page-h2">The Rule of 72</h2>
-    <p class="page-p">Divide 72 by your annual return rate to get the approximate years to double your money. No calculator needed.</p>
-    <table class="t">
-      <thead><tr><th>Return Rate</th><th>Years to Double</th></tr></thead>
-      <tbody>
-        <tr><td>4%</td><td>18 years</td></tr>
-        <tr><td>6%</td><td>12 years</td></tr>
-        <tr><td>7%</td><td class="hl">10.3 years</td></tr>
-        <tr><td>8%</td><td>9 years</td></tr>
-        <tr><td>10%</td><td>7.2 years</td></tr>
-      </tbody>
-    </table>
-
-    <h2 class="page-h2">Time beats returns</h2>
-    <p class="page-p">A 22-year-old who invests $200/month at 7% until age 65 accumulates roughly $1,034,000. A 32-year-old who invests $400/month — double the amount — at the same rate accumulates roughly $986,000. Starting ten years earlier beats saving twice as much. That's the Coast FIRE insight in a nutshell.</p>
-
-    <div class="callout callout-amber">
-      <h4>Why Coast FIRE rewards early savers</h4>
-      <p>Every dollar you save in your 20s or 30s that sits in the market for 30 years is worth 3–4x a dollar saved in your 40s. Hitting your Coast FIRE number early matters more than squeezing extra savings later.</p>
-    </div>
-    <p class="disclaimer">This calculator uses constant annual returns. Market returns vary year to year. For educational illustration only, not financial advice.</p>
-  </div>
-  <script>
+<div><label>Monthly Contribution ($)</label><input autocomplete="off" id="monthly" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="500"/></div>
+<div><label>Annual Return (%)</label><input id="annualReturn" max="20" min="0" step="0.1" type="number" value="7"/></div>
+</div>
+<div class="form-row form-row-2">
+<div><label>Years</label><input id="years" max="60" min="1" type="number" value="30"/></div>
+<div style="display:flex;align-items:flex-end;"><button class="btn btn-primary" onclick="calculate()" style="width:100%;">Calculate</button></div>
+</div>
+</div>
+</div>
+<div class="hidden" id="result">
+<div class="stats-row">
+<div class="stat"><div class="stat-val" id="fv" style="font-size:15px;">—</div><div class="stat-lbl">Portfolio Value</div></div>
+<div class="stat"><div class="stat-val" id="growth" style="font-size:15px;color:var(--success);">—</div><div class="stat-lbl">Growth</div></div>
+<div class="stat"><div class="stat-val" id="contributed" style="font-size:15px;">—</div><div class="stat-lbl">Contributed</div></div>
+</div>
+</div>
+<h2 class="page-h2">The formula</h2>
+<div class="formula">Future Value = Principal × (1 + r)<sup>n</sup> + Monthly × [((1 + r)<sup>n</sup> − 1) / r]<br/><span style="color:var(--text-muted);font-size:12px;">r = annual rate ÷ 12 (monthly periods)  |  n = years × 12 (total months)</span></div>
+<h2 class="page-h2">The Rule of 72</h2>
+<p class="page-p">Divide 72 by your annual return rate to get the approximate years to double your money. No calculator needed.</p>
+<table class="t">
+<thead><tr><th>Return Rate</th><th>Years to Double</th></tr></thead>
+<tbody>
+<tr><td>4%</td><td>18 years</td></tr>
+<tr><td>6%</td><td>12 years</td></tr>
+<tr><td>7%</td><td class="hl">10.3 years</td></tr>
+<tr><td>8%</td><td>9 years</td></tr>
+<tr><td>10%</td><td>7.2 years</td></tr>
+</tbody>
+</table>
+<h2 class="page-h2">Time beats returns</h2>
+<p class="page-p">A 22-year-old who invests $200/month at 7% until age 65 accumulates roughly $1,034,000. A 32-year-old who invests $400/month — double the amount — at the same rate accumulates roughly $986,000. Starting ten years earlier beats saving twice as much. That's the Coast FIRE insight in a nutshell.</p>
+<div class="callout callout-amber">
+<h4>Why Coast FIRE rewards early savers</h4>
+<p>Every dollar you save in your 20s or 30s that sits in the market for 30 years is worth 3–4x a dollar saved in your 40s. Hitting your Coast FIRE number early matters more than squeezing extra savings later.</p>
+</div>
+<p class="disclaimer">This calculator uses constant annual returns. Market returns vary year to year. For educational illustration only, not financial advice.</p>
+</div><div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div></div>
+<script>
     
   
   function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
@@ -147,4 +145,4 @@ function calculate(){
     }
     calculate();
     ["principal","monthly","annualReturn","years"].forEach(id=>document.getElementById(id).addEventListener("input",calculate));
-  </script><footer><p>© 2025 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>
+  </script><footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>

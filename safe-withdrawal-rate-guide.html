@@ -1,6 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en"><head>
 <script type="application/ld+json">{'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': 'What is the 4% rule?', 'acceptedAnswer': {'@type': 'Answer', 'text': "A 4% initial withdrawal rate from a diversified portfolio has historically never exhausted a 30-year retirement in US market history. It comes from financial planner William Bengen's research and was confirmed by the Trinity Study."}}, {'@type': 'Question', 'name': 'What is a safe withdrawal rate?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'The percentage of your portfolio you can withdraw annually with a high probability of not outliving your money over a given time horizon. For a 30-year retirement, 4% is the standard starting point.'}}, {'@type': 'Question', 'name': 'Why does sequence of returns risk matter?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'A market crash in the first years of retirement is far more damaging than the same crash later. Early withdrawals on a depressed portfolio deplete it faster than a crash after recovery.'}}, {'@type': 'Question', 'name': 'What is the conservative withdrawal rate for early retirees?', 'acceptedAnswer': {'@type': 'Answer', 'text': 'For 40–50 year retirements, 3–3.5% is more conservative. For a 30-year retirement, 4% is well-supported by historical data.'}}]}</script>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Safe Withdrawal Rate Guide — CoastFIREWhen</title><meta name="description" content="The 4% rule, Trinity Study, sequence of returns risk, and how to calculate your own safe withdrawal rate.">  <style>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>Safe Withdrawal Rate Guide — CoastFIREWhen</title><meta content="The 4% rule, Trinity Study, sequence of returns risk, and how to calculate your own safe withdrawal rate." name="description"/> <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;510;590&family=JetBrains+Mono:wght@400;500&display=swap');
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     :root{--bg:#08090a;--bg-panel:#0f1011;--bg-surface:#191a1b;--bg-hover:#28282c;--text-primary:#f7f8f8;--text-secondary:#d0d6e0;--text-tertiary:#8a8f98;--text-muted:#62666d;--accent:#5e6ad2;--accent-hover:#7170ff;--accent-light:#828fff;--success:#10b981;--border:rgba(255,255,255,0.08);--border-subtle:rgba(255,255,255,0.05);--border-solid:#23252a;--font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;}
@@ -13,7 +14,7 @@
     .nav-links a{font-size:14px;font-weight:510;color:var(--text-tertiary);padding:6px 10px;border-radius:6px;transition:background .15s,color .15s;}
     .nav-links a:hover{background:rgba(255,255,255,0.04);color:var(--text-secondary);}
     .page-header{padding:52px 24px 0;max-width:1100px;margin:0 auto;}
-    .page-content{max-width:680px;margin:0 auto;padding:32px 24px 80px;}
+    
     .eyebrow{font-size:12px;font-weight:510;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
     .eyebrow-orange{color:#f97316;}.eyebrow-blue{color:#60a5fa;}.eyebrow-green{color:var(--success);}.eyebrow-purple{color:var(--accent-light);}
     .page-h1{font-size:34px;font-weight:510;letter-spacing:-.025em;color:var(--text-primary);margin-bottom:16px;line-height:1.1;}
@@ -67,85 +68,81 @@
     .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:6px;font-size:14px;font-weight:510;cursor:pointer;transition:all .15s;border:none;}
     .btn-primary{background:var(--accent);color:#fff;}.btn-primary:hover{background:var(--accent-hover);color:#fff;}
     .btn-ghost{background:rgba(255,255,255,0.03);color:var(--text-secondary);border:1px solid var(--border);}.btn-ghost:hover{background:rgba(255,255,255,0.07);color:var(--text-primary);}
-  .ad-slot{background:rgba(255,255,255,0.02);border:1px dashed rgba(255,255,255,0.1);border-radius:8px;padding:20px;text-align:center;margin:24px 0;}.ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}</style>  <link rel="canonical" href="https://coastfirewhen.com/safe-withdrawal-rate-guide.html">
-  <meta property="og:title" content="Safe Withdrawal Rate Guide — CoastFIREWhen">
-  <meta property="og:description" content="The 4% rule, the Trinity Study, and dynamic withdrawal strategies for a durable retirement.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Safe Withdrawal Rate Guide — CoastFIREWhen">
-  <meta name="twitter:description" content="The 4% rule, the Trinity Study, and dynamic withdrawal strategies for a durable retirement.">
-</head><body><nav><div class="nav-inner"><a href="/" class="nav-logo">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebollow-green">Calculator</p></div>
-  <div class="page-content">
-    <h1 class="page-h1">Safe Withdrawal Rate</h1>
-    <div class="intro-box"><p>How much can you withdraw each year without running out? The answer depends on your time horizon, portfolio mix, and how much risk you can sleep through.</p></div>
+  .ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
+    .ad-slot{min-height:600px}
+    .page-wrapper{display:flex;gap:32px;align-items:flex-start;max-width:960px;margin:0 auto;padding:40px 24px 80px}.ad-sidebar{width:160px;flex-shrink:0;position:sticky;top:72px}@media(max-width:900px){.page-wrapper{display:block;padding:40px 24px 80px}.ad-sidebar{width:100%;position:static;margin-top:32px}}
+    .page-content{flex:1;min-width:0}</style> <link href="https://coastfirewhen.com/safe-withdrawal-rate-guide.html" rel="canonical"/>
+<meta content="Safe Withdrawal Rate Guide — CoastFIREWhen" property="og:title"/>
+<meta content="The 4% rule, the Trinity Study, and dynamic withdrawal strategies for a durable retirement." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Safe Withdrawal Rate Guide — CoastFIREWhen" name="twitter:title"/>
+<meta content="The 4% rule, the Trinity Study, and dynamic withdrawal strategies for a durable retirement." name="twitter:description"/>
+</head><body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav><div class="page-header"><p class="eyebrow eyebollow-green">Calculator</p></div>
+<div class="page-wrapper"><div class="page-content">
+<h1 class="page-h1">Safe Withdrawal Rate</h1>
+<div class="intro-box"><p>How much can you withdraw each year without running out? The answer depends on your time horizon, portfolio mix, and how much risk you can sleep through.</p></div>
+<div class="calc-card">
+<h2>Test your withdrawal rate</h2>
+<div class="form-grid">
+<div class="form-row form-row-2">
+<div><label>Portfolio Value ($)</label><input autocomplete="off" id="portfolio" inputmode="numeric" min="1000" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="1000000"/></div>
 
-    <div class="calc-card">
-      <h2>Test your withdrawal rate</h2>
-      <div class="form-grid">
-        <div class="form-row form-row-2">
-          <div><label>Portfolio Value ($)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="portfolio" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="1000000" min="1000"></div>
-          
-<div class="ad-slot"><p>Advertisement</p><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
-<div><label>Annual Withdrawal ($)</label><input type="text" inputmode="numeric" pattern="[0-9,]*" id="withdrawal" oninput="formatComma(this)" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" autocomplete="off" value="40000" min="0"></div>
-        </div>
-        <div class="form-row form-row-3">
-          <div><label>Years in Retirement</label><input type="number" id="years" value="30" min="10" max="50"></div>
-          <div><label>Expected Return (%)</label><input type="number" id="returnRate" value="7" min="1" max="15" step="0.1"></div>
-          <div><label>Inflation Rate (%)</label><input type="number" id="inflation" value="3" min="0" max="10" step="0.1"></div>
-        </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <button onclick="calculate()" class="btn btn-primary">Calculate</button>
-          <button onclick="resetDefaults()" class="btn btn-ghost">Reset</button>
-        </div>
-      </div>
-    </div>
-    <div id="result" class="hidden">
-      <div class="result-box">
-        <h4>Withdrawal Rate</h4>
-        <div class="result-big" id="rate">—</div>
-      </div>
-      <div class="stats-row">
-        <div class="stat"><div class="stat-val" id="status">—</div><div class="stat-lbl">Outcome</div></div>
-        <div class="stat"><div class="stat-val" id="endBal">—</div><div class="stat-lbl">End Balance</div></div>
-        <div class="stat"><div class="stat-val" id="realRet">—</div><div class="stat-lbl">Real Return</div></div>
-      </div>
-    </div>
-
-    <h2 class="page-h2">The 4% rule</h2>
-    <p class="page-p">In 1994, financial planner William Bengen analyzed historical US market returns and concluded that a <strong>4% initial withdrawal rate</strong> — adjusted each year for inflation — never exhausted a 50/50 stock/bond portfolio over any 30-year period in history. The Trinity Study (1998) confirmed similar success rates across portfolio allocations.</p>
-    <p class="page-p">The shorthand: <strong>25 × your annual expenses = your FIRE number.</strong></p>
-    <div class="formula">$50,000/year expenses × 25 = <strong style="color:var(--accent-light);">$1,250,000 FIRE number</strong><br><span style="color:var(--text-muted);font-size:12px;">4% of $1,250,000 = $50,000/year</span></div>
-
-    <h2 class="page-h2">Why 4% isn't guaranteed</h2>
-    <p class="page-p">The 4% rule is based on historical data. It assumes a 50/50 stock/bond mix, constant annual inflation adjustments, and a 30-year horizon. Sequence of returns risk — a market crash early in retirement before recovery — is the biggest threat. A 50% drop in year one with $40,000 withdrawals is far more damaging than the same drop in year twenty.</p>
-
-    <h2 class="page-h2">Dynamic alternatives</h2>
-    <ul class="page-ul">
-      <li><strong>Variable withdrawal</strong> — Withdraw a fixed percentage of your portfolio each year (e.g., 4%). Falls in downturns, rises in bull markets.</li>
-      <li><strong>Guardrail method</strong> — Start at 4%. Reduce spending 10% if portfolio drops 20%. Increase if it doubles.</li>
-      <li><strong>Ratchet method</strong> — Raise spending when portfolio hits new highs. Never cut.</li>
-    </ul>
-
-    <h2 class="page-h2">Withdrawal rates by horizon</h2>
-    <table class="t">
-      <thead><tr><th>Years in Retirement</th><th>Safe Rate</th><th>FIRE Multiple</th></tr></thead>
-      <tbody>
-        <tr><td>20 years</td><td class="hl">5.0%</td><td>20×</td></tr>
-        <tr><td>25 years</td><td>4.5%</td><td>22×</td></tr>
-        <tr><td>30 years</td><td>4.0%</td><td>25×</td></tr>
-        <tr><td>35 years</td><td>3.7%</td><td>27×</td></tr>
-        <tr><td>40 years</td><td>3.5%</td><td>29×</td></tr>
-        <tr><td>50 years</td><td>3.2%</td><td>31×</td></tr>
-      </tbody>
-    </table>
-
-    <div class="callout callout-blue">
-      <h4>The practical takeaway</h4>
-      <p>The real question is not "what's the safest rate" but "what withdrawal rate gives me confidence I never have to go back to work?" For a 30-year retirement, 3.5–4% is the reasonable range. For early retirees planning 40–50 years, 3–3.5% is more conservative.</p>
-    </div>
-    <p class="disclaimer">This calculator uses simplified projections. Does not account for taxes, sequence of returns, or changes in personal circumstances. Not financial advice.</p>
-  </div>
-  <script>
+<div><label>Annual Withdrawal ($)</label><input autocomplete="off" id="withdrawal" inputmode="numeric" min="0" onblur="if(this.value){this.value=Number(this.value.replace(/,/g,'')).toLocaleString('en-US')}" oninput="formatComma(this)" pattern="[0-9,]*" type="text" value="40000"/></div>
+</div>
+<div class="form-row form-row-3">
+<div><label>Years in Retirement</label><input id="years" max="50" min="10" type="number" value="30"/></div>
+<div><label>Expected Return (%)</label><input id="returnRate" max="15" min="1" step="0.1" type="number" value="7"/></div>
+<div><label>Inflation Rate (%)</label><input id="inflation" max="10" min="0" step="0.1" type="number" value="3"/></div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+<button class="btn btn-primary" onclick="calculate()">Calculate</button>
+<button class="btn btn-ghost" onclick="resetDefaults()">Reset</button>
+</div>
+</div>
+</div>
+<div class="hidden" id="result">
+<div class="result-box">
+<h4>Withdrawal Rate</h4>
+<div class="result-big" id="rate">—</div>
+</div>
+<div class="stats-row">
+<div class="stat"><div class="stat-val" id="status">—</div><div class="stat-lbl">Outcome</div></div>
+<div class="stat"><div class="stat-val" id="endBal">—</div><div class="stat-lbl">End Balance</div></div>
+<div class="stat"><div class="stat-val" id="realRet">—</div><div class="stat-lbl">Real Return</div></div>
+</div>
+</div>
+<h2 class="page-h2">The 4% rule</h2>
+<p class="page-p">In 1994, financial planner William Bengen analyzed historical US market returns and concluded that a <strong>4% initial withdrawal rate</strong> — adjusted each year for inflation — never exhausted a 50/50 stock/bond portfolio over any 30-year period in history. The Trinity Study (1998) confirmed similar success rates across portfolio allocations.</p>
+<p class="page-p">The shorthand: <strong>25 × your annual expenses = your FIRE number.</strong></p>
+<div class="formula">$50,000/year expenses × 25 = <strong style="color:var(--accent-light);">$1,250,000 FIRE number</strong><br/><span style="color:var(--text-muted);font-size:12px;">4% of $1,250,000 = $50,000/year</span></div>
+<h2 class="page-h2">Why 4% isn't guaranteed</h2>
+<p class="page-p">The 4% rule is based on historical data. It assumes a 50/50 stock/bond mix, constant annual inflation adjustments, and a 30-year horizon. Sequence of returns risk — a market crash early in retirement before recovery — is the biggest threat. A 50% drop in year one with $40,000 withdrawals is far more damaging than the same drop in year twenty.</p>
+<h2 class="page-h2">Dynamic alternatives</h2>
+<ul class="page-ul">
+<li><strong>Variable withdrawal</strong> — Withdraw a fixed percentage of your portfolio each year (e.g., 4%). Falls in downturns, rises in bull markets.</li>
+<li><strong>Guardrail method</strong> — Start at 4%. Reduce spending 10% if portfolio drops 20%. Increase if it doubles.</li>
+<li><strong>Ratchet method</strong> — Raise spending when portfolio hits new highs. Never cut.</li>
+</ul>
+<h2 class="page-h2">Withdrawal rates by horizon</h2>
+<table class="t">
+<thead><tr><th>Years in Retirement</th><th>Safe Rate</th><th>FIRE Multiple</th></tr></thead>
+<tbody>
+<tr><td>20 years</td><td class="hl">5.0%</td><td>20×</td></tr>
+<tr><td>25 years</td><td>4.5%</td><td>22×</td></tr>
+<tr><td>30 years</td><td>4.0%</td><td>25×</td></tr>
+<tr><td>35 years</td><td>3.7%</td><td>27×</td></tr>
+<tr><td>40 years</td><td>3.5%</td><td>29×</td></tr>
+<tr><td>50 years</td><td>3.2%</td><td>31×</td></tr>
+</tbody>
+</table>
+<div class="callout callout-blue">
+<h4>The practical takeaway</h4>
+<p>The real question is not "what's the safest rate" but "what withdrawal rate gives me confidence I never have to go back to work?" For a 30-year retirement, 3.5–4% is the reasonable range. For early retirees planning 40–50 years, 3–3.5% is more conservative.</p>
+</div>
+<p class="disclaimer">This calculator uses simplified projections. Does not account for taxes, sequence of returns, or changes in personal circumstances. Not financial advice.</p>
+</div><div class="ad-sidebar"><div class="ad-slot"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-format="auto" data-ad-slot="XXXXXXXXXX" data-full-width-responsive="true" style="display:block"></ins></div></div></div>
+<script>
     
   
   function fmtNums(v){return parseFloat((v||'0').replace(/,/g,''))||0;}
@@ -184,4 +181,4 @@ function calculate(){
     }
     calculate();
     ["portfolio","withdrawal","years","returnRate","inflation"].forEach(id=>document.getElementById(id).addEventListener("input",calculate));
-  </script><footer><p>© 2025 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>
+  </script><footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer></body></html>
