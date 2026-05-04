@@ -329,7 +329,7 @@
 
   // ── Sync slider ↔ text input ──────────────────────────────────
   function syncSlider(sliderEl, inputEl, displayEl, formatter, calcFn) {
-    // Update display label and sync number input from slider value
+    // Update display label and keep number input in sync from slider value
     function refreshDisplay(v) {
       sliderEl.value = v;
       inputEl.value = v;
@@ -341,23 +341,22 @@
       refreshDisplay(v);
       calcFn();
     });
-    // Typing in number input → only update display; recalculate on blur
-    inputEl.addEventListener('input', function() {
-      var raw = parseFloat(inputEl.value);
-      if (!isNaN(raw)) {
-        var v = Math.min(raw, parseFloat(sliderEl.max));
-        v = Math.max(v, parseFloat(sliderEl.min));
-        // Snap to step
-        var step = parseFloat(sliderEl.step) || 1;
-        v = Math.round(v / step) * step;
-        refreshDisplay(v);
-      }
-    });
-    inputEl.addEventListener('blur', function() {
-      calcFn();
-    });
+    // Number input: only commit on blur/change/enter — don't fight while typing
     inputEl.addEventListener('change', function() {
+      var raw = parseFloat(inputEl.value);
+      if (isNaN(raw)) return;
+      var v = Math.min(raw, parseFloat(sliderEl.max));
+      v = Math.max(v, parseFloat(sliderEl.min));
+      var step = parseFloat(sliderEl.step) || 1;
+      v = Math.round(v / step) * step;
+      refreshDisplay(v);
       calcFn();
+    });
+    // Allow Enter to commit without blurring
+    inputEl.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        inputEl.blur();
+      }
     });
   }
 
