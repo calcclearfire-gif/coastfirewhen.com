@@ -121,7 +121,20 @@
     .ad-slot{min-height:600px}
   .ad-slot p{font-size:12px;color:#62666d;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px;}
 
-    .nav-links a[aria-current="page"] { background: rgba(255,255,255,0.06); color: var(--text-secondary); }</style> <link href="https://coastfirewhen.com/coast-fire-calculator-explained.html" rel="canonical"/>
+    .nav-links a[aria-current="page"] { background: rgba(255,255,255,0.06); color: var(--text-secondary); }
+    .nav-toggle{display:none;position:absolute;right:24px;top:0;width:32px;height:56px;cursor:pointer;opacity:0;z-index:100}
+    .nav-toggle-label{display:none;position:absolute;right:24px;top:16px;width:24px;height:24px;cursor:pointer;z-index:101}
+    .nav-toggle-label span{display:block;width:100%;height:2px;background:var(--text-secondary);border-radius:2px;transition:all .2s;margin-bottom:5px}
+    @media(max-width:640px){
+      .nav-toggle-label{display:block}
+      .nav-links{position:fixed;top:0;right:-100%;width:220px;height:100vh;background:var(--bg);border-left:1px solid var(--border);flex-direction:column;align-items:flex-start;padding:80px 24px 24px;gap:0;transition:right .3s;z-index:99}
+      .nav-links a{font-size:16px;padding:12px 0;border-bottom:1px solid var(--border);width:100%}
+      .nav-toggle:checked ~ .nav-links{right:0}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2){opacity:0}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    }
+  </style> <link href="https://coastfirewhen.com/coast-fire-calculator-explained.html" rel="canonical"/>
 <meta content="Coast FIRE Calculator — CoastFIREWhen" property="og:title"/>
 <meta content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for." property="og:description"/>
 <meta content="website" property="og:type"/>
