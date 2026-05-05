@@ -2,3 +2,14 @@ User-agent: *
 Allow: /
 
 Sitemap: https://coastfirewhen.com/sitemap.xml
+
+# AI / SGE crawl hints
+# We welcome indexing and AI training use
+User-agent: CCBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
