@@ -145,11 +145,7 @@
     .ad-slot{min-height:600px}
     .page-wrapper{display:flex;gap:32px;align-items:flex-start;max-width:960px;margin:0 auto;padding:40px 24px 80px}.ad-sidebar{width:160px;flex-shrink:0;position:sticky;top:72px}@media(max-width:900px){.page-wrapper{display:block;padding:40px 24px 80px}.ad-sidebar{width:100%;position:static;margin-top:32px}}
     .page-content{flex:1;min-width:0}
-    .nav-links a[aria-current="page"] { background: rgba(255,255,255,0.06); color: var(--text-secondary); }
-    .hero-stats { display: flex; gap: 40px; justify-content: center; margin: 36px 0 32px; flex-wrap: wrap; }
-    .hero-stat { text-align: center; }
-    .hero-stat-val { font-size: 32px; font-weight: 590; color: var(--text-primary); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1; }
-    .hero-stat-lbl { font-size: 12px; color: var(--text-muted); margin-top: 6px; letter-spacing: 0.03em; text-transform: uppercase; }</style><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "CoastFIREWhen", "url": "https://coastfirewhen.com", "description": "Free Coast FIRE calculators and plain-English financial independence guides.", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://coastfirewhen.com/?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script></head><body><nav>
+    .nav-links a[aria-current="page"] { background: rgba(255,255,255,0.06); color: var(--text-secondary); }</style><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "CoastFIREWhen", "url": "https://coastfirewhen.com", "description": "Free Coast FIRE calculators and plain-English financial independence guides.", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://coastfirewhen.com/?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script></head><body><nav>
 <div class="nav-inner">
 <a class="nav-logo" href="/">Coast<span>FIRE</span>When</a>
 <div class="nav-links">
@@ -167,19 +163,6 @@
 <div class="hero-actions">
 <a class="btn btn-primary" href="/coast-fire-calculator-explained.html">Open the Calculator</a>
 <a class="btn btn-ghost" href="/what-is-coast-fire.html">What is Coast FIRE?</a>
-</div>
-<div class="hero-stats">
-<div class="hero-stat">
-<div class="hero-stat-val" data-format="compact" data-prefix="$" data-suffix="" data-target="1500000">$0</div>
-<div class="hero-stat-lbl">Median FIRE target</div>
-</div>
-<div class="hero-stat">
-<div class="hero-stat-val" data-format="int" data-prefix="" data-suffix="" data-target="37">0</div>
-<div class="hero-stat-lbl">Avg. Coast FIRE age</div>
-</div>
-<div class="hero-stat">
-<div class="hero-stat-val" data-prefix="" data-suffix="%" data-target="7">0%</div>
-<div class="hero-stat-lbl">Historical real return</div>
 </div>
 </div>
 </div>
@@ -237,43 +220,4 @@
 <a href="/privacy-policy.html">Privacy Policy</a>
 <a href="/terms.html">Terms</a>
 </div>
-</footer><script>
-(function() {
-  function animateCounter(el) {
-    var target = parseInt(el.dataset.target, 10);
-    var prefix = el.dataset.prefix || '';
-    var suffix = el.dataset.suffix || '';
-    var fmt = el.dataset.format || 'int';
-    var duration = 1200;
-    var steps = 60;
-    var stepTime = duration / steps;
-    var current = 0;
-    var increment = target / steps;
-    var timer = setInterval(function() {
-      current += increment;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      var val;
-      if (fmt === 'compact') {
-        val = current >= 1e6 ? prefix + (current / 1e6).toFixed(2) + 'M' :
-              current >= 1e3 ? prefix + (current / 1e3).toFixed(0) + 'K' :
-              prefix + Math.round(current);
-      } else {
-        val = prefix + Math.round(current) + suffix;
-      }
-      el.textContent = val;
-    }, stepTime);
-  }
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.3 });
-  var statsEl = document.querySelector('.hero-stats');
-  if (statsEl) observer.observe(statsEl);
-})();</script></body></html>
+</footer></body></html>
