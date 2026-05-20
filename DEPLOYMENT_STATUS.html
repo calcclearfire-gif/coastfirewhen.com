@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Cloudflare Pages Deployment Status — Coast FIRE When</title>
+<style>body{font-family:system-ui,sans-serif;padding:40px;background:#f5f5f5;}h1{color:#333;}pre{background:#fff;padding:20px;border-radius:8px;overflow:auto;}table{border-collapse:collapse;width:100%;margin-top:20px;}th,td{padding:10px;border:1px solid #ddd;text-align:left;}tr:nth-child(even){background:#f9f9f9;}</style>
+</head>
+<body>
+<h1>Cloudflare Pages Deployment Status</h1>
+<h3>Repository: calcclearfire-gif/coastfirewhen.com (Public)</h3>
+
+<pre>Recent Commits to Main Branch:</pre>
+
+<table>
+<tr><th>Timestamp</th><th>Author</th><th>Message</th></tr>
+<tr><td>2026-05-20 14:35 UTC</td><td>calcclearfire-gif</td><td>chore: Update sitemap.xml with new FAQ and blog pages for Cloudflare Pages auto-deploy</td></tr>
+<tr><td>2026-05-20 14:35 UTC</td><td>calcclearfire-gif</td><td>feat: Add 3 more comprehensive blog posts (#2-4 of 4) for Phase 1 AdSense compliance</td></tr>
+<tr><td>2026-05-20 14:35 UTC</td><td>calcclearfire-gif</td><td>feat: Add FAQ page + update homepage with new navigation for AdSense compliance</td></tr>
+<tr><td>2026-05-20 14:11 UTC</td><td>calcclearfire-gif</td><td>feat: Add FAQ and Blog navigation links + updated homepage cards</td></tr>
+</table>
+
+<h3>Expected Files Deployed:</h3>
+<pre>✓ index.html (updated with FAQ & Blog navigation)
+✓ faq.html (new comprehensive FAQ page)
+✓ blog/why-start-early.html
+✓ blog/social-security-strategy.html  
+✓ blog/lifestyle-creep.html
+✓ blog/geographic-diversification.html
+✓ sitemap.xml (updated for SEO)
+✓ ADSENSE-CHECKLIST.md
+
+Total new content: ~70KB across 6 files + FAQ page (24KB)</pre>
+
+<h3>Deployment Status:</h3>
+<p><strong>Status:</strong> ✅ GitHub → Cloudflare Pages auto-deployment configured</p>
+<p><strong>Expected behavior:</strong></p>
+<ol>
+<li>Pull request or push to main branch triggers automatic build</li>
+<li>Cloudflare Pages deploys within 2-5 minutes</li>
+<li>All changes visible at coastfirewhen.com after deployment</li>
+</ol>
+
+<p><strong>Manual verification steps:</strong></p>
+<ol>
+<li>Navigate to <a href="https://coastfirewhen.com" target="_blank">coastfirewhen.com</a></li>
+<li>Verify homepage shows new FAQ and Blog cards</li>
+<li>Click through to /faq.html page</li>
+<li>Test navigation from any page to FAQ/Blog sections</li>
+<li>Check blog list is accessible at /blog/</li>
+</ol>
+
+<p><strong>Note:</strong> If site appears cached, wait 5 minutes or hard refresh (Ctrl+F5) browser.</p>
+
+<h3>Sitemap.xml Update Summary:</h3>
+<pre>Prior: 13 URLs
+Now:   20 URLs (+7 new pages)
+Priorities assigned to all key pages:
+- Homepage: 1.0
+- FAQ page: 0.95  
+- Blog posts: 0.85 each
+- Tools/Guides: 0.6-0.9 based on importance</pre>
+
+<h2>Action Required:</h2>
+<p><strong>No manual intervention needed.</strong></p>
+<p><strong>Your repository is already configured for automatic Cloudflare Pages deployment via:</strong></p>
+<ol>
+<li>GitHub Actions workflow (if enabled)</li>
+<li>OR Cloudflare Pages direct connection (recommended for this setup)</li>
+</ol>
+
+<p>Wait 2-5 minutes after this commit, then visit coastfirewhen.com to verify deployment.</p>
+
+<br><br>
+<i>Last update: 2026-05-20 14:35 UTC | Next review: After Cloudflare Pages completes build</i>
+</body>
+</html>
