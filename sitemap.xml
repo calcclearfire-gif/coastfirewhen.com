@@ -6,6 +6,31 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://coastfirewhen.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/why-start-early.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/social-security-strategy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/lifestyle-creep.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/geographic-diversification.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://coastfirewhen.com/what-is-coast-fire.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -23,22 +48,22 @@
   <url>
     <loc>https://coastfirewhen.com/safe-withdrawal-rate-guide.html</loc>
     <changefreq>quarterly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://coastfirewhen.com/compound-interest-explained.html</loc>
     <changefreq>quarterly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.65</priority>
   </url>
   <url>
     <loc>https://coastfirewhen.com/margin-vs-markup-guide.html</loc>
     <changefreq>quarterly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://coastfirewhen.com/probate-guide.html</loc>
     <changefreq>quarterly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://coastfirewhen.com/about.html</loc>
@@ -48,11 +73,26 @@
   <url>
     <loc>https://coastfirewhen.com/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://coastfirewhen.com/terms.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/coast-fire-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/fire-budget-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/expenses-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
