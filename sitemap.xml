@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<<<<<<< HEAD
     <url>
         <loc>https://coastfirewhen.com/</loc>
         <lastmod>2026-05-18T00:00:00+00:00</lastmod>
@@ -96,3 +97,101 @@
         <priority>0.50</priority>
     </url>
 </urlset>
+=======
+  <url>
+    <loc>https://coastfirewhen.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/why-start-early.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/social-security-strategy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/lifestyle-creep.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/blog/geographic-diversification.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/what-is-coast-fire.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/coast-fire-calculator-explained.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/fire-progress-tracker.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/safe-withdrawal-rate-guide.html</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/compound-interest-explained.html</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/margin-vs-markup-guide.html</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/probate-guide.html</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/terms.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/coast-fire-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/fire-budget-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coastfirewhen.com/resources/expenses-calculator.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+>>>>>>> 49c650423f1a06ba2e3327a085b59545e1e702c3
