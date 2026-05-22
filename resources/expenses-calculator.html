@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta content="#0d0f14" name="theme-color"/><meta charset="utf-8"/><title>FIRE Expenses Calculator — Coast FIREWhen</title><style>body{font-family:system-ui,sans-serif;max-width:960px;margin:24px auto;padding:24px;line-height:1.7;color:#333;background:#f9f9f9}.container{background:white;border-radius:8px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}.section{margin-bottom:24px}h1{color:#2d3748;margin-bottom:20px;font-size:26px}.section h2{color:#5e6ad2;font-size:18px;margin-top:0;margin-bottom:16px;font-weight:590}.form-row{display:grid;gap:12px;margin-bottom:14px}.form-row-2{grid-template-columns:1fr 1fr}.form-row-3{grid-template-columns:1fr 1fr 1fr}.label{display:block;font-size:13px;font-weight:590;color:#718096;margin-bottom:6px;letter-spacing:0.01em}input[type="number"]{width:100%;background:#fafafa;border:1px solid #cbd5e0;border-radius:6px;padding:12px 14px;color:#2d3748;font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}.input-input{width:90px;background:white;font-weight:590;color:#2d3748;display:inline-block}.input-slider{flex:1}.input-suffix{margin-left:8px;color:#718096;font-size:13px}.result-box{background:#fdfdfd;border:1px solid #e2e8f0;border-radius:6px;padding:16px;margin-bottom:14px}.result-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #edf2f7;font-size:14px}.result-row:last-child{border-bottom:none;font-weight:590;font-size:16px;color:#2d3748}.result-value{font-family:monospace;font-size:16px}</style></head><body>
+
+<div class="container">
+    <h1>FIRE Expenses Calculator</h1>
+    
+    <div class="section">
+        <h2>Basic Information</h2>
+        
+        <div class="form-row form-row-3">
+            <div>
+                <label for="currentAge" class="label">Current Age</label>
+                <input type="number" id="currentAge" value="30" min="18" max="80" class="input-input"/><span class="input-suffix">years</span>
+            </div>
+            <div>
+                <label for="targetRetirementAge" class="label">Target Retirement Age</label>
+                <input type="number" id="targetRetirementAge" value="65" min="40" max="90" class="input-input"/><span class="input-suffix">years</span>
+            </div>
+            <div>
+                <label for="currentAgeDisplay" class="label">Age (read-only)</label>
+                <input type="number" id="currentAgeDisplay" value="30" readonly class="input-input"/>
+            </div>
+        </div>
+
+        <div class="form-row form-row-3">
+            <div>
+                <label for="retirementAgeDisplay" class="label">Retirement Age (read-only)</label>
+                <input type="number" id="retirementAgeDisplay" value="65" readonly class="input-input"/>
+            </div>
+            <div>
+                <label for="yearsToRetireDisplay" class="label">Years Until Retirement</label>
+                <input type="number" id="yearsToRetireDisplay" value="35" readonly class="input-input"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Annual Expenses (in today's dollars)</h2>
+        
+        <div class="form-row form-row-2">
+            <div>
+                <label for="housingMonthly" class="label">Housing (rent/mortgage/property tax/insurance)</label>
+                <input type="number" id="housingMonthly" value="2500" min="0"/><span class="input-suffix">/month</span>
+            </div>
+            <div>
+                <label for="foodMonthly" class="label">Food & Groceries</label>
+                <input type="number" id="foodMonthly" value="800" min="0"/><span class="input-suffix">/month</span>
+            </div>
+        </div>
+
+        <div class="form-row form-row-3">
+            <div>
+                <label for="transportationMonthly" class="label">Transportation (gas, car payments, insurance)</label>
+                <input type="number" id="transportationMonthly" value="600" min="0"/><span class="input-suffix">/month</span>
+            </div>
+            <div>
+                <label for="entertainmentMonthly" class="label">Entertainment & Dining Out</label>
+                <input type="number" id="entertainmentMonthly" value="500" min="0"/><span class="input-suffix">/month</span>
+            </div>
+            <div>
+                <label for="healthcareMonthly" class="label">Health Insurance & Medications</label>
+                <input type="number" id="healthcareMonthly" value="400" min="0"/><span class="input-suffix">/month</span>
+            </div>
+        </div>
+
+        <div class="form-row form-row-3">
+            <div>
+                <label for="utilitiesMonthly" class="label">Utilities (electric, water, internet)</label>
+                <input type="number" id="utilitiesMonthly" value="300" min="0"/><span class="input-suffix">/month</span>
+            </div>
+            <div>
+                <label for="otherMonthly" class="label">Other (clothing, subscriptions, gifts)</label>
+                <input type="number" id="otherMonthly" value="300" min="0"/><span class="input-suffix">/month</span>
+            </div>
+            <div>
+                <label for="travelMonthly" class="label">Travel & Vacations</label>
+                <input type="number" id="travelMonthly" value="200" min="0"/><span class="input-suffix">/month</span>
+            </div>
+        </div>
+
+        <button onclick="calculateAnnual()" style="background:#5e6ad2;color:white;border:none;padding:10px 20px;border-radius:6px;font-size:14px;font-weight:590;cursor:pointer;margin-top:8px;">Calculate Annual Expenses</button>
+    </div>
+
+    <div class="section">
+        <h2>Investment Parameters</h2>
+        
+        <div class="form-row form-row-2">
+            <div>
+                <label for="currentSavings" class="label">Current Investment Portfolio Value</label>
+                <input type="number" id="currentSavings" value="50000" min="0"/><span class="input-suffix">$</span>
+            </div>
+            <div>
+                <label for="expectedReturnRate" class="label">Expected Annual Return (after inflation)</label>
+                <input type="number" id="expectedReturnRate" value="7" min="1" max="15" step="0.1"/><span class="input-suffix">%</span>
+            </div>
+        </div>
+
+        <div class="form-row form-row-2">
+            <div>
+                <label for="swrRate" class="label">Safe Withdrawal Rate</label>
+                <input type="number" id="swrRate" value="4" min="2" max="8" step="0.1"/><span class="input-suffix">%</span>
+            </div>
+        </div>
+
+        <button onclick="calculateFIRE()" style="background:#5e6ad2;color:white;border:none;padding:10px 20px;border-radius:6px;font-size:14px;font-weight:590;cursor:pointer;margin-top:8px;">Calculate FIRE Numbers</button>
+    </div>
+
+    <div class="section">
+        <h2>Your FIRE Analysis</h2>
+
+        <div id="results" style="display:none;">
+            <div class="result-box">
+                <div class="result-row"><span>Housing Annual:</span><span class="result-value" id="annualHousing"></span></div>
+                <div class="result-row"><span>Food & Groceries:</span><span class="result-value" id="annualFood"></span></div>
+                <div class="result-row"><span>Transportation:</span><span class="result-value" id="annualTransport"></span></div>
+                <div class="result-row"><span>Entertainment & Dining:</span><span class="result-value" id="annualEntertainment"></span></div>
+                <div class="result-row"><span>Healthcare:</span><span class="result-value" id="annualHealthcare"></span></div>
+                <div class="result-row"><span>Utilities:</span><span class="result-value" id="annualUtilities"></span></div>
+                <div class="result-row"><span>Other:</span><span class="result-value" id="annualOther"></span></div>
+                <div class="result-row"><span>Travel & Vacations:</span><span class="result-value" id="annualTravel"></span></div>
+                <div style="margin-top:8px;padding-top:10px;border-top:2px solid #e2e8f0;"><span>Total Annual Expenses:</span><span class="result-value" id="totalAnnualExpenses"></span></div>
+            </div>
+
+            <div class="result-box">
+                <div class="result-row"><span>Full FIRE Target (4% SWR):</span><span class="result-value" id="fullFIRETarget"></span></div>
+                <div class="result-row"><span>Coast FIRE Number:</span><span class="result-value" id="coastFIRENumber"></span></div>
+                <div class="result-row"><span>Savings Gap:</span><span class="result-value" id="savingsGap"></span></div>
+                <div class="result-row"><span>Percentage to Coast:</span><span class="result-value" id="coastPercentage"></span></div>
+                <div class="result-row"><span>Years Until Coast FIRE:</span><span class="result-value" id="yearsToCoast"></span></div>
+                <div class="result-row"><span>Achieve Coast FIRE At Age:</span><span class="result-value" id="coastAge"></span></div>
+            </div>
+
+            <div style="background:#fdfdfd;border:1px solid #e2e8f0;border-radius:6px;padding:14px;margin-top:14px;font-size:13px;color:#718096;">
+                <strong>About These Numbers:</strong><br/>
+                The Full FIRE Target is what you need in your portfolio to withdraw 4% annually. 
+                The Coast FIRE Number is how much you need TODAY (at current age) so that compound growth 
+                alone will reach the Full FIRE Target by your target retirement age. 
+                
+                Once you have the Coast FIRE number invested, you can stop saving aggressively and let 
+                compounding work for you until traditional retirement age or whenever you choose to retire.
+            </div>
+
+            <button onclick="window.print()" style="background:#718096;color:white;border:none;padding:8px 16px;border-radius:4px;font-size:13px;cursor:pointer;margin-top:14px;">Print / Save as PDF</button>
+        </div>
+    </div>
+
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;font-size:12px;color:#718096;font-style:italic;">
+        Disclaimer: This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.
+    </div>
+
+</div>
+
+<script>
+(function(){
+    // Format currency
+    const fmt = new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',maximumFractionDigits:0});
+    
+    // Sync read-only fields with base fields
+    document.getElementById('currentAge').addEventListener('input', function(e) {
+        document.getElementById('currentAgeDisplay').value = e.target.value;
+    });
+    document.getElementById('targetRetirementAge').addEventListener('input', function(e) {
+        document.getElementById('retirementAgeDisplay').value = e.target.value;
+    });
+
+    function calculateAnnual() {
+        const housing = parseFloat(document.getElementById('housingMonthly').value) || 0;
+        const food = parseFloat(document.getElementById('foodMonthly').value) || 0;
+        const transport = parseFloat(document.getElementById('transportationMonthly').value) || 0;
+        const entertainment = parseFloat(document.getElementById('entertainmentMonthly').value) || 0;
+        const healthcare = parseFloat(document.getElementById('healthcareMonthly').value) || 0;
+        const utilities = parseFloat(document.getElementById('utilitiesMonthly').value) || 0;
+        const other = parseFloat(document.getElementById('otherMonthly').value) || 0;
+        const travel = parseFloat(document.getElementById('travelMonthly').value) || 0;
+
+        document.getElementById('annualHousing').textContent = fmt.format(housing * 12);
+        document.getElementById('annualFood').textContent = fmt.format(food * 12);
+        document.getElementById('annualTransport').textContent = fmt.format(transport * 12);
+        document.getElementById('annualEntertainment').textContent = fmt.format(entertainment * 12);
+        document.getElementById('annualHealthcare').textContent = fmt.format(healthcare * 12);
+        document.getElementById('annualUtilities').textContent = fmt.format(utilities * 12);
+        document.getElementById('annualOther').textContent = fmt.format(other * 12);
+        document.getElementById('annualTravel').textContent = fmt.format(travel * 12);
+
+        const totalAnnualExpensesEl = document.getElementById('totalAnnualExpenses');
+        const totalAnnualExpenses = (housing + food + transport + entertainment + healthcare + utilities + other + travel) * 12;
+        
+        totalAnnualExpensesEl.textContent = fmt.format(totalAnnualExpenses);
+    }
+
+    function calculateFIRE() {
+        const currentAge = parseFloat(document.getElementById('currentAge').value) || 30;
+        const targetRetirementAge = parseFloat(document.getElementById('targetRetirementAge').value) || 65;
+        const yearsToRetire = targetRetirementAge - currentAge;
+        const annualExpenses = parseFloat(document.getElementById('totalAnnualExpenses').textContent.replace(/[^0-9.]/g, '')) || 50000;
+        const currentSavings = parseFloat(document.getElementById('currentSavings').value) || 0;
+        const returnRate = parseFloat(document.getElementById('expectedReturnRate').value) || 7 / 100;
+        const swrRate = parseFloat(document.getElementById('swrRate').value) || 4 / 100;
+
+        const fullFIRETarget = annualExpenses / swrRate;
+        const coastFIRENumber = fullFIRETarget / Math.pow(1 + returnRate, yearsToRetire);
+        const gap = Math.max(0, coastFIRENumber - currentSavings);
+        const pct = coastFIRENumber > 0 ? (currentSavings / coastFIRENumber) * 100 : 0;
+        
+        let yearsToCoast = 0;
+        let coastAge = targetRetirementAge;
+        
+        if (currentSavings < coastFIRENumber && currentSavings > 0) {
+            yearsToCoast = Math.log(fullFIRETarget / currentSavings) / Math.log(1 + returnRate);
+            coastAge = Math.ceil(currentAge + yearsToCoast);
+        }
+
+        document.getElementById('fullFIRETarget').textContent = fmt.format(fullFIRETarget);
+        document.getElementById('coastFIRENumber').textContent = fmt.format(coastFIRENumber);
+        document.getElementById('savingsGap').textContent = gap === 0 ? '$0' : fmt.format(gap);
+        
+        const pctEl = document.getElementById('coastPercentage');
+        pctEl.textContent = currentSavings >= coastFIRENumber ? '100% (Already there!)' : pct.toFixed(1) + '%';
+
+        if (currentSavings >= coastFIRENumber) {
+            document.getElementById('yearsToCoast').textContent = '0 (You\'ve reached Coast FIRE!)';
+            document.getElementById('coastAge').textContent = currentAge + ' (already here!)';
+            document.getElementById('results').style.background = '#f7fff7';
+        } else if (currentSavings === 0 && yearsToRetire === 0) {
+            document.getElementById('yearsToCoast').textContent = 'N/A';
+            document.getElementById('coastAge').textContent = currentAge;
+            document.getElementById('results').style.background = '#fafafa';
+        } else {
+            document.getElementById('yearsToCoast').textContent = yearsToCoast.toFixed(1) + ' years';
+            document.getElementById('coastAge').textContent = coastAge + (coastAge > targetRetirementAge ? ' (beyond traditional retirement age)' : '');
+            document.getElementById('results').style.background = '#fdfdfd';
+        }
+
+        // Show results with animation
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.style.display = 'block';
+        resultsDiv.style.opacity = '0';
+        
+        // Trigger reflow for animation
+        void resultsDiv.offsetWidth;
+        
+        resultsDiv.style.transition = 'opacity 0.5s ease';
+        resultsDiv.style.opacity = '1';
+    }
+
+    // Auto-calculate annual when inputs change
+    const expenseInputs = document.querySelectorAll('#expenses-section input[type="number"]');
+    expenseInputs.forEach(input => {
+        input.addEventListener('input', calculateAnnual);
+    });
+
+    // Initial calculations
+    calculateAnnual();
+})();
+</script>
+
+</body></html>
