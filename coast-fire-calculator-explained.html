@@ -142,13 +142,18 @@
 <meta content="Coast FIRE Calculator Explained — CoastFIREWhen" name="twitter:title"/>
 <meta content="A plain-English walkthrough of how the Coast FIRE calculator works, the formula, and what to watch out for." name="twitter:description"/>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script><script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebApplication", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coastfirewhen.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculator", "item": "https://coastfirewhen.com/coast-fire-calculator-explained.html"}], "isSpeakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".intro-box p", ".page-p", ".result-box h4"], "xpath": []}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://coastfirewhen.com/coast-fire-calculator-explained.html"}}</script><script type="application/ld+json">{ "@context": "https://schema.org", "@type": "WebSite", "name": "CoastFIREWhen", "url": "https://coastfirewhen.com", "description": "Free Coast FIRE calculators and plain-English financial independence guides.", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://coastfirewhen.com/?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script><script type="application/ld+json">{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coastfirewhen.com/"}, {"@type": "ListItem", "position": 2, "name": "Calculator", "item": "https://coastfirewhen.com/coast-fire-calculator-explained.html"}]}</script></head>
-<body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a aria-current="page" href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/about.html">About</a></div></div></nav>
+<body><nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div class="nav-links"><a href="/">Home</a><a aria-current="page" href="/coast-fire-calculator-explained.html">Calculator</a><a href="/fire-progress-tracker.html">Progress</a><a href="/what-is-coast-fire.html">Guides</a><a href="/faq.html">FAQ</a><a href="/blog/">Blog</a><a href="/about.html">About</a></div></div></nav>
 <div class="page-header">
 <p class="eyebrow eyebollow-orange">Calculator</p>
 <h1 class="page-h1">Coast FIRE Calculator</h1>
-<div class="intro-box"><p>Find the exact amount you need invested to coast to your full FIRE number — with no further savings required.</p></div>
+<div class="intro-box"><p>Find the exact amount you need invested today to coast to your full FIRE number &mdash; with no further savings required. The math is the same as a standard retirement calculator, just applied earlier in the timeline. This page walks through the formula, the assumptions, and what the result actually tells you.</p></div>
+
+<div class="callout callout-amber">
+<h4>Not Financial Advice</h4>
+<p>This calculator uses constant real returns for simplicity. It doesn't model taxes, Social Security, sequence-of-returns risk, or changes in personal circumstances. The result is a planning anchor, not a forecast. A qualified advisor can build a more complete model for your situation.</p>
 </div>
-<div class="page-wrapper">
+
+<h2 class="page-h2">How it works</h2>
 <div class="page-main">
 <!-- ===== TWO-COLUMN CALCULATOR ===== -->
 <div class="calc-layout">
@@ -243,8 +248,7 @@
 </div><!-- end .calc-layout -->
 <!-- ===== HOW IT WORKS (full width) ===== -->
 <div class="how-it-works">
-<h2 class="page-h2">How it works</h2>
-<p class="page-p">The calculation has three steps:</p>
+<h2 class="page-h2">Calculator inputs explained</h2>
 <h3 class="page-h3">1. Full FIRE Target</h3>
 <div class="formula">Full FIRE Number = Annual Expenses ÷ SWR<br/><span style="color:var(--text-muted);font-size:12px;">Example: $50,000 ÷ 0.04 = $1,250,000</span></div>
 <h3 class="page-h3">2. Years to Retirement</h3>
@@ -285,7 +289,62 @@
 <p style="margin-top:12px;font-size:14px;color:#A3A3A3">The combination of 7% nominal returns and 2% inflation means your purchasing power can grow even if you don't save another dollar. That's the Coast FIRE advantage.</p>
 </div>
 
-<p class="disclaimer">This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.</p></div><!-- end .how-it-works -->
+<h2 class="page-h2">Reading your results</h2>
+<p class="page-p">The calculator shows six numbers. Here's what each one means:</p>
+<ul class="page-ul">
+<li><strong>Coast FIRE Number:</strong> the amount you need invested today for compound growth to carry you to your full FIRE number by your target retirement age. The headline result.</li>
+<li><strong>Full FIRE Target:</strong> the portfolio size that would let you withdraw your annual expenses indefinitely at your chosen safe withdrawal rate. $50,000/yr at 4% SWR = $1,250,000.</li>
+<li><strong>Gap:</strong> the difference between your current savings and your Coast FIRE number. Positive number means you still need to save. Negative (or zero) means you've already hit it.</li>
+<li><strong>Coast Age:</strong> the age at which, if you started saving zero today and let the portfolio grow, you'd hit the Coast FIRE number. Useful as a "if I stop saving now" projection.</li>
+<li><strong>Years Left:</strong> the number of years between your current age and your target retirement age. The exponent in the compound growth formula.</li>
+<li><strong>Savings progress:</strong> the bar at the bottom shows what percentage of your Coast FIRE number you've already accumulated. 100% means you've hit it.</li>
+</ul>
+
+<h2 class="page-h2">How the formula works (deeper dive)</h2>
+<p class="page-p">The Coast FIRE calculation is a single equation: divide your full FIRE number by the compound growth factor over your time horizon. The full FIRE number is your annual expenses divided by your safe withdrawal rate (typically 4%, per the Trinity Study). The compound growth factor is (1 + expected real return) raised to the number of years until retirement.</p>
+<p class="page-p">The intuition: any dollar invested today grows by the compound factor over the years until you retire. To hit a $1.25M target with 35 years of 7% real growth, you don't need $1.25M today &mdash; you need $1.25M divided by (1.07)<sup>35</sup>, which is about $117,000. That's the entire trick. Time multiplies your money for you; the more time, the smaller the number you need to start with.</p>
+<p class="page-p">The reason "start early" matters so much: a 22-year-old with 43 years until retirement needs a fraction of the savings a 32-year-old does. The same dollar saved at 25 does about 2.5x the work of a dollar saved at 35, given the same return rate. That's why the <a href="/compound-interest-explained.html">compound interest guide</a> exists.</p>
+
+<h2 class="page-h2">What to do once you hit your Coast FIRE number</h2>
+<p class="page-p">Three reasonable paths, in increasing order of risk:</p>
+<ol class="page-ul">
+<li><strong>Stop saving entirely.</strong> The simplest. You no longer need the money; compound growth handles the rest. Your lifestyle doesn't change unless you choose to change it.</li>
+<li><strong>Reduce savings, keep investing.</strong> Move the money you would have saved into something you value more &mdash; a Roth IRA contribution you weren't maxing out, an HSA, a 529 for a kid's education, a vacation fund. Coast FIRE is a milestone, not a finish line.</li>
+<li><strong>Change your work.</strong> Switch to a lower-paying job you find more meaningful, go part-time, start a low-risk business, take a sabbatical. Your portfolio no longer needs to grow from contributions; it can stay flat or grow slowly and still hit full FIRE.</li>
+</ol>
+<p class="page-p">Which path is right depends on your goals, your tolerance for risk, and what you actually want to do with your time. Coast FIRE doesn't force any of them. It just gives you the option.</p>
+
+<h2 class="page-h2">Adjusting the assumptions</h2>
+<p class="page-p">The default assumptions (7% real return, 4% SWR) are reasonable starting points, not facts. If you want to model a more conservative scenario:</p>
+<ul class="page-ul">
+<li><strong>Lower return:</strong> Use 5% or 6% instead of 7%. The Coast FIRE number grows by 50-80% depending on how low you go. If you can't hit the 7% number but can hit the 5% number, that's a more honest plan.</li>
+<li><strong>Lower SWR:</strong> Use 3% or 3.5% instead of 4%. Your full FIRE target grows by 14-33%. More conservative; better for early retirees with longer horizons.</li>
+<li><strong>Higher expenses:</strong> Add 10-20% to your annual expenses to account for healthcare, taxes, or one-time costs (cars, home repairs, kids' college). Better to over-estimate than under.</li>
+<li><strong>Longer timeline:</strong> If you might retire at 70 instead of 65, plug that in. The math gives you a different (smaller) Coast FIRE number for a longer runway.</li>
+</ul>
+<p class="page-p">The point isn't to hit the exact number on this calculator. It's to build a plan that survives the assumptions being wrong in the wrong direction.</p>
+
+<h2 class="page-h2">Common mistakes when using a Coast FIRE calculator</h2>
+<ul class="page-ul">
+<li><strong>Confusing Coast FIRE with full FIRE.</strong> The Coast FIRE number is much smaller than the full FIRE number. The full number assumes you stop working entirely at your target age; the Coast number assumes you keep working but stop saving.</li>
+<li><strong>Ignoring taxes.</strong> Money in a 401(k) is taxed as ordinary income when you withdraw. Money in a Roth IRA isn't. The calculator doesn't differentiate. If half your savings are in tax-advantaged accounts and half in a taxable brokerage, your real Coast FIRE number depends on the mix.</li>
+<li><strong>Underestimating healthcare.</strong> If you stop working before 65, you're paying for your own insurance (ACA or COBRA), which can be $500-$1,500/month per person. The calculator assumes your stated expenses include this; it doesn't add it separately.</li>
+<li><strong>Treating the result as a target, not a range.</strong> The number is a point estimate. Real returns vary. A reasonable plan is "hit the number +/- 20% and you're fine."</li>
+<li><strong>Updating too often.</strong> The 7% and 4% assumptions shouldn't change based on last week's market. Update your inputs when your life changes (new job, new savings rate, kid), not when the market does.</li>
+</ul>
+
+<h2 class="page-h2">When the calculator's answer is wrong</h2>
+<p class="page-p">For most working-age savers with a 30+ year horizon, the Coast FIRE math is robust enough to be useful as a planning tool. The calculator will mislead you if:</p>
+<ul class="page-ul">
+<li>Your retirement date is more than 5-10 years out (assumptions get shakier the further you extrapolate)</li>
+<li>Your expenses are unusually high or low (the 4% rule is calibrated for typical middle-class spending)</li>
+<li>You plan to retire early and have unusual income sources (rental properties, a pension, an inheritance)</li>
+<li>You're not actually planning to retire at the target age (the calculator assumes you do)</li>
+</ul>
+<p class="page-p">In any of these cases, the calculator gives a starting point, not a final answer. A fee-only financial advisor or a detailed planning tool (New Retirement, Boldin, ProjectionLab) will model your specific situation more accurately.</p>
+
+<h2 class="page-h2">Related reading</h2>
+<p class="page-p">The Coast FIRE calculator is one piece of a larger picture. The <a href="/what-is-coast-fire.html">What is Coast FIRE?</a> page is the conceptual overview. The <a href="/safe-withdrawal-rate-guide.html">Safe Withdrawal Rate guide</a> explains the 4% in the formula. The <a href="/compound-interest-explained.html">Compound Interest guide</a> explains why the Coast FIRE number is so much smaller than the full FIRE number. The <a href="/fire-progress-tracker.html">FIRE Progress Tracker</a> shows your current net worth vs. your target. And the <a href="/faq.html">FAQ</a> covers the most common follow-up questions.</p>
 </div><!-- end .page-main -->
 <div class="ad-sidebar"><ins class="adsbygoogle" data-ad-client="ca-pub-1342579174060580" data-ad-format="auto" data-ad-slot="sidebar" data-full-width-responsive="true" style="display:block"></ins></div>
 </div><!-- end .page-wrapper -->
@@ -296,7 +355,51 @@
 <span class="sticky-val" id="stickyCoastNum">—</span>
 </div>
 </div>
-<footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>Learn</h4>
+<a href="/what-is-coast-fire.html">What is Coast FIRE?</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog/">Blog</a>
+</div>
+<div class="footer-col">
+<h4>Calculate</h4>
+<a href="/coast-fire-calculator-explained.html">Coast FIRE Calculator</a>
+<a href="/fire-progress-tracker.html">Progress Tracker</a>
+<a href="/resources/expenses-calculator.html">Expense Calculator</a>
+</div>
+<div class="footer-col">
+<h4>Guides</h4>
+<a href="/compound-interest-explained.html">Compound Interest</a>
+<a href="/safe-withdrawal-rate-guide.html">Safe Withdrawal Rate</a>
+<a href="/margin-vs-markup-guide.html">Margin vs. Markup</a>
+<a href="/probate-guide.html">Probate Guide</a>
+</div>
+<div class="footer-col">
+<h4>Resources</h4>
+<a href="/resources/coast-fire-checklist.html">Coast FIRE Checklist</a>
+<a href="/resources/fire-budget-checklist.html">FIRE Budget Checklist</a>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<a href="/about.html">About</a>
+<a href="/editorial-policy.html">Editorial Policy</a>
+<a href="/contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 CoastFIREWhen</p>
+<p class="disclaimer">Educational use only. Not financial advice. Not a substitute for a qualified advisor. Numbers shown are illustrative; your actual results will differ.</p>
+</div>
+</div>
+</footer>
 <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
