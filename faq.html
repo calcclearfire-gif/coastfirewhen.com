@@ -1,261 +1,391 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en"><head><meta content="#0d0f14" name="theme-color"/><meta content="CoastFIREWhen" name="author"/><meta content="https://coastfirewhen.com/faq.html" property="og:url"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>FAQ — CoastFIREWhen</title><meta content="Answers to all your Coast FIRE questions: how it works, calculator inputs, interpretation of results, and common scenarios." name="description"/>
-=======
-<html lang="en"><head><meta content="#0d0f14" name="theme-color"/><meta content="CoastFIREWhen" name="author"/><meta content="https://coastfirewhen.com/faq.html" property="og:url"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>FAQ — Coast FIRE When</title><meta content="Answers to all your Coast FIRE questions: how it works, calculator inputs, interpretation of results, and common scenarios." name="description"/>
->>>>>>> 49c650423f1a06ba2e3327a085b59545e1e702c3
+
+<html lang="en"><head><meta content="#0d0f14" name="theme-color"/><meta content="CoastFIREWhen" name="author"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><meta content="https://coastfirewhen.com/faq.html" property="og:url"/><meta content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect fill='%230d0f14' width='1200' height='630'/%3E%3Ctext x='600' y='300' font-family='system-ui,sans-serif' font-size='72' font-weight='590' fill='%23f7f8f8' text-anchor='middle' dominant-baseline='middle'%3ECoastFIREWhen%3C/text%3E%3Ctext x='600' y='390' font-family='system-ui,sans-serif' font-size='28' fill='%23828fff' text-anchor='middle'%3EFAQ+%E2%80%94+Coast+FIRE+Questions%2C+Answered%3C/text%3E%3C/svg%3E" name="twitter:image"/><meta content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect fill='%230d0f14' width='1200' height='630'/%3E%3Ctext x='600' y='300' font-family='system-ui,sans-serif' font-size='72' font-weight='590' fill='%23f7f8f8' text-anchor='middle' dominant-baseline='middle'%3ECoastFIREWhen%3C/text%3E%3Ctext x='600' y='390' font-family='system-ui,sans-serif' font-size='28' fill='%23828fff' text-anchor='middle'%3EFAQ+%E2%80%94+Coast+FIRE+Questions%2C+Answered%3C/text%3E%3C/svg%3E" property="og:image"/>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/><title>FAQ — CoastFIREWhen</title><meta content="Answers to the most common Coast FIRE questions: how the math works, what the inputs mean, how to interpret the calculator, and what to do once you hit your number." name="description"/>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;510;590&family=JetBrains+Mono:wght@400;500&display=swap');
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #0d0f14; --bg-panel: #0f1011; --bg-surface: #191a1b; --accent: #5e6ad2; --success: #10b981; --border: rgba(255,255,255,0.08); --text-primary: #f7f8f8; --text-secondary: #d0d6e0; --text-tertiary: #8a8f98; --text-muted: #62666d; --font: 'Inter', system-ui, sans-serif; }
+    :root {
+      --bg: #08090a; --bg-panel: #0f1011; --bg-surface: #191a1b; --bg-hover: #28282c;
+      --text-primary: #f7f8f8; --text-secondary: #d0d6e0; --text-tertiary: #8a8f98; --text-muted: #62666d;
+      --accent: #5e6ad2; --accent-hover: #7170ff; --accent-light: #828fff;
+      --success: #10b981;
+      --border: rgba(255,255,255,0.08); --border-subtle: rgba(255,255,255,0.05); --border-solid: #23252a;
+      --font: 'Inter', system-ui, sans-serif; --mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
     html { font-family: var(--font); background: var(--bg); color: var(--text-primary); font-size: 16px; -webkit-font-smoothing: antialiased; }
-    body { min-height: 100vh; padding-bottom: 70px; }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 49c650423f1a06ba2e3327a085b59545e1e702c3
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(13,15,20,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 24px; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { font-size: 15px; font-weight: 590; color: var(--text-secondary); }
-    .nav-logo span { color: var(--text-primary); }
-<<<<<<< HEAD
-    
-    a { color: inherit; text-decoration: none; }
-    
-    .page-header { padding: 48px 24px 0; max-width: 960px; margin: 0 auto; }
-    .eyebrow { font-size: 12px; font-weight: 590; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-    .page-h1 { font-size: 34px; font-weight: 510; color: var(--text-primary); line-height: 1.1; }
-    
-    .faq-container { max-width: 800px; margin: 40px auto 60px; padding: 0 24px; }
-    
-    .faq-item { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; background: rgba(255,255,255,0.02); }
-    .faq-question { width: 100%; padding: 18px 20px; text-align: left; border: none; background: none; color: var(--text-primary); font-size: 16px; font-weight: 590; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.15s; }
-    .faq-question:hover { background: rgba(255,255,255,0.04); }
-    .faq-question::after { content: '+'; font-size: 20px; color: var(--text-muted); transition: transform 0.2s; }
-    .faq-item[open] .faq-question::after { content: '−'; transform: rotate(180deg); }
-    
-    .faq-answer { padding: 0 20px 20px; font-size: 15px; color: var(--text-tertiary); line-height: 1.7; display: none; }
-    .faq-item[open] .faq-answer { display: block; animation: fadeIn 0.3s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
-    
-    .callout { background: rgba(94,106,210,0.04); border: 1px solid rgba(94,106,210,0.18); border-radius: 8px; padding: 18px 20px; margin: 32px 0; }
-    .callout h4 { font-size: 14px; font-weight: 590; color: var(--accent); margin-bottom: 6px; }
-    .callout p { font-size: 14px; color: var(--text-tertiary); line-height: 1.6; margin: 0; }
-    
-=======
+    body { min-height: 100vh; }
     a { color: inherit; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .page-header { padding: 48px 24px 0; max-width: 1100px; margin: 0 auto; }
-    .eyebrow { font-size: 12px; font-weight: 590; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
-    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
-    .faq-container { max-width: 960px; margin: 0 auto; padding: 0 24px 60px; }
-    details { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
-    summary { padding: 16px 20px; font-size: 15px; font-weight: 590; cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between; list-style: none; }
+    ::selection { background: var(--accent); color: #fff; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,9,10,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-subtle); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 15px; font-weight: 510; letter-spacing: -0.01em; color: var(--text-secondary); }
+    .nav-logo span { color: var(--text-primary); }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { font-size: 14px; font-weight: 510; color: var(--text-tertiary); padding: 6px 10px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    .nav-links a:hover { background: rgba(255,255,255,0.04); color: var(--text-secondary); }
+    .nav-links a[aria-current="page"] { background: rgba(255,255,255,0.06); color: var(--text-secondary); }
+
+    .page-header { padding: 52px 24px 0; max-width: 1100px; margin: 0 auto; }
+    .eyebrow { font-size: 12px; font-weight: 510; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
+    .eyebrow-purple { color: var(--accent-light); }
+    .page-h1 { font-size: 34px; font-weight: 510; letter-spacing: -0.025em; color: var(--text-primary); margin-bottom: 16px; line-height: 1.1; }
+    .page-lede { font-size: 17px; font-weight: 300; line-height: 1.65; color: var(--text-secondary); max-width: 680px; margin-bottom: 8px; }
+
+    .page-content { max-width: 680px; margin: 0 auto; padding: 32px 24px 80px; }
+    .page-h2 { font-size: 22px; font-weight: 510; letter-spacing: -0.015em; color: var(--text-primary); margin: 40px 0 14px; }
+    .page-h3 { font-size: 17px; font-weight: 590; color: var(--text-primary); margin: 24px 0 10px; letter-spacing: -0.01em; }
+    .page-p { font-size: 16px; font-weight: 300; line-height: 1.75; color: var(--text-tertiary); margin-bottom: 14px; }
+    .page-ul { list-style: none; padding: 0; margin: 10px 0 16px; }
+    .page-ul li { font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--text-tertiary); padding: 3px 0 3px 16px; position: relative; }
+    .page-ul li::before { content: '–'; position: absolute; left: 0; color: var(--text-muted); }
+
+    .faq-section { border-top: 1px solid var(--border-subtle); padding-top: 32px; margin-top: 40px; }
+    .faq-section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .section-eyebrow { font-size: 11px; font-weight: 510; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 6px; }
+    .section-title { font-size: 20px; font-weight: 510; color: var(--text-primary); margin-bottom: 18px; letter-spacing: -0.015em; }
+
+    details { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    details[open] { background: rgba(255,255,255,0.03); }
+    summary { padding: 16px 20px; font-size: 15px; font-weight: 590; cursor: pointer; user-select: none; display: flex; align-items: center; justify-content: space-between; list-style: none; color: var(--text-primary); }
     summary:hover { background: rgba(255,255,255,0.04); }
-    summary::after { content: '+'; font-size: 18px; font-weight: 300; color: var(--text-tertiary); }
+    summary::after { content: '+'; font-size: 18px; font-weight: 300; color: var(--text-tertiary); margin-left: 16px; }
     details[open] summary::after { content: '−'; }
-    .faq-content { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-tertiary); line-height: 1.7; }
-    h2 { font-size: 24px; font-weight: 510; margin: 48px 0 16px; letter-spacing: -0.01em; color: var(--text-primary); }
-    h3 { font-size: 19px; font-weight: 590; margin: 28px 0 12px; letter-spacing: -0.01em; }
-    p { margin-bottom: 14px; }
-    .faq-section { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 32px; margin-top: 32px; }
-    .section-title { font-size: 18px; font-weight: 590; color: var(--accent); margin-bottom: 16px; }
->>>>>>> 49c650423f1a06ba2e3327a085b59545e1e702c3
-    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; margin-top: 48px; }
-    footer p { font-size: 13px; color: var(--text-muted); }
-    .footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 16px; }
-    .footer-links a { font-size: 13px; color: var(--text-tertiary); }
-<<<<<<< HEAD
-</style></head><body>
+    .faq-answer { padding: 4px 20px 18px; color: var(--text-tertiary); line-height: 1.7; }
+    .faq-answer p { font-size: 15px; font-weight: 300; margin-bottom: 10px; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul { list-style: none; padding: 0; margin: 8px 0 12px; }
+    .faq-answer ul li { font-size: 14px; font-weight: 300; line-height: 1.65; color: var(--text-tertiary); padding: 3px 0 3px 18px; position: relative; }
+    .faq-answer ul li::before { content: '•'; position: absolute; left: 4px; color: var(--text-muted); }
+    .faq-answer strong { color: var(--text-secondary); font-weight: 590; }
 
-<nav><div class="nav-inner"><a class="nav-logo" href="/">Coast<span>FIRE</span>When</a><div style="font-size:12px;color:var(--text-muted)"><a href="/">Home</a> / <strong>FAQ</strong></div></div></nav>
+    .callout { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; margin: 24px 0; }
+    .callout-blue { border-color: rgba(96,165,250,0.18); background: rgba(96,165,250,0.04); }
+    .callout h4 { font-size: 13px; font-weight: 590; margin-bottom: 5px; }
+    .callout-blue h4 { color: #60a5fa; }
+    .callout p { font-size: 14px; font-weight: 300; color: var(--text-tertiary); margin: 0; }
 
-<div class="page-header">
-    <p class="eyebrow">Support</p>
-    <h1 class="page-h1">Frequently Asked Questions</h1>
-    <p style="font-size:16px;color:var(--text-tertiary);margin-top:12px;">Answers to common questions about Coast FIRE, the calculators, and your path to financial independence.</p>
-</div>
+    .cta { background: rgba(94,106,210,0.06); border: 1px solid rgba(94,106,210,0.2); border-radius: 8px; padding: 22px 24px; margin: 36px 0 8px; text-align: center; }
+    .cta h3 { font-size: 17px; font-weight: 590; color: var(--text-primary); margin-bottom: 6px; }
+    .cta p { font-size: 14px; font-weight: 300; color: var(--text-tertiary); margin-bottom: 14px; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 6px; font-size: 14px; font-weight: 510; cursor: pointer; transition: all 0.15s; border: none; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
 
-<div class="faq-container">
+    .disclaimer { font-size: 13px; font-weight: 300; color: var(--text-muted); font-style: italic; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-subtle); }
 
-<div class="callout"><h4>Why use this FAQ?</h4><p>We've compiled the most common questions from our community. Use these answers to understand Coast FIRE better before diving into the calculators.</p></div>
+    footer { border-top: 1px solid var(--border-subtle); padding: 36px 24px; text-align: center; margin-top: 48px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; text-align: left; margin-bottom: 32px; }
+    .footer-col h4 { font-size: 11px; font-weight: 590; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 12px; }
+    .footer-col a { display: block; font-size: 13px; font-weight: 400; color: var(--text-muted); padding: 4px 0; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--text-secondary); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 20px; }
+    .footer-bottom p { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+    .footer-bottom .disclaimer-line { font-style: italic; }
+    @media (max-width: 720px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 420px) { .footer-grid { grid-template-columns: 1fr; } }
 
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">Coast FIRE Fundamentals</h2>
-
-<div class="faq-item"><details open><summary class="faq-question">What exactly is Coast FIRE?</summary><div class="faq-answer"><p>Coast FIRE is a retirement strategy where you save aggressively now, then let compound growth carry you to traditional retirement age without additional contributions. Once you reach your Coast FIRE number, the market does the rest.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Key insight:</h4><p>The goal is to stop saving aggressively while you still have decades for compounding to work its magic. This is different from traditional FIRE because you don't need to accumulate enough assets immediately to live off entirely—you can work part-time or in a career you enjoy.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">How does Coast FIRE differ from traditional FIRE?</summary><div class="faq-answer"><p><strong>Traditional FIRE:</strong> Save enough for 25-30x expenses before retiring. Stop working entirely.</p><p><strong>Coast FIRE:</strong> Build enough assets that compound growth alone will reach your full FIRE number by age 65 (or whenever you choose to retire). Once there, stop saving and let investments grow.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">The difference:</h4><p>Traditional FIRE gets you to the finish line fast but requires high savings rates. Coast FIRE extends the journey slightly but reduces pressure once you hit a milestone.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">At what age should I aim for Coast FIRE?</summary><div class="faq-answer"><p>This depends on your current financial situation. Most people reach Coast FIRE between ages 35-45, depending on:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Current savings and assets</li><li>Your savings rate (percentage of income saved)</li><li>Expected investment returns (historically ~7% after inflation)</li><li>Target retirement age</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Rule of thumb:</h4><p>If you're in your 20s or early 30s with a reasonable savings rate (15-20% of income), you could hit Coast FIRE by late 30s. If starting later or with lower savings rates, it might be mid-to-late 40s.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">Can I restart saving after coasting?</summary><div class="faq-answer"><p>Absolutely! Coast FIRE doesn't mean you can never save again. Once you reach your Coast FIRE number, you have flexibility:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Stop saving entirely and let compounding work</li><li>Save occasionally in good markets</li><li>Restart aggressively if market conditions improve</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">The key insight:</h4><p>Coast FIRE gives you optionality—you're not stuck. You can work because you want to, not because you have to.</p></div></details></div>
-
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">How to Use the Calculators</h2>
-
-<div class="faq-item"><details open><summary class="faq-question">What inputs are required for the Coast FIRE calculator?</summary><div class="faq-answer"><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>Current Age:</strong> How old you are now</li><li><strong>Target Retirement Age:</strong> When you plan to stop working (typically 65-70)</li><li><strong>Annual Expenses:</strong> What you expect to spend in retirement (in today's dollars)</li><li><strong>Current Savings:</strong> Total invested assets (401k, IRA, brokerage accounts)</li><li><strong>Expected Annual Return:</strong> Historical average is 7% for diversified stock portfolios</li><li><strong>Safe Withdrawal Rate:</strong> Typically 4% based on the Trinity Study</li></ul></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">How do I enter Social Security benefits?</summary><div class="faq-answer"><p>Our calculators use a conservative approach: they assume no Social Security income to give you the most realistic timeline.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Why this matters:</h4><p>If you expect Social Security to cover 30-50% of your expenses, enter that as a percentage reduction. For example, if $50,000 annual expenses include $20,000 from Social Security, enter $30,000 instead.</p><p>Use <a href="https://ssa.gov/my-account" target="_blank" rel="noopener">ssa.gov/my-account</a> to check your estimated benefits before finalizing retirement plans.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">What if my expected return is lower than 7%?</summary><div class="faq-answer"><p>A 7% return represents historical averages, not guarantees. If you're concerned about volatility or want a more conservative estimate:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>6%:</strong> Still reasonable for a balanced portfolio (60-40 stocks/bonds)</li><li><strong>5%:</strong> Conservative stock-heavy or target-date funds</li><li><strong>4%:</strong> Very conservative allocation</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Important note:</h4><p>Your calculator results will vary year-to-year. Use the conservative return to build confidence, but don't be afraid to use historical averages for planning. The key is maintaining your allocation during market downturns.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">Can I adjust the withdrawal rate?</summary><div class="faq-answer"><p>Yes! Use the slider to adjust from 3% to 10%:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>4-5%:</strong> Traditional safe withdrawal rates (Trinity Study)</li><li><strong>6-7%:</strong> More aggressive, higher risk of portfolio depletion</li><li><strong>3%:</strong> Very conservative, supports longer retirement</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Why it matters:</h4><p>The withdrawal rate directly impacts your Coast FIRE number. A lower rate means you need more assets to coast, but also extends your portfolio's lifespan. Use your personal risk tolerance as a guide.</p></div></details></div>
-
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">Understanding Your Results</h2>
-
-<div class="faq-item"><details open><summary class="faq-question">What does my Coast FIRE number mean?</summary><div class="faq-answer"><p>This is the exact amount you need invested TODAY to reach your full FIRE goal by traditional retirement age without saving another dollar.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Example:</h4><p>If your Coast FIRE number is $250,000 and you currently have $150,000 in savings, you need to save another $100,000 through compound growth. If you hit that target at age 38, you can coast until age 65.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Already there?</h4><p>If the calculator shows you've already reached Coast FIRE (indicated in green), congratulations! You can stop saving aggressively now and let compounding work its magic.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">How do I interpret "years to coast"?</summary><div class="faq-answer"><p>This tells you when you'll stop needing to save aggressively. If the calculator shows 7 years to coast from age 35, that means by age 42, your investments will have grown enough that compounding alone can get you to retirement.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">What happens after hitting Coast FIRE:</h4><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Market growth continues without additional savings</li><li>You can reduce work hours or switch careers</li><li>Your portfolio becomes truly passive income</li></ul></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">What is the "gap" number?</summary><div class="faq-answer"><p>The gap is how much you need to save before coasting begins. If your Coast FIRE number is $200,000 and you have $100,000 saved, your gap is $100,000.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Why close the gap:</h4><p>The smaller your gap, the sooner you can coast. Consider:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Increasing savings rate temporarily</li><li>Selling a property or other asset</li><li>Career move to higher income (if age allows)</li></ul></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">Does the calculator account for inflation?</summary><div class="faq-answer"><p>Yes. The calculator assumes:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Inputs are in today's dollars</li><li>Expected return of 7% is after-inflation (real returns)</li><li>Your expenses grow with inflation over time</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Important note:</h4><p>The calculator shows results in today's dollars for simplicity. Your future portfolio will naturally keep pace with inflation through nominal returns exceeding inflation.</p></div></details></div>
-
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">Investment Strategies</h2>
-
-<div class="faq-item"><details><summary class="faq-question">What portfolio allocation should I use?</summary><div class="faq-answer"><p>Coast FIRE works with any portfolio that maintains long-term compounding:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>Growth-oriented (recommended):</strong> 90-100% stocks</li><li><strong>Balanced:</strong> 70-80% stocks / 20-30% bonds</li><li><strong>Conservative:</strong> 50-60% stocks / 40-50% bonds</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Key principle:</h4><p>During the coasting phase, you have decades where market downturns can recover. Avoid locking into overly conservative portfolios during this time.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">Should I use a target-date fund?</summary><div class="faq-answer"><p>Yes! Target-date funds automatically adjust allocation as you approach retirement:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>Example:</strong> If coasting at age 40 targeting age 65, use target date fund for year 2040</li><li>The fund becomes more conservative automatically as you approach retirement</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Benefits:</h4><p>Automatic rebalancing, professional management, tax-efficient structure. Ideal for hands-off investors.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">How often should I check my progress?</summary><div class="faq-answer"><p>At minimum, review annually:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Portfolio value vs. Coast FIRE target</li><li>Market conditions (are we in bull or bear market?)</li><li>Changes in expenses or life circumstances</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Important mindset:</h4><p>Don't over-check during short-term market volatility. Remember that compound growth works best with a long-term perspective. Coast FIRE is about trusting the process.</p></div></details></div>
-
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">Social Security & Taxes</h2>
-
-<div class="faq-item"><details><summary class="faq-question">How do Social Security benefits factor into planning?</summary><div class="faq-answer"><p>Use our calculator with conservative assumptions, then adjust for expected benefits:</p><ol style="list-style:decimal;padding-left:20px;margin:12px 0;"><li>Enter full expenses for baseline planning</li><li>Check ssa.gov/my-account for your estimated benefit</li><li>If SS covers ~40% of expenses, reduce your target by that amount</li></ol><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Example:</h4><p>With $50,000 annual expenses and SS providing $20,000, you only need your portfolio to cover $30,000. This significantly reduces your Coast FIRE number.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">When should I claim Social Security?</summary><div class="faq-answer"><p>This depends on your specific situation:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>Age 62:</strong> Early claiming (permanently reduced benefit)</li><li><strong>Full Retirement Age:</strong> Typically 66-67 depending on birth year</li><li><strong>Age 70:</strong> Delayed claiming (maximum benefit)</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Coast FIRE strategy:</h4><p>Consider delaying SS claiming while you coast. You can work part-time to cover living expenses without claiming benefits. When you finally hit full Coast FIRE, continue working and delay SS until age 70 for maximum benefit.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">What about taxes on retirement income?</summary><div class="faq-answer"><p>Taxes vary based on:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>State of residence (some have no income tax)</li><li>Total portfolio value</li><li>Income from other sources</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Planning tips:</h4><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Consider geographic diversification (low-tax states)</li><li>Roth conversions can fill tax brackets efficiently</li><li>Invest in low-tax asset classes during high-income years</li></ul></div></details></div>
-
-<h2 style="font-size:18px;font-weight:590;margin:32px 0 20px;color:var(--text-primary);border-bottom:1px solid var(--border);padding-bottom:12px;">Common Scenarios</h2>
-
-<div class="faq-item"><details><summary class="faq-question">I'm 28, earning $75k, saving $15k/year. When can I coast?</summary><div class="faq-answer"><p>This depends on your expenses and investment returns. With a typical savings rate of ~20% and 7% annual returns, you could reach Coast FIRE by age 35-38.</p><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">What to optimize:</h4><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Increase savings rate to 25-30% if possible</li><li>Maximize employer matching on retirement accounts</li><li>Avoid lifestyle creep as income increases</li></ul></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">I'm 45 with $200k in investments. Is that enough to coast?</summary><div class="faq-answer"><p>It depends on your expenses and target retirement age. If you plan to retire at 65 (20 years from now) and have annual expenses of $40,000:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Your Full FIRE Target = $40,000 / 0.04 = $1,000,000</li><li>Coast FIRE Number = $1,000,000 / 1.07^20 = ~$329,000</li></ul><p>You currently have $200k, so you need to save until your portfolio reaches ~$330k. That could take 5-7 more years depending on savings rate and returns.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">I lost my job last year. Does Coast FIRE still apply?</summary><div class="faq-answer"><p>Absolutely! In fact, it may be more attractive now:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>You have flexibility to work part-time or find passion projects</li><li>No employer benefits tied to employment</li><li>Market downturns might create buying opportunities</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Opportunity perspective:</h4><p>Coast FIRE gives you optionality—you're not desperate for employment. This is a strength, not a vulnerability.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">Can I achieve Coast FIRE and then move abroad?</summary><div class="faq-answer"><p>Yes! This is one of Coast FIRE's unique advantages. You can:</p><ol style="list-style:decimal;padding-left:20px;margin:12px 0;"><li>Achieve Coast FIRE in a high-cost area</li><li>Migrate to lower-cost location (Thailand, Portugal, Costa Rica)</li><li>Your portfolio continues compounding regardless of location</li></ol><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Example:</h4><p>Coast FIRE at age 45 with $330k in a high-cost area. Move to Thailand where your purchasing power doubles or triples. Your portfolio continues growing toward retirement target regardless of location changes.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">What if the market crashes during my coasting phase?</summary><div class="faq-answer"><p>Remember: Coast FIRE works because compound growth is a long-term phenomenon:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li>Market downturns are temporary (decades-long view)</li><li>Historical average returns still hold over time</li><li>No need to add more money—you have no forced selling pressure</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">The advantage of coasting:</h4><p>Unlike traditional retirement where you're pulling money out, during Coast FIRE you're letting time work for you. A market downturn actually benefits you—it reduces your portfolio value but also means lower starting point when compounding resumes.</p></div></details></div>
-
-<div class="faq-item"><details><summary class="faq-question">How do I handle lifestyle inflation as income increases?</summary><div class="faq-answer"><p>Be intentional about saving rate vs. spending:</p><ul style="list-style:none;padding-left:0;margin:12px 0;"><li><strong>Maintain modest lifestyle:</strong> Don't upgrade car/house with every raise</li><li><strong>Automate savings:</strong> Set up automatic transfers to investment accounts</li><li><strong>Live below means:</strong> Use percentage-of-income budget (e.g., 50/30/20 rule)</li></ul><h4 style="margin:12px 0 6px;font-size:13px;color:var(--accent);">Coast FIRE timing:</h4><p>The earlier you resist lifestyle inflation, the sooner you can coast. Every $1k saved at age 30 is worth ~$15k in today's dollars by age 60 due to compounding.</p></div></details></div>
-
-<div class="callout"><h4>Still have questions?</h4><p>This FAQ covers our most common topics. Check out our <a href="/coast-fire-calculator-explained.html">calculator guide</a> for detailed explanations, or explore our other guides on compound interest, withdrawal rates, and FIRE strategies.</p></div>
-
-<footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
-=======
-</style></head>
+    .nav-toggle{display:none;position:absolute;right:24px;top:0;width:32px;height:56px;cursor:pointer;opacity:0;z-index:100}
+    .nav-toggle-label{display:none;position:absolute;right:24px;top:16px;width:24px;height:24px;cursor:pointer;z-index:101}
+    .nav-toggle-label span{display:block;width:100%;height:2px;background:var(--text-secondary);border-radius:2px;transition:all .2s;margin-bottom:5px}
+    @media(max-width:640px){
+      .nav-toggle-label{display:block}
+      .nav-links{position:fixed;top:0;right:-100%;width:220px;height:100vh;background:var(--bg);border-left:1px solid var(--border);flex-direction:column;align-items:flex-start;padding:80px 24px 24px;gap:0;transition:right .3s;z-index:99}
+      .nav-links a{font-size:16px;padding:12px 0;border-bottom:1px solid var(--border);width:100%}
+      .nav-toggle:checked ~ .nav-links{right:0}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2){opacity:0}
+      .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    }
+  </style>
+<link href="https://coastfirewhen.com/faq.html" rel="canonical"/>
+<meta content="FAQ — CoastFIREWhen" property="og:title"/>
+<meta content="Answers to common Coast FIRE questions: how the math works, what the calculator inputs mean, and how to interpret the result." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="FAQ — CoastFIREWhen" name="twitter:title"/>
+<meta content="Answers to common Coast FIRE questions: how the math works, what the calculator inputs mean, and how to interpret the result." name="twitter:description"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342579174060580"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "What is Coast FIRE?", "acceptedAnswer": {"@type": "Answer", "text": "Coast FIRE means saving aggressively until compound interest alone can grow your portfolio to your full FIRE number by traditional retirement age."}},
+  {"@type": "Question", "name": "How much do I need to coast?", "acceptedAnswer": {"@type": "Answer", "text": "You need enough invested assets that, at retirement age (say 65), they will equal your FIRE number without any more contributions. That depends on your spending, expected returns, and withdrawal rate."}},
+  {"@type": "Question", "name": "What's the safe withdrawal rate?", "acceptedAnswer": {"@type": "Answer", "text": "The 4% rule means withdrawing 4% of your portfolio annually, adjusted for inflation."}},
+  {"@type": "Question", "name": "How does Coast FIRE differ from traditional FIRE?", "acceptedAnswer": {"@type": "Answer", "text": "Traditional FIRE means saving aggressively all the way to retirement. Coast FIRE means saving aggressively in early career, then stopping or reducing savings by mid-career while compound growth carries you to your target."}},
+  {"@type": "Question", "name": "When can I coast?", "acceptedAnswer": {"@type": "Answer", "text": "Coast eligibility is when your portfolio divided by your FIRE number is at or above 65% and is on track to reach 100% by retirement age."}}
+]}</script>
+</head>
 <body>
-<nav><div class="nav-inner">
+<nav>
+<div class="nav-inner">
 <a class="nav-logo" href="/">Coast<span>FIRE</span>When</a>
-<label class="nav-toggle-label" for="nav-toggle"><span><span></span></span><span><span></span></span><span><span></span></span></label>
 <input type="checkbox" id="nav-toggle"/>
-<nav class="nav-links">
+<label class="nav-toggle-label" for="nav-toggle"><span></span><span></span><span></span></label>
+<div class="nav-links">
 <a href="/">Home</a>
 <a href="/coast-fire-calculator-explained.html">Calculator</a>
 <a href="/fire-progress-tracker.html">Progress</a>
 <a href="/what-is-coast-fire.html">Guides</a>
-<a href="/faq.html" style="background:rgba(255,255,255,0.06);color:var(--text-secondary)">FAQ</a>
+<a aria-current="page" href="/faq.html">FAQ</a>
 <a href="/blog/">Blog</a>
 <a href="/about.html">About</a>
+</div>
+</div>
 </nav>
-</div></nav>
 <div class="page-header">
-<p class="eyebrow">FAQ</p>
-<nav style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Home / FAQ /</nav>
-<h1>Frequently Asked Questions</h1>
-<div class="meta">Answers to all your Coast FIRE questions</div>
+<p class="eyebrow eyebrow-purple">FAQ</p>
+<h1 class="page-h1">Coast FIRE questions, answered</h1>
+<p class="page-lede">The questions that come up most often about Coast FIRE, the calculator, and what to do once you've hit your number. If you're new to the concept, the <a href="/what-is-coast-fire.html">5-minute explainer</a> is a faster starting point.</p>
 </div>
-<div class="faq-container">
-  <details open>
-    <summary>What is Coast FIRE?</summary>
-    <div class="faq-content">
-      <p><strong>Coast FIRE</strong> means saving aggressively until compound interest alone can grow your portfolio to your full FIRE number by traditional retirement age.</p>
-    </div>
-  </details>
+<div class="page-content">
 
-  <details>
-    <summary>How much do I need to coast?</summary>
-    <div class="faq-content">
-      <p>You need enough invested assets such that, at retirement age (say 65), they will equal your "FIRE number" without any more contributions. That depends on your spending, expected returns (typically 7-8%), and withdrawal rate assumption (commonly 4%).</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>What's the "safe withdrawal rate"?</summary>
-    <div class="faq-content">
-      <p>The <strong>4% rule</strong> means withdrawing 4% of your portfolio annually, adjusted for inflation. For Coast FIRE, we assume:</p>
-      <ul><li><strong>Conservative:</strong> 3-3.5%</li><li><strong>Moderate:</strong> 4%</li><li><strong>Aggressive:</strong> 5%</li></ul>
-    </div>
-  </details>
-
-  <details>
-    <summary>How does Coast FIRE differ from traditional FIRE?</summary>
-    <div class="faq-content">
-      <p><strong>Traditional FIRE:</strong> Save aggressively all the way to retirement.</p>
-      <p><strong>Coast FIRE:</strong> Save aggressively in early career, then stop or reduce savings by mid-career while compound growth carries you to your target.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>When can I coast?</summary>
-    <div class="faq-content">
-      <p><strong>Coast eligibility:</strong></p>
-      <ul><li>Portfolio / FIRE Number ≥ 65% and ≤ 100%</li><li>Your portfolio is on track to reach full FIRE number by retirement age</li></ul>
-    </div>
-  </details>
-
-  <details>
-    <summary>How does the calculator work?</summary>
-    <div class="faq-content">
-      <p>The calculator asks for current assets, annual expenses, expected return (7%), and withdrawal rate (4%). It projects your FIRE target and when you can stop saving.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>What if I'm over 60?</summary>
-    <div class="faq-content">
-      <p>If you're over 60, traditional FIRE is often better because you have fewer years for compounding. However, Coast FIRE can still work if you've already accumulated a large enough portfolio.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>How do I account for inflation?</summary>
-    <div class="faq-content">
-      <p>All numbers in our calculations are in <strong>nominal (today's) dollars</strong>. We use pre-inflation figures:</p>
-      <ul><li>Your Annual Expenses input is your current spending power</li><li>7-8% returns are historical nominal averages (which already include inflation)</li><li>4% withdrawal rate is a traditional rule of thumb for portfolio sustainability</li></ul>
-      <p>Over a 30-35 year horizon, a 7% nominal return portfolio typically outpaces average inflation, allowing your purchasing power to grow even if you don't save another dollar. That's the Coast FIRE advantage.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>Can I use a higher withdrawal rate?</summary>
-    <div class="faq-content">
-      <p>Yes! Higher withdrawal rates reduce your FIRE number, but increase sequence-of-returns risk. The calculator lets you pick your own rate.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>What about Social Security?</summary>
-    <div class="faq-content">
-      <p>You can claim at age 62 (reduced), full retirement age (typically 66-67), or delay to 70 for maximum benefit. In Coast FIRE, you may coast on your portfolio for years before claiming Social Security.</p>
-    </div>
-  </details>
-
-  <details>
-    <summary>What investment allocation should I use?</summary>
-    <div class="faq-content">
-      <p><strong>Ages 20-40:</strong> 90-100% equities (time in market is your friend)</p>
-      <p><strong>Ages 40-55:</strong> 70-80% equities, 20-30% bonds</p>
-      <p><strong>Ages 55+: </strong>60-70% equities, 30-40% bonds (preservation becomes more important)</p>
-    </div>
-  </details>
-
-  <footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
+<div class="callout callout-blue">
+<h4>Not financial advice</h4>
+<p>Educational content only. Consult a licensed financial advisor before making significant financial decisions. See our <a href="/editorial-policy.html">Editorial Policy</a> for how we approach this content.</p>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<canvas id="compoundChart" style="width:100%;max-width:960px;margin:32px auto;border-radius:8px;background:rgba(255,255,255,0.02);padding:20px;display:none;"></canvas>
->>>>>>> 49c650423f1a06ba2e3327a085b59545e1e702c3
+<div class="faq-section">
+<p class="section-eyebrow">Section 1</p>
+<h2 class="section-title">The basics</h2>
 
+<details open>
+<summary>What is Coast FIRE?</summary>
+<div class="faq-answer">
+<p><strong>Coast FIRE</strong> means saving aggressively until compound interest alone can grow your portfolio to your full FIRE number by traditional retirement age. Once you hit that point, you can stop saving entirely &mdash; or save far less &mdash; and still arrive at retirement financially independent.</p>
+<p>The name comes from the idea that your money is "coasting" toward the finish line on its own. You still have to <em>work</em> to pay for current expenses, but the savings grind is over.</p>
+</div>
+</details>
+
+<details>
+<summary>How is Coast FIRE different from regular FIRE?</summary>
+<div class="faq-answer">
+<p><strong>Traditional FIRE:</strong> Save aggressively all the way to retirement, then stop working. Most aggressive version.</p>
+<p><strong>Coast FIRE:</strong> Save aggressively in early career, then stop or reduce savings by mid-career while compound growth carries you to your target. Less aggressive, more flexible.</p>
+<p><strong>Barista FIRE:</strong> A Coast FIRE variant where you cover most expenses with part-time or lower-stress work in the "coast" phase. The portfolio bridges whatever gap remains.</p>
+<p>The three sit on a spectrum: how much do you keep saving after the coast point? Zero (Coast), some (Barista), all the way (full FIRE).</p>
+</div>
+</details>
+
+<details>
+<summary>Is Coast FIRE realistic? When does it actually happen?</summary>
+<div class="faq-answer">
+<p>For most people saving 15&ndash;25% of income from their mid-20s with a reasonable income, the coast point arrives somewhere between 35 and 45. That sounds earlier than expected, but it tracks the math: a $200K portfolio growing for 20&ndash;30 years at 7% real returns becomes a $1M&ndash;$1.5M portfolio, and the FIRE number for a moderate spender is in that range.</p>
+<p>The hard part is the front-loaded saving. Most people who don't reach coast status aren't failing on the math &mdash; they're failing on the savings rate in years 3&ndash;7, when lifestyle inflation starts and the compounding hasn't yet made the sacrifices feel worth it.</p>
+</div>
+</details>
+
+<details>
+<summary>What counts as "my number"?</summary>
+<div class="faq-answer">
+<p>Your <strong>FIRE number</strong> is the portfolio size that lets you withdraw your annual expenses indefinitely. The standard rule of thumb is annual expenses &times; 25 (the inverse of the 4% safe withdrawal rate), but the right number depends on:</p>
+<ul>
+<li>Your actual spending, not your aspirational spending</li>
+<li>The withdrawal rate you want to use (3.5% is more conservative; 4% is the historical default; 5% is aggressive)</li>
+<li>Whether you expect one-time large expenses (a house, kids' college) that should be funded separately</li>
+</ul>
+<p>The calculator lets you set your own withdrawal rate. Most people start at 4% and adjust if the resulting number feels unattainable or if they want a margin of safety.</p>
+</div>
+</details>
+</div>
+
+<div class="faq-section">
+<p class="section-eyebrow">Section 2</p>
+<h2 class="section-title">The calculator</h2>
+
+<details>
+<summary>What inputs does the Coast FIRE calculator take?</summary>
+<div class="faq-answer">
+<p>Four numbers:</p>
+<ul>
+<li><strong>Current invested assets</strong> &mdash; everything in taxable brokerage, Roth IRA, Traditional IRA, and 401(k) accounts. Don't include your home equity, emergency fund, or money you'll need in the next 3 years.</li>
+<li><strong>Annual expenses</strong> &mdash; what you actually spend in a year, not what you earn. The post-tax number matters, not the pre-tax number.</li>
+<li><strong>Expected return</strong> &mdash; default 7% (a long-run real estimate). Use a lower number if you're more conservative.</li>
+<li><strong>Current age</strong> &mdash; the calculator projects to 65 by default; you can change that to any target retirement age.</li>
+</ul>
+</div>
+</details>
+
+<details>
+<summary>What's the formula behind the calculator?</summary>
+<div class="faq-answer">
+<p>The core calculation is the <strong>present value of a future number</strong>:</p>
+<p style="font-family: var(--mono); font-size: 13px; color: var(--text-secondary); padding: 10px 14px; background: rgba(255,255,255,0.03); border-radius: 6px; margin: 8px 0;">coast_number = FIRE_number / (1 + r)^years_to_retirement</p>
+<p>where <em>FIRE_number = annual_expenses / withdrawal_rate</em>, and <em>r</em> is the expected real return. The result is the portfolio size you need <em>today</em> such that, with no further contributions, compound growth carries you to your FIRE number by retirement age.</p>
+<p>If your current invested assets are at or above the coast number, you can stop saving and still hit your target. If they're below, the calculator shows how long until you reach the coast point at your current savings rate.</p>
+</div>
+</details>
+
+<details>
+<summary>How do I account for inflation?</summary>
+<div class="faq-answer">
+<p>All numbers in the calculator are in <strong>nominal (today's) dollars</strong> for simplicity. What that means in practice:</p>
+<ul>
+<li>Your Annual Expenses input is your current spending power</li>
+<li>The 7% expected return is a long-run real return (after inflation)</li>
+<li>The 4% withdrawal rate is a traditional rule of thumb for portfolio sustainability</li>
+</ul>
+<p>Over a 30&ndash;35 year horizon, a 7% real-return portfolio typically outpaces average inflation, so your purchasing power grows even if you don't save another dollar. That's the Coast FIRE advantage. If you'd rather use nominal returns (the historical S&amp;P 500 average of ~10%), the <a href="/compound-interest-explained.html">compound interest guide</a> walks through the difference.</p>
+</div>
+</details>
+
+<details>
+<summary>When does the calculator say I can coast?</summary>
+<div class="faq-answer">
+<p>The calculator shows two milestones:</p>
+<ul>
+<li><strong>Coast point:</strong> when your portfolio reaches the present-value amount that will compound to your FIRE number by retirement age. Above this, you can stop saving entirely.</li>
+<li><strong>Full FIRE point:</strong> when your portfolio itself equals your FIRE number. Above this, you can stop working entirely (in theory).</li>
+</ul>
+<p>The gap between the two is the "coast window" &mdash; the years where your portfolio is large enough to coast but not yet large enough to retire. Most people fill that window with a mix of lower-stress work, sabbaticals, or selective career moves.</p>
+</div>
+</details>
+
+<details>
+<summary>Can I use a higher or lower withdrawal rate?</summary>
+<div class="faq-answer">
+<p>Yes &mdash; the calculator lets you set your own. A few reference points:</p>
+<ul>
+<li><strong>3.0&ndash;3.5% (very conservative):</strong> High margin of safety. Used by people who retired before 2007 and lived through 2008&ndash;2009 without portfolio damage.</li>
+<li><strong>4.0% (standard):</strong> Bengen's 1994 study. Historical safe withdrawal rate across 30-year retirements in US data.</li>
+<li><strong>4.5&ndash;5.0% (aggressive):</strong> Higher risk of running out, especially in retirement sequences with poor early returns. Often used with the assumption of flexible spending in downturn years.</li>
+</ul>
+<p>Higher withdrawal rates reduce your FIRE number but increase sequence-of-returns risk. The <a href="/safe-withdrawal-rate-guide.html">safe withdrawal rate guide</a> has the full background.</p>
+</div>
+</details>
+</div>
+
+<div class="faq-section">
+<p class="section-eyebrow">Section 3</p>
+<h2 class="section-title">Money mechanics</h2>
+
+<details>
+<summary>Should I use tax-advantaged accounts (401(k), IRA) or a taxable brokerage?</summary>
+<div class="faq-answer">
+<p>For Coast FIRE math, the account type doesn't matter &mdash; what matters is the total invested amount and the time horizon. But for tax efficiency, prioritize this order:</p>
+<ul>
+<li><strong>401(k) up to the match:</strong> Free money. Always capture the full employer match.</li>
+<li><strong>Roth IRA (or HSA if eligible):</strong> Tax-free growth and tax-free withdrawal in retirement. Especially valuable if you expect to be in a higher tax bracket later.</li>
+<li><strong>Remaining 401(k) up to the limit:</strong> Pre-tax contributions reduce current-year taxes.</li>
+<li><strong>Taxable brokerage:</strong> No contribution limits, no early-withdrawal penalty, but dividends and gains are taxed each year.</li>
+</ul>
+<p>The "Coast FIRE" label doesn't care which bucket your money is in. The IRS, however, does. The 401(k) early-withdrawal penalty is real &mdash; a Roth IRA is the more flexible Coast FIRE vehicle for most people.</p>
+</div>
+</details>
+
+<details>
+<summary>What about healthcare before Medicare kicks in?</summary>
+<div class="faq-answer">
+<p>This is the single biggest non-investment risk in early retirement. Options:</p>
+<ul>
+<li><strong>ACA marketplace:</strong> If your income is low enough (Coast FIRE often qualifies), ACA subsidies can make coverage very affordable. This is the most common path.</li>
+<li><strong>COBRA:</strong> Continue employer coverage for 18 months after leaving. Usually expensive and a bridge, not a destination.</li>
+<li><strong>Spouse's plan:</strong> If your partner has employer coverage, this is often the simplest solution.</li>
+<li><strong>Health sharing ministry or direct primary care:</strong> Non-traditional options that some early retirees use, but they aren't insurance and don't cover everything.</li>
+</ul>
+<p>Model your expected ACA subsidies before finalizing your Coast FIRE plan. They're often the difference between "this works" and "this doesn't quite work yet."</p>
+</div>
+</details>
+
+<details>
+<summary>What if I'm over 60? Is Coast FIRE still possible?</summary>
+<div class="faq-answer">
+<p>Mathematically, yes &mdash; if your portfolio is already at or near your FIRE number. The compounding advantage of Coast FIRE is the time between reaching the coast point and retirement age. With 0&ndash;5 years of that window, the difference between Coast FIRE and traditional FIRE mostly disappears.</p>
+<p>If you're over 60 and your portfolio is below your number, the strategy is closer to "save aggressively for a few more years, then traditional retirement" than "coast." That said, the <a href="/fire-progress-tracker.html">progress tracker</a> can show you exactly how many years of saving remain at your current rate.</p>
+</div>
+</details>
+
+<details>
+<summary>What investment allocation should I use?</summary>
+<div class="faq-answer">
+<p>Standard Coast FIRE allocation by age range:</p>
+<ul>
+<li><strong>Ages 20&ndash;40:</strong> 90&ndash;100% equities. Time in the market is your main advantage.</li>
+<li><strong>Ages 40&ndash;55:</strong> 70&ndash;80% equities, 20&ndash;30% bonds. Starting to preserve capital as the coast window narrows.</li>
+<li><strong>Ages 55+:</strong> 60&ndash;70% equities, 30&ndash;40% bonds. Preservation becomes more important than growth.</li>
+</ul>
+<p>These are starting points, not prescriptions. Your personal risk tolerance, other income sources, and how close you are to the coast point all matter. Most Coast FIRE plans keep a higher equity allocation for longer than the traditional glide-path suggests, because the time horizon is "until retirement" rather than "until I need this money next year."</p>
+</div>
+</details>
+
+<details>
+<summary>How does Social Security fit in?</summary>
+<div class="faq-answer">
+<p>You can claim at age 62 (reduced benefit), full retirement age (typically 66&ndash;67), or delay to 70 for the maximum benefit (about 8% per year of delay past full retirement age). In Coast FIRE, you may coast on your portfolio for years before claiming Social Security, which usually means delaying to 70 is the right call.</p>
+<p>Whether to include expected Social Security in your FIRE number is a modeling choice. The conservative approach is to plan as if you'll get $0 &mdash; then Social Security is pure upside. The optimistic approach is to subtract expected Social Security income from your annual expenses when calculating your number. The right answer depends on your confidence in the program, your health, and your family longevity.</p>
+</div>
+</details>
+
+<details>
+<summary>What if my expenses change after I hit the coast point?</summary>
+<div class="faq-answer">
+<p>Re-run the calculator. The coast number scales with expenses, so a 20% increase in spending means a 20% higher coast number. If your portfolio is well above the original coast number, you have a buffer. If it's right at the line, a lifestyle change can knock you back below it.</p>
+<p>This is one reason most Coast FIRE plans build in a margin: hitting 1.2&ndash;1.5&times; the coast number gives you room for life events (kids, a home purchase, a career change) without losing coast status. The <a href="/fire-progress-tracker.html">progress tracker</a> is the easiest way to monitor this over time.</p>
+</div>
+</details>
+
+<details>
+<summary>What if the market drops 40% right after I hit the coast point?</summary>
+<div class="faq-answer">
+<p>That's the scenario the calculator's expected return assumption averages out. In practice, the math still works as long as you don't panic-sell and as long as your time horizon is long enough. A 40% drop followed by a recovery leaves you in roughly the same place 10 years later &mdash; but only if you stay invested.</p>
+<p>The bigger risk is selling during a downturn to cover current expenses. That's why most Coast FIRE plans include 1&ndash;2 years of cash reserves outside the invested portfolio: to cover spending during a market crash without having to sell investments at a loss. Sequence-of-returns risk is real; cash buffer is the standard defense.</p>
+</div>
+</details>
+</div>
+
+<div class="cta">
+<h3>Ready to run the numbers?</h3>
+<p>The calculator takes about 30 seconds. Current assets, annual expenses, age, and a return assumption &mdash; that's it.</p>
+<a class="btn btn-primary" href="/coast-fire-calculator-explained.html">Open the Coast FIRE Calculator</a>
+</div>
+
+<p class="disclaimer">Last updated 2026. See <a href="/editorial-policy.html">Editorial Policy</a> for content standards and disclosure. Numbers shown are illustrative; consult a licensed advisor for your specific situation.</p>
+
+</div>
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-col">
+<h4>Learn</h4>
+<a href="/what-is-coast-fire.html">What is Coast FIRE?</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog/">Blog</a>
+</div>
+<div class="footer-col">
+<h4>Calculate</h4>
+<a href="/coast-fire-calculator-explained.html">Coast FIRE Calculator</a>
+<a href="/fire-progress-tracker.html">Progress Tracker</a>
+<a href="/resources/expenses-calculator.html">Expense Calculator</a>
+</div>
+<div class="footer-col">
+<h4>Guides</h4>
+<a href="/compound-interest-explained.html">Compound Interest</a>
+<a href="/safe-withdrawal-rate-guide.html">Safe Withdrawal Rate</a>
+<a href="/margin-vs-markup-guide.html">Margin vs. Markup</a>
+<a href="/probate-guide.html">Probate Guide</a>
+</div>
+<div class="footer-col">
+<h4>Resources</h4>
+<a href="/resources/coast-fire-checklist.html">Coast FIRE Checklist</a>
+<a href="/resources/fire-budget-checklist.html">FIRE Budget Checklist</a>
+</div>
+<div class="footer-col">
+<h4>About</h4>
+<a href="/about.html">About</a>
+<a href="/editorial-policy.html">Editorial Policy</a>
+<a href="/contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 CoastFIREWhen</p>
+<p class="disclaimer-line">Educational use only. Not financial advice. Not a substitute for a qualified advisor. Numbers shown are illustrative; your actual results will differ.</p>
+</div>
+</div>
+</footer>
 </body></html>
