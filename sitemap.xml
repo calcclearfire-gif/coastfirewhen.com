@@ -7,53 +7,63 @@
     </url>
     <url>
         <loc>https://coastfirewhen.com/</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/coast-fire-calculator-explained.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.90</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/fire-progress-tracker.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://coastfirewhen.com/what-is-coast-fire.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <loc>https://coastfirewhen.com/compound-interest-explained.html</loc>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/safe-withdrawal-rate-guide.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://coastfirewhen.com/compound-interest-explained.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-        <priority>0.75</priority>
-    </url>
-    <url>
         <loc>https://coastfirewhen.com/margin-vs-markup-guide.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-        <priority>0.70</priority>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/probate-guide.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-        <priority>0.70</priority>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/faq.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/about.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
-        <priority>0.70</priority>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.75</priority>
+    </url>
+    <url>
+        <loc>https://coastfirewhen.com/editorial-policy.html</loc>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>https://coastfirewhen.com/contact.html</loc>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.40</priority>
+    </url>
+    <url>
+        <loc>https://coastfirewhen.com/what-is-coast-fire.html</loc>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+        <priority>0.80</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/blog/why-start-early.html</loc>
@@ -87,27 +97,27 @@
     </url>
     <url>
         <loc>https://coastfirewhen.com/resources/coast-fire-checklist.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.70</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/resources/fire-budget-checklist.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.70</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/resources/expenses-calculator.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.70</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/privacy-policy.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.50</priority>
     </url>
     <url>
         <loc>https://coastfirewhen.com/terms.html</loc>
-        <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+        <lastmod>2026-06-10T00:00:00+00:00</lastmod>
         <priority>0.50</priority>
     </url>
 </urlset>
