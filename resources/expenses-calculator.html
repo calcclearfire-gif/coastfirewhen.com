@@ -1,8 +1,59 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta content="#0d0f14" name="theme-color"/><meta charset="utf-8"/><title>FIRE Expenses Calculator — Coast FIREWhen</title><style>body{font-family:system-ui,sans-serif;max-width:960px;margin:24px auto;padding:24px;line-height:1.7;color:#333;background:#f9f9f9}.container{background:white;border-radius:8px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}.section{margin-bottom:24px}h1{color:#2d3748;margin-bottom:20px;font-size:26px}.section h2{color:#5e6ad2;font-size:18px;margin-top:0;margin-bottom:16px;font-weight:590}.form-row{display:grid;gap:12px;margin-bottom:14px}.form-row-2{grid-template-columns:1fr 1fr}.form-row-3{grid-template-columns:1fr 1fr 1fr}.label{display:block;font-size:13px;font-weight:590;color:#718096;margin-bottom:6px;letter-spacing:0.01em}input[type="number"]{width:100%;background:#fafafa;border:1px solid #cbd5e0;border-radius:6px;padding:12px 14px;color:#2d3748;font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}.input-input{width:90px;background:white;font-weight:590;color:#2d3748;display:inline-block}.input-slider{flex:1}.input-suffix{margin-left:8px;color:#718096;font-size:13px}.result-box{background:#fdfdfd;border:1px solid #e2e8f0;border-radius:6px;padding:16px;margin-bottom:14px}.result-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #edf2f7;font-size:14px}.result-row:last-child{border-bottom:none;font-weight:590;font-size:16px;color:#2d3748}.result-value{font-family:monospace;font-size:16px}</style></head><body>
+<html lang="en"><head>
+<style>
+.cfw-nav{background:rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.08)}
+.cfw-nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.cfw-nav-logo{font-family:'Inter',system-ui,sans-serif;font-weight:700;font-size:18px;letter-spacing:-.02em;color:#f7f8f8;text-decoration:none}
+.cfw-nav-logo span{color:#5e6ad2}
+.cfw-nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.cfw-nav-links a{font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:500;color:#8a8f98;text-decoration:none;transition:color .15s}
+.cfw-nav-links a:hover{color:#f7f8f8}
+.cfw-footer{background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.08);margin-top:56px}
+.cfw-footer-inner{max-width:1100px;margin:0 auto;padding:40px 24px 28px}
+.cfw-footer-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+@media(max-width:900px){.cfw-footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.cfw-footer-grid{grid-template-columns:1fr}}
+.cfw-footer-col h4{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8a8f98;margin:0 0 12px}
+.cfw-footer-col a{display:block;font-family:'Inter',system-ui,sans-serif;font-size:13px;color:#d0d6e0;text-decoration:none;padding:4px 0}
+.cfw-footer-col a:hover{color:#7170ff}
+.cfw-footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.05);margin-top:28px;padding-top:18px;font-family:'Inter',system-ui,sans-serif;font-size:12px;color:#62666d}
+.cfw-footer-bottom a{color:#8a8f98;text-decoration:none}
+</style><meta content="#0d0f14" name="theme-color"/><meta charset="utf-8"/><title>FIRE Expenses Calculator — Coast FIREWhen</title><style>body{font-family:system-ui,sans-serif;max-width:960px;margin:24px auto;padding:24px;line-height:1.7;color:#333;background:#f9f9f9}.container{background:white;border-radius:8px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}.section{margin-bottom:24px}h1{color:#2d3748;margin-bottom:20px;font-size:26px}.section h2{color:#5e6ad2;font-size:18px;margin-top:0;margin-bottom:16px;font-weight:590}.form-row{display:grid;gap:12px;margin-bottom:14px}.form-row-2{grid-template-columns:1fr 1fr}.form-row-3{grid-template-columns:1fr 1fr 1fr}.label{display:block;font-size:13px;font-weight:590;color:#718096;margin-bottom:6px;letter-spacing:0.01em}input[type="number"]{width:100%;background:#fafafa;border:1px solid #cbd5e0;border-radius:6px;padding:12px 14px;color:#2d3748;font-size:15px;font-family:inherit;outline:none;transition:border-color .15s}.input-input{width:90px;background:white;font-weight:590;color:#2d3748;display:inline-block}.input-slider{flex:1}.input-suffix{margin-left:8px;color:#718096;font-size:13px}.result-box{background:#fdfdfd;border:1px solid #e2e8f0;border-radius:6px;padding:16px;margin-bottom:14px}.result-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #edf2f7;font-size:14px}.result-row:last-child{border-bottom:none;font-weight:590;font-size:16px;color:#2d3748}.result-value{font-family:monospace;font-size:16px}</style><style>
+body{background:#0d0f14 !important;color:#d0d6e0}
+body,section,.container,.card,main,article{background:#0d0f14 !important;color:#d0d6e0 !important}
+h1,h2,h3,h4{color:#f7f8f8 !important}
+p,li,td,th,label,small,span,dd,dt{color:#d0d6e0 !important}
+a{color:#828fff}
+table{background:#0f1011}
+th{color:#8a8f98 !important}
+input,select{background:#191a1b !important;color:#f7f8f8 !important;border-color:rgba(255,255,255,0.15)}
+button,.btn{background:#5e6ad2 !important;color:#fff !important}
+.callout,.note,.tip,.warning,blockquote{background:rgba(255,255,255,0.03) !important;border-color:rgba(255,255,255,0.08);color:#d0d6e0 !important}
+</style>
+</head><body>
+<nav class="cfw-nav">
+<div class="cfw-nav-inner">
+<a class="cfw-nav-logo" href="/">Coast<span>FIRE</span>When</a>
+<div class="cfw-nav-links">
+<a href="/">Home</a>
+<a href="/coast-fire-calculator-explained.html">Calculator</a>
+<a href="/fire-progress-tracker.html">Progress</a>
+<a href="/what-is-coast-fire.html">Guides</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">About</a>
+</div>
+</div>
+</nav>
 
 <div class="container">
-    <h1>FIRE Expenses Calculator</h1>
+    
+<div style="max-width:960px;margin:0 auto 8px;padding:0 24px">
+<h2 style="font-size:24px;margin:28px 0 12px;color:#2d3748">How to Use This Calculator</h2>
+<p style="font-size:15px;line-height:1.7;color:#444;margin-bottom:12px">Enter your current and target retirement ages, your monthly expenses by category, your current portfolio value, your expected after-inflation return, and a safe withdrawal rate (4% is the conventional starting point — see the <a href="/safe-withdrawal-rate-guide.html" style="color:#5e6ad2">safe withdrawal rate guide</a> for the trade-offs). The calculator does two things: it totals your annual spending, and it works backward to the portfolio you need <em>today</em> so that compound growth alone gets you to the full FIRE number by your target age.</p>
+<p style="font-size:15px;line-height:1.7;color:#444;margin-bottom:12px">That second number — the "Coast FIRE Number" — is the one that matters. It's the point at which you can stop saving aggressively and let the market do the work. For most people it lands somewhere between 30% and 60% of the full FIRE number, which is the whole appeal of the strategy: a much smaller, much earlier target than the conventional one.</p>
+</div>
+<h1>FIRE Expenses Calculator</h1>
     
     <div class="section">
         <h2>Basic Information</h2>
@@ -147,6 +198,33 @@
     <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;font-size:12px;color:#718096;font-style:italic;">
         Disclaimer: This calculator is for educational purposes only. It assumes constant returns, no Social Security income, and does not account for taxes, inflation variability, or sequence of returns risk. Consult a licensed financial advisor before making significant financial decisions.
     </div>
+<br/>
+<strong>What This Calculator Doesn't Tell You</strong><br/>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Taxes on withdrawals.</strong> The 4% rule assumes you can withdraw without income tax in perpetuity, which is only true in a Roth account. A traditional 401(k) or IRA will owe income tax on every dollar you take out.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Healthcare.</strong> If you're not on employer coverage at retirement, Medicare doesn't start until 65, and the gap between your retirement age and 65 is either a bridge job, a spouse's plan, or a subsidy. None of those are in the number above.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Sequence-of-returns risk.</strong> A 4% withdrawal rate that works in a good market can deplete a portfolio that hit a 2008-style drawdown in its first five years. The calculator assumes a smooth average return; reality is lumpy.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Inflation variability.</strong> The "after-inflation return" input is a single number. In practice, inflation is front-loaded in healthcare and back-loaded in general prices, and the two don't move together.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Housing-specific costs.</strong> Property tax, HOA, maintenance — these scale with your asset base in a way that a flat "housing" line doesn't capture.</p>
+<br/>
+<strong>Benchmarking Your Number</strong><br/>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">Median US household spending is roughly $60,000-$70,000/year. A typical full FIRE target for that spending level is $1.5M-$1.75M at a 4% safe withdrawal rate. A Coast FIRE target for the same spending, starting in your late 20s with a 25-year runway to retirement, is often $400,000-$700,000 — a number that is genuinely reachable on a moderate income if you start early and keep fees low. If your output is far outside those bands, double-check your inputs before you trust the date.</p>
+<br/>
+<strong>Common Mistakes When Entering Expenses</strong><br/>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Using gross instead of net income.</strong> The calculator wants take-home reality, not pre-tax figures. Enter what actually leaves your account.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Forgetting irregular costs.</strong> Car registration, property tax (if not in your mortgage), annual insurance premiums, the big maintenance year. Annualize them into the monthly lines.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Counting future salary as a negative expense.</strong> The Coast FIRE strategy assumes you stop saving, not that you stop earning. Don't subtract expected future income from your target — that's a different plan.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Using a 7% "after-inflation" return.</strong> 7% is a gross, pre-inflation long-run estimate for equities. After inflation and fees, a realistic planning number is 4-5%.</p>
+<p style="font-size:14px;line-height:1.7;color:#444;margin:8px 0">• <strong>Entering your current 401(k) balance but not your expected match.</strong> The match is real money. Count it, or treat it as a future contribution — but pick one and be consistent.</p>
+<br/>
+<strong>Related Reading</strong><br/>
+<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:10px">
+    <a href="/coast-fire-calculator-explained.html" style="font-size:14px;color:#5e6ad2;padding:8px 14px;border:1px solid #ddd;border-radius:6px;background:#fff">Coast FIRE Calculator Explained</a>
+    <a href="/safe-withdrawal-rate-guide.html" style="font-size:14px;color:#5e6ad2;padding:8px 14px;border:1px solid #ddd;border-radius:6px;background:#fff">Safe Withdrawal Rate Guide</a>
+    <a href="/resources/coast-fire-checklist.html" style="font-size:14px;color:#5e6ad2;padding:8px 14px;border:1px solid #ddd;border-radius:6px;background:#fff">Coast FIRE Checklist</a>
+    <a href="/what-is-coast-fire.html" style="font-size:14px;color:#5e6ad2;padding:8px 14px;border:1px solid #ddd;border-radius:6px;background:#fff">What is Coast FIRE?</a>
+    <a href="/faq.html" style="font-size:14px;color:#5e6ad2;padding:8px 14px;border:1px solid #ddd;border-radius:6px;background:#fff">FAQ</a>
+</div>
+<p style="margin-top:24px;font-size:12px;color:#888">CoastFIREWhen — Educational content. Not financial advice. See our <a href="/editorial-policy.html" style="color:#5e6ad2">editorial policy</a>.</p>
 
 </div>
 
@@ -254,4 +332,50 @@
 })();
 </script>
 
+<footer class="cfw-footer">
+<div class="cfw-footer-inner">
+<div class="cfw-footer-grid">
+<div class="cfw-footer-col">
+<h4>Learn</h4>
+<a href="/what-is-coast-fire.html">What is Coast FIRE?</a>
+<a href="/faq.html">FAQ</a>
+<a href="/blog/">Blog</a>
+</div>
+<div class="cfw-footer-col">
+<h4>Calculate</h4>
+<a href="/coast-fire-calculator-explained.html">Coast FIRE Calculator</a>
+<a href="/fire-progress-tracker.html">Progress Tracker</a>
+<a href="/resources/expenses-calculator.html">Expense Calculator</a>
+</div>
+<div class="cfw-footer-col">
+<h4>Guides</h4>
+<a href="/compound-interest-explained.html">Compound Interest</a>
+<a href="/safe-withdrawal-rate-guide.html">Safe Withdrawal Rate</a>
+<a href="/probate-guide.html">Probate Guide</a>
+<a href="/margin-vs-markup-guide.html">Margin vs Markup</a>
+</div>
+<div class="cfw-footer-col">
+<h4>Resources</h4>
+<a href="/resources/coast-fire-checklist.html">Coast FIRE Checklist</a>
+<a href="/resources/fire-budget-checklist.html">Budget Checklist</a>
+<a href="/resources/expenses-calculator.html">Expenses Calculator</a>
+</div>
+<div class="cfw-footer-col">
+<h4>About</h4>
+<a href="/about.html">About</a>
+<a href="/editorial-policy.html">Editorial Policy</a>
+<a href="/contact.html">Contact</a>
+</div>
+<div class="cfw-footer-col">
+<h4>Legal</h4>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Use</a>
+</div>
+</div>
+<div class="cfw-footer-bottom">
+<span>&copy; 2026 CoastFIREWhen. Educational content, not financial advice.</span>
+<span>Questions? <a href="/contact.html">Contact us</a></span>
+</div>
+</div>
+</footer>
 </body></html>
