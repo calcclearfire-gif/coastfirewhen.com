@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="#0d0f14" name="theme-color"/>
+<meta content="CoastFIREWhen" name="author"/>
+<title>How Much Do I Need to Save to Hit Coast FIRE? The Savings-Rate Math — CoastFIREWhen Blog</title>
+<meta content="Coast FIRE is a one-time target, not a monthly bill. The concrete math on what savings rate gets you there by your target age — and what waiting actually costs." name="description"/>
+<link href="https://coastfirewhen.com/blog/savings-rate-coast-fire.html" rel="canonical"/>
+<meta content="https://coastfirewhen.com/blog/savings-rate-coast-fire.html" property="og:url"/>
+<meta content="How Much Do I Need to Save to Hit Coast FIRE? The Savings-Rate Math" property="og:title"/>
+<meta content="Coast FIRE is a one-time target, not a monthly bill. The concrete math on what savings rate gets you there by your target age." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect fill='%230d0f14' width='1200' height='630'/%3E%3Ctext x='600' y='270' font-family='system-ui,sans-serif' font-size='44' font-weight='590' fill='%23f7f8f8' text-anchor='middle'%3EThe+Coast+FIRE+Savings+Math%3C/text%3E%3Ctext x='600' y='360' font-family='system-ui,sans-serif' font-size='28' fill='%23828fff' text-anchor='middle'%3Ecoastfirewhen.com/blog/savings-rate-coast-fire%3C/text%3E%3C/svg%3E" property="og:image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How Much Do I Need to Save to Hit Coast FIRE? The Savings-Rate Math","description":"Coast FIRE is a one-time target, not a monthly bill. The concrete math on what savings rate gets you there by your target age, and what waiting actually costs.","datePublished":"2026-08-26","author":{"@type":"Organization","name":"CoastFIREWhen"},"mainEntityOfPage":"https://coastfirewhen.com/blog/savings-rate-coast-fire.html"}</script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #08090a; --bg-panel: #0f1011; --bg-surface: #191a1b; --accent: #5e6ad2; --success: #10b981; --border: rgba(255,255,255,0.08); --text-primary: #f7f8f8; --text-secondary: #d0d6e0; --text-tertiary: #8a8f98; --text-muted: #62666d; --font: 'Inter', system-ui, sans-serif; }
+    html { font-family: var(--font); background: var(--bg); color: var(--text-primary); font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+    body { min-height: 100vh; padding-bottom: 70px; }
+        nav { position: sticky; top: 0; z-index: 100; background: rgba(8,9,10,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 16px 24px; }
+    .nav-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-size: 15px; font-weight: 600; color: var(--text-secondary); }
+    .nav-logo span { color: var(--text-primary); }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page-header { padding: 48px 24px 0; max-width: 960px; margin: 0 auto; }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .post-content { max-width: 740px; margin: 0 auto; padding: 0 24px 60px; line-height: 1.8; }
+    h1 { font-size: 36px; font-weight: 600; color: var(--text-primary); line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.015em; }
+    .meta { font-size: 13px; color: var(--text-muted); margin-top: 8px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+    h2 { font-size: 24px; font-weight: 500; color: var(--text-primary); margin: 40px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 19px; font-weight: 600; color: var(--text-primary); margin: 28px 0 12px; letter-spacing: -0.01em; }
+    p, ul, ol { margin-bottom: 16px; }
+    ul, ol { margin-left: 24px; }
+    li { margin-bottom: 8px; color: var(--text-tertiary); }
+    .lead { font-size: 18px; font-weight: 300; line-height: 1.75; color: var(--text-secondary); margin: 24px 0 24px; }
+    .callout { background: rgba(94,106,210,0.04); border: 1px solid rgba(94,106,210,0.18); border-radius: 8px; padding: 18px 20px; margin: 24px 0; }
+    .callout h4 { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
+    .callout p, .callout ul { font-size: 14px; color: var(--text-tertiary); line-height: 1.6; margin: 0; }
+    .callout ul { margin-left: 18px; margin-top: 6px; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; margin-top: 48px; }
+    footer p { font-size: 13px; color: var(--text-muted); }
+    .footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 16px; }
+    .footer-links a { font-size: 13px; color: var(--text-tertiary); }
+    .nav-toggle { display: none; position: absolute; right: 24px; top: 0; height: 56px; width: 32px; cursor: pointer; opacity: 0; z-index: 100; }
+    .nav-toggle-label { display: none; position: absolute; right: 24px; top: 16px; width: 24px; height: 24px; cursor: pointer; z-index: 101; }
+    .nav-toggle-label span { display: block; width: 100%; height: 2px; background: var(--text-secondary); border-radius: 2px; transition: all 0.2s; margin-bottom: 5px; }
+    @media (max-width: 640px) { .nav-toggle-label { display: block; } .nav-links { position: fixed; top: 0; right: -100%; width: 220px; height: 100vh; background: var(--bg); border-left: 1px solid var(--border); flex-direction: column; align-items: flex-start; padding: 80px 24px 24px; gap: 0; transition: right 0.3s; z-index: 99; } .nav-links a { font-size: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); width: 100%; } .nav-toggle:checked ~ .nav-links { right: 0; } .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); } .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) { opacity: 0; } .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) { transform: rotate(-45deg) translate(-5px, -5px); } }
+.highlight-box { background: rgba(251,191,36,0.04); border: 1px solid rgba(251,191,36,0.18); border-radius: 8px; padding: 20px; margin: 24px 0; }
+.highlight-box h4 { font-size: 14px; font-weight: 600; color: #fbbf24; margin-bottom: 8px; }
+.highlight-box p { font-size: 14px; color: var(--text-tertiary); line-height: 1.6; margin: 0; }
+.formula { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 6px; padding: 14px 18px; font-family: ui-monospace, monospace; font-size: 13px; color: var(--text-secondary); margin: 16px 0; line-height: 1.7; white-space: pre-wrap; }
+</style></head><body>
+
+<nav><div class="nav-inner">
+    <a class="nav-logo" href="/">Coast<span>FIRE</span>When</a>
+    <label class="nav-toggle-label" for="nav-toggle"><span><span></span></span><span><span></span></span><span><span></span></span></label>
+    <input type="checkbox" id="nav-toggle"/>
+    <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/coast-fire-calculator-explained.html">Calculator</a>
+        <a href="/fire-progress-tracker.html">Progress</a>
+        <a href="/what-is-coast-fire.html">Guides</a>
+        <a href="/faq.html" style="background:rgba(255,255,255,0.06);color:var(--text-secondary)">FAQ</a>
+        <a href="/about.html">About</a>
+    </nav>
+</div></nav>
+
+<div class="page-header">
+    <p class="eyebrow">Blog</p>
+    <nav style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">Home / Blog /</nav>
+    <h1>How Much Do I Need to Save to Hit Coast FIRE?</h1>
+    <div class="meta">August 26, 2026 • Reading time: 6 minutes</div>
+</div>
+
+<div class="post-content">
+    <div class="lead">Coast FIRE is a one-time target, not a monthly bill. That's what makes it tractable: you're not saving a percentage forever — you're saving a specific amount for a specific number of years, and then you're done. Here's the math that turns "someday" into "by age 35."</div>
+
+    <h2>The framing that makes it solvable</h2>
+
+    <p>Most retirement math asks, "What percentage do I save for 40 years?" That's a question with no end, which is why it feels endless. Coast FIRE reframes it: "What lump sum do I need by a certain age, and what does it cost per year to get there?"</p>
+
+    <p>Once you know your Coast FIRE number (the figure from our <a href="/blog/your-coast-fire-number.html">age-by-age table</a>), the rest is a standard savings problem with a finish line. You're not running a marathon. You're saving for a specific dollar amount, and every year you save, the amount left shrinks.</p>
+
+    <div class="highlight-box">
+        <h4>The one question that matters:</h4>
+        <p>If you need <em>X</em> dollars by age <em>N</em>, and you have <em>Y</em> today, how much do you save per year to close the gap? That's a single, answerable equation — and the answer is almost always far less than you assume, because the market is doing part of the work.</p>
+    </div>
+
+    <h2>A concrete example, with real numbers</h2>
+
+    <p>Let's make it real. Say you're <strong>28</strong>, your Coast FIRE number (by our assumptions) is <strong>$260,000</strong>, and you want to hit it by <strong>age 35</strong> — seven years from now. You currently have <strong>$60,000</strong> invested. You're earning $120,000 a year.</p>
+
+    <p>Here's what already happens without you saving a single extra dollar: that $60,000 grows at 6% a year.</p>
+
+    <div class="formula">$60,000 × (1.06)^7 ≈ $87,900</div>
+
+    <p>So even doing nothing, you'll be around $88,000 by 35. The gap you actually need to close is the difference between $260,000 and that ~$88,000 — roughly <strong>$172,000</strong> of new growth, over seven years.</p>
+
+    <p>Now solve for the annual savings that gets you there. At 6%, that works out to about:</p>
+
+    <div class="callout">
+        <h4>Result:</h4>
+        <p>You'd need to save roughly <strong>$20,000 a year</strong> for the next seven years to reach $260,000 by 35. On a $120,000 income, that's a <strong>~17% savings rate</strong>. High, but finite — and it's the rate for the <em>next seven years only</em>, not forever.</p>
+    </div>
+
+    <h2>The two levers that actually move the number</h2>
+
+    <p>You have three dials: the target amount, the time horizon, and the savings rate. Here's how each behaves — and which one to turn first.</p>
+
+    <h3>Lever 1: Start earlier (time)</h3>
+    <p>This is the most powerful lever and the one people undervalue. A dollar saved at 28 gets 12 more years of compounding than the same dollar saved at 40. Concretely: saving $30,000 at age 28, left to grow at 7%, is worth about <strong>$68,000</strong> by age 40. The same $30,000 saved at 40 is just $30,000. The earlier you start, the less each dollar of savings has to do.</p>
+
+    <h3>Lever 2: Raise the savings rate</h3>
+    <p>Every percentage point you add to your savings rate is a direct, linear push on the gap. But it's also the most painful lever, because it touches your spending every single month. It's the right lever when your horizon is already fixed — say, you know you want to be done by a specific age and the early-start window is partly closed.</p>
+
+    <h3>Lever 3: Lower the target (spending)</h3>
+    <p>The Coast FIRE number scales directly with your spending. If you can live on $45,000 a year instead of $50,000, your target drops by 10% and so does the amount you need to save. This lever is quiet, but it compounds across your whole life — and it's often the easiest one to pull, because it doesn't require earning more, just wanting less.</p>
+
+    <div class="callout">
+        <h4>The honest trade-off:</h4>
+        <p>Time is the cheapest lever (you already have it if you're young). Savings rate is the most visible lever. Lowering spending is the most durable. Most people reach Coast FIRE by turning all three a little, not one of them a lot.</p>
+    </div>
+
+    <h2>The real cost of waiting</h2>
+
+    <p>This is the part that should change your behavior. "I'll start in a few years" isn't neutral — it's expensive, and the cost is back-loaded, which is why it feels painless in the moment.</p>
+
+    <p>Suppose delaying your start by 10 years means saving $20,000 a year for a decade. That stream, invested at 7%, grows to about <strong>$276,000</strong> by the end of those ten years. And that $276,000 doesn't sit there — it keeps compounding for the rest of your working life. Give it another 25 years at 7% and it's worth roughly <strong>$1.5 million</strong>.</p>
+
+    <p>That's the price of "I'll deal with it later." Not the $20,000 a year. The <em>future value</em> of what that $20,000 a year would have become.</p>
+
+    <div class="highlight-box">
+        <h4>Rule of thumb:</h4>
+        <p>A year of saving is worth more than the money it represents. It's worth the money <em>plus</em> everything that money would have compounded into. That's why the earliest dollar you save is almost always the most valuable one — and the most expensive to skip.</p>
+    </div>
+
+    <h2>A simple plan you can actually run</h2>
+
+    <ol>
+        <li><strong>Find your Coast FIRE number</strong> from the age table — adjust it to your actual spending and target retirement age.</li>
+        <li><strong>Subtract what you already have</strong>, grown to your target date. That's your true gap.</li>
+        <li><strong>Pick your horizon</strong> — the age you want to be coasting by. Shorter horizon means a higher annual savings rate.</li>
+        <li><strong>Set the rate and automate it</strong> — direct that amount to investments before you see it. Remove the decision from the monthly loop.</li>
+        <li><strong>Re-check every year</strong> — as your balance and income grow, the required rate usually drops. The goal gets easier to hit as you get closer.</li>
+    </ol>
+
+    <p>That's the whole system. No 40-year commitment, no vague "save as much as you can." A number, a date, a rate, and a review every year.</p>
+
+    <div class="callout">
+        <h4>The bottom line:</h4>
+        <p>Coast FIRE turns an endless savings problem into a finite one. Once you know your number and your deadline, the math tells you exactly what rate gets you there — and in most cases it's a challenging-but-reachable percentage for a bounded number of years. The bigger lesson is that starting early is the cheapest way to lower that number, and waiting is far more expensive than it feels.</p>
+    </div>
+
+    <p><strong>Related reading:</strong> <a href="/blog/your-coast-fire-number.html">Your Coast FIRE number, by age</a> · <a href="/blog/why-start-early.html">Why starting early beats saving more</a> · <a href="/coast-fire-calculator-explained.html">The calculator, explained</a> · <a href="/resources/fire-budget-checklist.html">FIRE budget checklist</a></p>
+
+    <footer><p>© 2026 CoastFIREWhen — Educational use only. Not financial advice.</p><div class="footer-links"><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms.html">Terms</a></div></footer>
+
+</div>
+
+</body></html>
